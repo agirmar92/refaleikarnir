@@ -1,25 +1,43 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Foxlympics from './Components/Foxlympics.js';
+import results from './Data/Data';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        {results.reverse().map((yearData, iYear) => {
+          return (
+            <div key={iYear} className="App__year">
+              <Foxlympics
+                isWinter
+                teams={yearData.get('teams')}
+                results={yearData.get('winter')}
+                year={yearData.get('year')}
+              />
+              <div
+                className={
+                  iYear % 2 === 0
+                    ? 'App__seperator'
+                    : 'App__seperator App__seperator--odd'
+                }
+              >
+                <div className="App__seperatorTitle App__seperatorTitle--winter">
+                  Vetur
+                </div>
+                <div className="App__seperatorTitle App__seperatorTitle--summer">
+                  Sumar
+                </div>
+              </div>
+              <Foxlympics
+                isSummer
+                teams={yearData.get('teams')}
+                results={yearData.get('summer')}
+              />
+            </div>
+          );
+        })}
       </div>
     );
   }

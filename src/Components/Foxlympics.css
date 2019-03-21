@@ -1,0 +1,117 @@
+.Foxlympics {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  flex: 1 1 0;
+  width: 100%;
+}
+.Foxlympics__content {
+  max-width: 500px;
+  margin: auto;
+}
+.Foxlympics--winter {
+  background-color: #433f6a;
+  color: #ecd098;
+}
+
+.Foxlympics--summer {
+  background-color: #ecd098;
+  color: #433f6a;
+}
+.Foxlympics__year {
+  position: relative;
+  top: 10px;
+  left: 0;
+  width: 100vw;
+  font-size: 32px;
+}
+.Foxlympics__challenges {
+  font-size: 18px;
+}
+.Foxlympics__teamPlacement {
+  display: flex;
+}
+.Foxlympics__teamPortraitContainer {
+  flex: 0 0 0;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.Foxlympics__teamPortrait {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: tomato;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  margin-top: 20px;
+}
+.Foxlympics__teamPortrait--white {
+  background-color: white;
+}
+.Foxlympics__teamPortrait--black {
+  background-color: black;
+}
+.Foxlympics__teamPortrait--red {
+  background-color: #944f69;
+}
+.Foxlympics__teamPortrait--winners {
+  height: 140px;
+  width: 140px;
+  margin-top: 0;
+}
+.Foxlympics__teamPortraitText {
+  font-size: 16px;
+}
+.Foxlympics__portraitImageContainer {
+  display: flex;
+  overflow: hidden;
+  width: 86%;
+  height: 86%;
+  background-color: tomato;
+  border-radius: 50%;
+  margin: auto;
+}
+.Foxlympics__portraitImage {
+  width: 50%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+.Foxlympics__portraitImage--aegir {
+  background-image: url('../images/aegir.jpg');
+}
+.Foxlympics__portraitImage--danni {
+  background-image: url('../images/danni.jpg');
+}
+.Foxlympics__portraitImage--gaui {
+  background-image: url('../images/gaui.jpg');
+}
+.Foxlympics__portraitImage--arnar {
+  background-image: url('../images/arnar.jpg');
+}
+.Foxlympics__portraitImage--vikingur {
+  background-image: url('../images/vikingur.jpg');
+}
+.Foxlympics__portraitImage--maggi {
+  background-image: url('../images/maggi.jpg');
+}
+
+@media only screen and (max-width: 500px) {
+  .Foxlympics__teamPortrait {
+    height: 80px;
+    width: 80px;
+    margin-top: 10px;
+  }
+  .Foxlympics__teamPortrait--winners {
+    height: 100px;
+    width: 100px;
+    margin-top: 0;
+  }
+  .Foxlympics__teamPortraitText {
+    font-size: 14px;
+  }
+}
