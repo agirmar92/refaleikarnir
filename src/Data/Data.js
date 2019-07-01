@@ -109,11 +109,11 @@ const results = fromJS([
         },
         {
           team: TEAMS.BLACK,
-          place: 0,
+          place: 1,
         },
         {
           team: TEAMS.RED,
-          place: 1,
+          place: 0,
         },
       ],
     },
