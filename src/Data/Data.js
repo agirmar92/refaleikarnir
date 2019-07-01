@@ -80,8 +80,8 @@ const results = fromJS([
     year: '2015',
     teams: {
       [TEAMS.WHITE]: [PLAYERS.DANNI, PLAYERS.MAGGI],
-      [TEAMS.BLACK]: [PLAYERS.GAUI, PLAYERS.AEGIR],
-      [TEAMS.RED]: [PLAYERS.VIKINGUR, PLAYERS.ARNAR],
+      [TEAMS.BLACK]: [PLAYERS.VIKINGUR, PLAYERS.ARNAR],
+      [TEAMS.RED]: [PLAYERS.GAUI, PLAYERS.AEGIR],
     },
     winter: {
       challenges: ['Badminton', 'Pool', 'FIFA'],
@@ -197,7 +197,7 @@ const results = fromJS([
         },
         {
           team: TEAMS.RED,
-          place: 1,
+          place: 2,
         },
       ],
     },
@@ -256,6 +256,23 @@ const results = fromJS([
         {
           team: TEAMS.RED,
           place: 1,
+        },
+      ],
+    },
+    summer: {
+      challenges: ['Tennis', 'Golfhermir', 'Píla'],
+      teamPlacement: [
+        {
+          team: TEAMS.WHITE,
+          place: 0,
+        },
+        {
+          team: TEAMS.BLACK,
+          place: 2,
+        },
+        {
+          team: TEAMS.RED,
+          place: 0,
         },
       ],
     },
