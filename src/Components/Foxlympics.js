@@ -6,9 +6,7 @@ import './Foxlympics.css';
 class Foxlympics extends Component {
   renderTeamPlacement() {
     const { results, teams } = this.props;
-    const placement = results
-      .get('teamPlacement')
-      .sortBy(team => team.get('place'));
+    const placement = results.get('teamPlacement').sortBy(team => team.get('place'));
     const text = ['Sigurvegarar', 'Annað sæti', 'Þriðja sæti'];
 
     return (
@@ -16,35 +14,27 @@ class Foxlympics extends Component {
         {[1, 0, 2].map(place => {
           const team = placement.get(place, Map());
           const members = teams.get(team.get('team'));
-          console.log(
-            'TCL: Foxlympics -> renderTeamPlacement -> members',
-            members
-          );
           return !team.isEmpty() ? (
             <div className="Foxlympics__teamPortraitContainer" key={place}>
               <div
                 className={
                   'Foxlympics__teamPortrait Foxlympics__teamPortrait--' +
                   team.get('team') +
-                  (team.get('place') === 0
-                    ? ' Foxlympics__teamPortrait--winners'
-                    : '')
+                  (team.get('place') === 0 ? ' Foxlympics__teamPortrait--winners' : '')
                 }
               >
                 <div className="Foxlympics__portraitImageContainer">
                   {members.map(member => (
                     <div
+                      key={member.get('slug')}
                       className={
-                        'Foxlympics__portraitImage Foxlympics__portraitImage--' +
-                        member.get('slug')
+                        'Foxlympics__portraitImage Foxlympics__portraitImage--' + member.get('slug')
                       }
                     />
                   ))}
                 </div>
               </div>
-              <p className="Foxlympics__teamPortraitText">
-                {text[team.get('place')]}
-              </p>
+              <p className="Foxlympics__teamPortraitText">{text[team.get('place')]}</p>
             </div>
           ) : null;
         })}
@@ -64,7 +54,7 @@ class Foxlympics extends Component {
       >
         {year && <div className="Foxlympics__year">{year}</div>}
         <div className="Foxlympics__content">
-          {results ? (
+          {!results.get('teamPlacement', List()).isEmpty() ? (
             <Fragment>
               <div className="Foxlympics__challenges">
                 {results.get('challenges', List()).map((challenge, i) => (
