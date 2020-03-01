@@ -289,7 +289,7 @@ const results = fromJS([
       teamPlacement: [
         {
           team: TEAMS.WHITE,
-          place: 0,
+          place: 2,
         },
         {
           team: TEAMS.BLACK,
@@ -297,7 +297,7 @@ const results = fromJS([
         },
         {
           team: TEAMS.RED,
-          place: 0,
+          place: 1,
         },
       ],
     },
