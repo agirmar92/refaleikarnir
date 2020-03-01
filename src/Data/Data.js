@@ -277,6 +277,35 @@ const results = fromJS([
       ],
     },
   },
+  {
+    year: '2020',
+    teams: {
+      [TEAMS.WHITE]: [PLAYERS.DANNI, PLAYERS.AEGIR],
+      [TEAMS.BLACK]: [PLAYERS.GAUI, PLAYERS.MAGGI],
+      [TEAMS.RED]: [PLAYERS.ARNAR, PLAYERS.VIKINGUR],
+    },
+    winter: {
+      challenges: ['Keila', 'Borðtennis', 'Minute to Win It'],
+      teamPlacement: [
+        {
+          team: TEAMS.WHITE,
+          place: 2,
+        },
+        {
+          team: TEAMS.BLACK,
+          place: 0,
+        },
+        {
+          team: TEAMS.RED,
+          place: 1,
+        },
+      ],
+    },
+    summer: {
+      challenges: [],
+      teamPlacement: [],
+    },
+  },
 ]);
 
 export default results;
