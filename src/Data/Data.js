@@ -319,6 +319,22 @@ const results = fromJS([
       ],
     },
   },
+  {
+    year: '2021',
+    teams: {
+      [TEAMS.WHITE]: [PLAYERS.DANNI, PLAYERS.VIKINGUR],
+      [TEAMS.BLACK]: [PLAYERS.AEGIR, PLAYERS.MAGGI],
+      [TEAMS.RED]: [PLAYERS.ARNAR, PLAYERS.GAUI],
+    },
+    winter: {
+      challenges: [],
+      teamPlacement: [],
+    },
+    summer: {
+      challenges: [],
+      teamPlacement: [],
+    },
+  },
 ]);
 
 export default results;
