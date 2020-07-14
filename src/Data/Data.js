@@ -302,8 +302,21 @@ const results = fromJS([
       ],
     },
     summer: {
-      challenges: [],
-      teamPlacement: [],
+      challenges: ['Folf', 'Körfubolti (trick shots)', 'Kubbur'],
+      teamPlacement: [
+        {
+          team: TEAMS.WHITE,
+          place: 1,
+        },
+        {
+          team: TEAMS.BLACK,
+          place: 0,
+        },
+        {
+          team: TEAMS.RED,
+          place: 2,
+        },
+      ],
     },
   },
 ]);
