@@ -35,7 +35,7 @@ const PLAYERS = {
   },
 };
 
-const TEAMS = {
+export const TEAMS = {
   WHITE: "white",
   BLACK: "black",
   RED: "red",

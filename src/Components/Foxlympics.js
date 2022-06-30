@@ -1,9 +1,30 @@
 import React, { Component, Fragment } from "react";
 import { List, Map } from "immutable";
 import classNames from "classnames";
+import ReactTooltip from "react-tooltip";
+import { TEAMS } from "../Data/Data";
 import "./Foxlympics.css";
 
 class Foxlympics extends Component {
+  renderTeamTooltip(team, members) {
+    const actualTeamNames = {
+      [TEAMS.BLACK]: "Svartir refir",
+      [TEAMS.RED]: "Rauðir refir",
+      [TEAMS.WHITE]: "Hvítir refir",
+      [TEAMS.SILVER]: "Silfur refir",
+    };
+    const color = team.get("team");
+    const membersNames = members
+      .map((member) => `<p>${member.get("name")}</p>`)
+      .join("");
+    return `
+      <div>
+        <h3>${actualTeamNames[color]}</h3>
+        ${membersNames}
+      </div>
+    `;
+  }
+
   renderTeamPlacement() {
     const { results, teams } = this.props;
     const placement = results
@@ -14,6 +35,7 @@ class Foxlympics extends Component {
 
     return (
       <div className="Foxlympics__teamPlacement">
+        <ReactTooltip effect="solid" html={true} />
         {placementOrder.map((place) => {
           const team = placement.get(place, Map());
           const members = teams.get(team.get("team"));
@@ -27,6 +49,7 @@ class Foxlympics extends Component {
                     ? " Foxlympics__teamPortrait--winners"
                     : "")
                 }
+                data-tip={this.renderTeamTooltip(team, members)}
               >
                 <div className="Foxlympics__portraitImageContainer">
                   {members.map((member) => (
