@@ -23,10 +23,10 @@
   justify-content: space-between;
   height: 45px;
   width: 100%;
-  background-image: linear-gradient(to bottom right, #433f6a 50%, #ecd098 0%);
+  background-image: linear-gradient(to bottom right, #433f6a 50%, #ecd098 51%);
 }
 .App__seperator--odd {
-  background-image: linear-gradient(to bottom left, #433f6a 50%, #ecd098 0%);
+  background-image: linear-gradient(to bottom left, #433f6a 50%, #ecd098 51%);
   flex-direction: row-reverse;
 }
 .App__seperatorTitle {
