@@ -1,4 +1,5 @@
 .Foxlympics {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,7 +21,7 @@
   color: var(--winter-color);
 }
 .Foxlympics__year {
-  position: relative;
+  position: absolute;
   top: 10px;
   left: 0;
   width: 100vw;
