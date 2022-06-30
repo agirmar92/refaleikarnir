@@ -45,7 +45,7 @@
   flex-direction: column;
   justify-content: center;
   background-color: tomato;
-  border-radius: 50%;
+  border-radius: 30%;
   height: 100px;
   width: 100px;
   margin-top: 20px;
@@ -57,7 +57,7 @@
   background-color: black;
 }
 .Foxlympics__teamPortrait--red {
-  background-color: #944f69;
+  background-color: var(--red-team-color);
 }
 .Foxlympics__teamPortrait--silver {
   background-color: #C0C0C0;
@@ -75,7 +75,7 @@
   overflow: hidden;
   width: 86%;
   height: 86%;
-  border-radius: 50%;
+  border-radius: 30%;
   margin: auto;
 }
 .Foxlympics__portraitImage {
