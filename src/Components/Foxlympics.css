@@ -11,20 +11,21 @@
   margin: auto;
 }
 .Foxlympics--winter {
-  background-color: #433f6a;
-  color: #ecd098;
+  background-color: var(--winter-color);
+  color: var(--summer-color);
 }
 
 .Foxlympics--summer {
-  background-color: #ecd098;
-  color: #433f6a;
+  background-color: var(--summer-color);
+  color: var(--winter-color);
 }
 .Foxlympics__year {
   position: relative;
   top: 10px;
   left: 0;
   width: 100vw;
-  font-size: 32px;
+  font-size: 42px;
+  font-family: "Tillana", cursive;
 }
 .Foxlympics__challenges {
   font-size: 18px;
