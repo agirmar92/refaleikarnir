@@ -6,10 +6,10 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <main className="App">
         {results.reverse().map((yearData, iYear) => {
           return (
-            <div key={iYear} className="App__year">
+            <section key={iYear} className="App__year">
               <Foxlympics
                 isWinter
                 teams={yearData.get('teams')}
@@ -35,10 +35,10 @@ class App extends Component {
                 teams={yearData.get('teams')}
                 results={yearData.get('summer')}
               />
-            </div>
+            </section>
           );
         })}
-      </div>
+      </main>
     );
   }
 }

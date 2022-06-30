@@ -1,40 +1,48 @@
-import React, { Component, Fragment } from 'react';
-import { List, Map } from 'immutable';
-import classNames from 'classnames';
-import './Foxlympics.css';
+import React, { Component, Fragment } from "react";
+import { List, Map } from "immutable";
+import classNames from "classnames";
+import "./Foxlympics.css";
 
 class Foxlympics extends Component {
   renderTeamPlacement() {
     const { results, teams } = this.props;
-    const placement = results.get('teamPlacement').sortBy(team => team.get('place'));
-    const text = ['Sigurvegarar', 'Annað sæti', 'Þriðja sæti'];
+    const placement = results
+      .get("teamPlacement")
+      .sortBy((team) => team.get("place"));
+    const text = ["Sigurvegarar", "Annað sæti", "Þriðja sæti", "Fjórða sæti"];
+    const placementOrder = teams.size === 3 ? [1, 0, 2] : [0, 1, 2, 3];
 
     return (
       <div className="Foxlympics__teamPlacement">
-        {[1, 0, 2].map(place => {
+        {placementOrder.map((place) => {
           const team = placement.get(place, Map());
-          const members = teams.get(team.get('team'));
+          const members = teams.get(team.get("team"));
           return !team.isEmpty() ? (
             <div className="Foxlympics__teamPortraitContainer" key={place}>
               <div
                 className={
-                  'Foxlympics__teamPortrait Foxlympics__teamPortrait--' +
-                  team.get('team') +
-                  (team.get('place') === 0 ? ' Foxlympics__teamPortrait--winners' : '')
+                  "Foxlympics__teamPortrait Foxlympics__teamPortrait--" +
+                  team.get("team") +
+                  (team.get("place") === 0
+                    ? " Foxlympics__teamPortrait--winners"
+                    : "")
                 }
               >
                 <div className="Foxlympics__portraitImageContainer">
-                  {members.map(member => (
+                  {members.map((member) => (
                     <div
-                      key={member.get('slug')}
+                      key={member.get("slug")}
                       className={
-                        'Foxlympics__portraitImage Foxlympics__portraitImage--' + member.get('slug')
+                        "Foxlympics__portraitImage Foxlympics__portraitImage--" +
+                        member.get("slug")
                       }
                     />
                   ))}
                 </div>
               </div>
-              <p className="Foxlympics__teamPortraitText">{text[team.get('place')]}</p>
+              <p className="Foxlympics__teamPortraitText">
+                {text[team.get("place")]}
+              </p>
             </div>
           ) : null;
         })}
@@ -47,19 +55,19 @@ class Foxlympics extends Component {
 
     return (
       <div
-        className={classNames('Foxlympics', {
-          'Foxlympics--winter': isWinter,
-          'Foxlympics--summer': isSummer,
+        className={classNames("Foxlympics", {
+          "Foxlympics--winter": isWinter,
+          "Foxlympics--summer": isSummer,
         })}
       >
         {year && <div className="Foxlympics__year">{year}</div>}
         <div className="Foxlympics__content">
-          {!results.get('teamPlacement', List()).isEmpty() ? (
+          {!results.get("teamPlacement", List()).isEmpty() ? (
             <Fragment>
               <div className="Foxlympics__challenges">
-                {results.get('challenges', List()).map((challenge, i) => (
+                {results.get("challenges", List()).map((challenge, i) => (
                   <span key={i}>
-                    {i !== 0 && ' - '}
+                    {i !== 0 && " - "}
                     {challenge}
                   </span>
                 ))}

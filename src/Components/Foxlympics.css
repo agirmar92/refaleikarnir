@@ -58,6 +58,9 @@
 .Foxlympics__teamPortrait--red {
   background-color: #944f69;
 }
+.Foxlympics__teamPortrait--silver {
+  background-color: #C0C0C0;
+}
 .Foxlympics__teamPortrait--winners {
   height: 140px;
   width: 140px;
@@ -80,6 +83,7 @@
   height: 100%;
   background-position: center;
   background-size: cover;
+  /* filter: grayscale(100%); */
 }
 .Foxlympics__portraitImage--aegir {
   background-image: url('../images/aegir.jpg');
@@ -98,6 +102,12 @@
 }
 .Foxlympics__portraitImage--maggi {
   background-image: url('../images/maggi.jpg');
+}
+.Foxlympics__portraitImage--jonni {
+  background-image: url('../images/jonni.jpg');
+}
+.Foxlympics__portraitImage--krissi {
+  background-image: url('../images/krissi.jpg');
 }
 
 @media only screen and (max-width: 500px) {
