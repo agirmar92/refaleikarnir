@@ -1,4 +1,6 @@
 .App {
+  height: 100%;
+  width: 100vw;
   scroll-snap-type: x mandatory;
   display: flex;
   flex-direction: row;

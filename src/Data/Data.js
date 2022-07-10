@@ -341,23 +341,23 @@ const results = fromJS([
       teamPlacement: [],
     },
     summer: {
-      challenges: ['Axarkast', 'Fótboltagolf', 'Minute to Win it'],
+      challenges: ['Padel', 'Fall Guys', 'Minute to Win it'],
       teamPlacement: [
         {
           team: TEAMS.WHITE,
-          place: -1,
+          place: 2,
         },
         {
           team: TEAMS.BLACK,
-          place: -1,
+          place: 0,
         },
         {
           team: TEAMS.RED,
-          place: -1,
+          place: 3,
         },
         {
           team: TEAMS.SILVER,
-          place: -1,
+          place: 1,
         },
       ],
     },

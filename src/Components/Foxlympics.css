@@ -70,6 +70,7 @@
 }
 .Foxlympics__teamPortraitText {
   font-size: 16px;
+  white-space: nowrap;
 }
 .Foxlympics__portraitImageContainer {
   display: flex;

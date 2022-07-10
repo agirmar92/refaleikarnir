@@ -6,6 +6,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root {
+  position: absolute;
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 :root {
   --winter-color: #264653;
   --summer-color: #ecd098;
