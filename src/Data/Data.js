@@ -51,7 +51,7 @@ const results = fromJS([
       [TEAMS.RED]: [PLAYERS.AEGIR, PLAYERS.ARNAR],
     },
     winter: {
-      challenges: ["Borðtennis", "Keila", "FIFA"],
+      challenges: ["Borðtennis 🏓", "Keila 🎳", "FIFA ⚽"],
       teamPlacement: [
         {
           team: TEAMS.WHITE,
@@ -68,7 +68,7 @@ const results = fromJS([
       ],
     },
     summer: {
-      challenges: ["Bogfimi", "Lazer tag", "Píla"],
+      challenges: ["Bogfimi 🏹", "Lazer tag 🟩", "Píla 🎯"],
       teamPlacement: [
         {
           team: TEAMS.WHITE,
@@ -93,7 +93,7 @@ const results = fromJS([
       [TEAMS.RED]: [PLAYERS.GAUI, PLAYERS.AEGIR],
     },
     winter: {
-      challenges: ["Badminton", "Pool", "FIFA"],
+      challenges: ["Badminton 🏸", "Pool 🎱", "FIFA ⚽"],
       teamPlacement: [
         {
           team: TEAMS.WHITE,
@@ -110,7 +110,7 @@ const results = fromJS([
       ],
     },
     summer: {
-      challenges: ["Körfubolti", "Keila", "Minute to Win it"],
+      challenges: ["Körfubolti 🏀", "Keila 🎳", "Minute to Win it ⏲️"],
       teamPlacement: [
         {
           team: TEAMS.WHITE,
@@ -135,7 +135,7 @@ const results = fromJS([
       [TEAMS.RED]: [PLAYERS.VIKINGUR, PLAYERS.ARNAR],
     },
     winter: {
-      challenges: ["Skotfimi", "Borðtennis", "Black Ops"],
+      challenges: ["Skotfimi 🔫", "Borðtennis 🏓", "Black Ops 🎮"],
       teamPlacement: [
         {
           team: TEAMS.WHITE,
@@ -152,7 +152,7 @@ const results = fromJS([
       ],
     },
     summer: {
-      challenges: ["Frolf", "Kubbur", "Capture the Flag"],
+      challenges: ["Folf 🥏", "Kubbur 👑", "Capture the Flag 🏴"],
       teamPlacement: [
         {
           team: TEAMS.WHITE,
@@ -177,7 +177,7 @@ const results = fromJS([
       [TEAMS.RED]: [PLAYERS.DANNI, PLAYERS.MAGGI],
     },
     winter: {
-      challenges: ["Go Kart", "Píla", "Mario Kart"],
+      challenges: ["Go Kart 🏁", "Píla 🎯", "Mario Kart 🍄"],
       teamPlacement: [
         {
           team: TEAMS.WHITE,
@@ -194,7 +194,7 @@ const results = fromJS([
       ],
     },
     summer: {
-      challenges: ["Strandblak", "Pool", "Rocket League"],
+      challenges: ["Strandblak 🏐", "Pool 🎱", "Rocket League 🏎️"],
       teamPlacement: [
         {
           team: TEAMS.WHITE,
@@ -218,7 +218,7 @@ const results = fromJS([
       [TEAMS.BLACK]: [PLAYERS.AEGIR, PLAYERS.ARNAR, PLAYERS.VIKINGUR],
     },
     winter: {
-      challenges: ["Fótbolti", "Keila", "Black Ops"],
+      challenges: ["Fótbolti ⚽", "Keila 🎳", "Black Ops 🎮"],
       teamPlacement: [
         {
           team: TEAMS.WHITE,
@@ -231,7 +231,7 @@ const results = fromJS([
       ],
     },
     summer: {
-      challenges: ["Skotfimi", "Pútt", "Beer Pong"],
+      challenges: ["Skotfimi 🔫", "Pútt ⛳", "Beer Pong 🍻"],
       teamPlacement: [
         {
           team: TEAMS.WHITE,
@@ -252,7 +252,7 @@ const results = fromJS([
       [TEAMS.RED]: [PLAYERS.ARNAR, PLAYERS.VIKINGUR],
     },
     winter: {
-      challenges: ["Foosball", "Dota 2", "Overwatch"],
+      challenges: ["Foosball ⚽", "Dota 2 🎮", "Overwatch 🔫"],
       teamPlacement: [
         {
           team: TEAMS.WHITE,
@@ -269,7 +269,7 @@ const results = fromJS([
       ],
     },
     summer: {
-      challenges: ["Tennis", "Golfhermir", "Píla"],
+      challenges: ["Tennis 🎾", "Golfhermir 🏌️‍♂️", "Píla 🎯"],
       teamPlacement: [
         {
           team: TEAMS.WHITE,
@@ -294,7 +294,7 @@ const results = fromJS([
       [TEAMS.RED]: [PLAYERS.ARNAR, PLAYERS.VIKINGUR],
     },
     winter: {
-      challenges: ["Keila", "Borðtennis", "Minute to Win it"],
+      challenges: ["Keila 🎳", "Borðtennis 🏓", "Minute to Win it ⏲️"],
       teamPlacement: [
         {
           team: TEAMS.WHITE,
@@ -311,7 +311,7 @@ const results = fromJS([
       ],
     },
     summer: {
-      challenges: ["Folf", "Körfubolti (trick shots)", "Kubbur"],
+      challenges: ["Folf 🥏", "Körfubolti (trick shots) 🏀", "Kubbur 👑"],
       teamPlacement: [
         {
           team: TEAMS.WHITE,
@@ -341,7 +341,7 @@ const results = fromJS([
       teamPlacement: [],
     },
     summer: {
-      challenges: ['Padel', 'Fall Guys', 'Minute to Win it'],
+      challenges: ['Padel 🎾', 'Fall Guys 🎮', 'Minute to Win it ⏲️'],
       teamPlacement: [
         {
           team: TEAMS.WHITE,

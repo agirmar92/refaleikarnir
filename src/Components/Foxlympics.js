@@ -74,7 +74,7 @@ class Foxlympics extends Component {
   }
 
   render() {
-    const { isWinter, isSummer, results, year } = this.props;
+    const { isWinter, isSummer, results } = this.props;
 
     return (
       <div
@@ -83,14 +83,13 @@ class Foxlympics extends Component {
           "Foxlympics--summer": isSummer,
         })}
       >
-        {year && <div className="Foxlympics__year">{year}</div>}
         <div className="Foxlympics__content">
           {!results.get("teamPlacement", List()).isEmpty() ? (
             <Fragment>
               <div className="Foxlympics__challenges">
                 {results.get("challenges", List()).map((challenge, i) => (
-                  <span key={i}>
-                    {i !== 0 && " - "}
+                  <span className="Foxlympics__challenge" key={i}>
+                    {/* {i !== 0 && " - "} */}
                     {challenge}
                   </span>
                 ))}
