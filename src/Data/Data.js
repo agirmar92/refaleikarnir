@@ -379,7 +379,7 @@ const results = fromJS([
       teamPlacement: [],
     },
     summer: {
-      challenges: ["Padel 🎾", "Fall Guys 🎮", "Minute to Win it ⏲️"],
+      challenges: ["GT 🏎️", "Black Ops 🎮", "Boccia/Boule 👴🏻"],
       teamPlacement: [
         {
           team: TEAMS.WHITE,
