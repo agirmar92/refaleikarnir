@@ -9264,10 +9264,10 @@ schema-utils@^1.0.0:
     ajv-errors "^1.0.0"
     ajv-keywords "^3.1.0"
 
-scroll-snap@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.npmjs.org/scroll-snap/-/scroll-snap-1.0.6.tgz"
-  integrity sha512-9QPdQFwZ31A7wQBDJxXblvK0+pdYyNh7tn4wVOsS5bbqhj/ZBFFlgHokAxbogiXcTdUIdq2UBovXf/3gylcKYw==
+scroll-snap@^4.0.0:
+  version "4.0.3"
+  resolved "https://registry.npmjs.org/scroll-snap/-/scroll-snap-4.0.3.tgz"
+  integrity sha512-7am2JXqY/0jHN9+3b2zhZtm55NmzEQhZTXZBIdC/fVb6aVN5nonjbRpf+OghU9LhguJB+rq5ty9SmQcYzMvMxw==
 
 select-hose@^2.0.0:
   version "2.0.0"
