@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 import { List, Map } from "immutable";
 import classNames from "classnames";
-import ReactTooltip from "react-tooltip";
+import { Tooltip as ReactTooltip } from "react-tooltip";
 import { TEAMS } from "../Data/Data";
 import "./Foxlympics.css";
 
@@ -15,11 +15,11 @@ class Foxlympics extends Component {
     };
     const color = team.get("team");
     const membersNames = members
-      .map((member) => `<p>${member.get("name")}</p>`)
+      .map((member) => `<p class="text-base">${member.get("name")}</p>`)
       .join("");
     return `
       <div>
-        <h3>${actualTeamNames[color]}</h3>
+        <h3 class="text-md">${actualTeamNames[color]}</h3>
         ${membersNames}
       </div>
     `;
@@ -35,7 +35,7 @@ class Foxlympics extends Component {
 
     return (
       <div className="Foxlympics__teamPlacement">
-        <ReactTooltip effect="solid" html={true} />
+        <ReactTooltip id="teamMembersTooltip" />
         {placementOrder.map((place) => {
           const team = placement.get(place, Map());
           const members = teams.get(team.get("team"));
@@ -49,7 +49,9 @@ class Foxlympics extends Component {
                     ? " Foxlympics__teamPortrait--winners"
                     : "")
                 }
-                data-tip={this.renderTeamTooltip(team, members)}
+                data-tooltip-id="teamMembersTooltip"
+                data-tooltip-html={this.renderTeamTooltip(team, members)}
+                data-tooltip-place="top"
               >
                 <div className="Foxlympics__portraitImageContainer">
                   {members.map((member) => (
@@ -89,7 +91,6 @@ class Foxlympics extends Component {
               <div className="Foxlympics__challenges">
                 {results.get("challenges", List()).map((challenge, i) => (
                   <span className="Foxlympics__challenge" key={i}>
-                    {/* {i !== 0 && " - "} */}
                     {challenge}
                   </span>
                 ))}
