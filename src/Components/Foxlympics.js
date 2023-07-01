@@ -19,7 +19,7 @@ class Foxlympics extends Component {
       .join("");
     return `
       <div>
-        <h3 class="text-md">${actualTeamNames[color]}</h3>
+        <h3 class="text-base underline">${actualTeamNames[color]}</h3>
         ${membersNames}
       </div>
     `;
