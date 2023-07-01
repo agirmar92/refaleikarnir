@@ -9,6 +9,10 @@ const PLAYERS = {
     name: "Arnar",
     slug: "arnar",
   },
+  ATLI: {
+    name: "Atli",
+    slug: "atli",
+  },
   DANNI: {
     name: "Danni",
     slug: "danni",
@@ -334,14 +338,14 @@ const results = fromJS([
       [TEAMS.WHITE]: [PLAYERS.DANNI, PLAYERS.VIKINGUR],
       [TEAMS.BLACK]: [PLAYERS.AEGIR, PLAYERS.MAGGI],
       [TEAMS.RED]: [PLAYERS.ARNAR, PLAYERS.GAUI],
-      [TEAMS.SILVER]: [PLAYERS.KRISSI, PLAYERS.JONNI]
+      [TEAMS.SILVER]: [PLAYERS.KRISSI, PLAYERS.JONNI],
     },
     winter: {
       challenges: [],
       teamPlacement: [],
     },
     summer: {
-      challenges: ['Padel 🎾', 'Fall Guys 🎮', 'Minute to Win it ⏲️'],
+      challenges: ["Padel 🎾", "Fall Guys 🎮", "Minute to Win it ⏲️"],
       teamPlacement: [
         {
           team: TEAMS.WHITE,
@@ -354,6 +358,40 @@ const results = fromJS([
         {
           team: TEAMS.RED,
           place: 3,
+        },
+        {
+          team: TEAMS.SILVER,
+          place: 1,
+        },
+      ],
+    },
+  },
+  {
+    year: "2023",
+    teams: {
+      [TEAMS.WHITE]: [PLAYERS.GAUI, PLAYERS.KRISSI],
+      [TEAMS.BLACK]: [PLAYERS.VIKINGUR, PLAYERS.ARNAR],
+      [TEAMS.RED]: [PLAYERS.DANNI, PLAYERS.MAGGI],
+      [TEAMS.SILVER]: [PLAYERS.AEGIR, PLAYERS.ATLI],
+    },
+    winter: {
+      challenges: [],
+      teamPlacement: [],
+    },
+    summer: {
+      challenges: ["Padel 🎾", "Fall Guys 🎮", "Minute to Win it ⏲️"],
+      teamPlacement: [
+        {
+          team: TEAMS.WHITE,
+          place: 3,
+        },
+        {
+          team: TEAMS.BLACK,
+          place: 0,
+        },
+        {
+          team: TEAMS.RED,
+          place: 2,
         },
         {
           team: TEAMS.SILVER,

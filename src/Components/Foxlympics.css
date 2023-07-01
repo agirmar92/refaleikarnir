@@ -93,6 +93,9 @@
 .Foxlympics__portraitImage--aegir {
   background-image: url("../images/aegir.jpg");
 }
+.Foxlympics__portraitImage--atli {
+  background-image: url("../images/atli.jpg");
+}
 .Foxlympics__portraitImage--danni {
   background-image: url("../images/danni.jpg");
 }
