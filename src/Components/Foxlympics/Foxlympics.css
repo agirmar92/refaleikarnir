@@ -91,31 +91,31 @@
   /* filter: grayscale(100%); */
 }
 .Foxlympics__portraitImage--aegir {
-  background-image: url("../images/aegir.jpg");
+  background-image: url("../../images/aegir.jpg");
 }
 .Foxlympics__portraitImage--atli {
-  background-image: url("../images/atli.jpg");
+  background-image: url("../../images/atli.jpg");
 }
 .Foxlympics__portraitImage--danni {
-  background-image: url("../images/danni.jpg");
+  background-image: url("../../images/danni.jpg");
 }
 .Foxlympics__portraitImage--gaui {
-  background-image: url("../images/gaui.jpg");
+  background-image: url("../../images/gaui.jpg");
 }
 .Foxlympics__portraitImage--arnar {
-  background-image: url("../images/arnar.jpg");
+  background-image: url("../../images/arnar.jpg");
 }
 .Foxlympics__portraitImage--vikingur {
-  background-image: url("../images/vikingur.jpg");
+  background-image: url("../../images/vikingur.jpg");
 }
 .Foxlympics__portraitImage--maggi {
-  background-image: url("../images/maggi.jpg");
+  background-image: url("../../images/maggi.jpg");
 }
 .Foxlympics__portraitImage--jonni {
-  background-image: url("../images/jonni.jpg");
+  background-image: url("../../images/jonni.jpg");
 }
 .Foxlympics__portraitImage--krissi {
-  background-image: url("../images/krissi.jpg");
+  background-image: url("../../images/krissi.jpg");
 }
 
 @media only screen and (max-width: 500px) {
