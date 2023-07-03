@@ -1,7 +1,7 @@
 import React from "react";
+import classNames from "classnames";
 import Foxlympics from "./Components/Foxlympics";
 import results from "./Data/Data";
-import classNames from "classnames";
 
 const beforeClassNames =
   "before:content-['Vetur'] before:right-[calc(50%+60px)] before:bottom-4 before:absolute before:text-[22px] before:font-gantari";

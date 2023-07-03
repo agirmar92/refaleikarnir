@@ -18,9 +18,3 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
-
-:root {
-  --winter-color: #264653;
-  --summer-color: #E76F51;
-  --red-team-color: #d62828;
-}
