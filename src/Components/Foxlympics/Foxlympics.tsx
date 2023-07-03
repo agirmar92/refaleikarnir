@@ -74,34 +74,30 @@ const renderTeamPlacement = (results: any, teams: any) => {
 };
 
 interface FoxlympicsProps {
-  isWinter?: boolean;
-  isSummer?: boolean;
+  season: "summer" | "winter";
   results: any;
   teams: any;
 }
 
-const Foxlympics = ({
-  isWinter,
-  isSummer,
-  results,
-  teams,
-}: FoxlympicsProps) => {
+const Foxlympics = ({ season, results, teams }: FoxlympicsProps) => {
   return (
     <div
       className={classNames("Foxlympics", {
-        "Foxlympics--winter": isWinter,
-        "Foxlympics--summer": isSummer,
+        "Foxlympics--winter": season === "winter",
+        "Foxlympics--summer": season === "summer",
       })}
     >
       <div className="Foxlympics__content">
         {!results.get("teamPlacement", List()).isEmpty() ? (
           <Fragment>
             <div className="Foxlympics__challenges">
-              {results.get("challenges", List()).map((challenge: any, i: number) => (
-                <span className="Foxlympics__challenge" key={i}>
-                  {challenge}
-                </span>
-              ))}
+              {results
+                .get("challenges", List())
+                .map((challenge: any, i: number) => (
+                  <span className="Foxlympics__challenge" key={i}>
+                    {challenge}
+                  </span>
+                ))}
             </div>
             {renderTeamPlacement(results, teams)}
           </Fragment>

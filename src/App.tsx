@@ -27,12 +27,12 @@ const App = () => {
               {yearData.get("year")}
             </div>
             <Foxlympics
-              isWinter
+              season="winter"
               teams={yearData.get("teams")}
               results={yearData.get("winter")}
             />
             <Foxlympics
-              isSummer
+              season="summer"
               teams={yearData.get("teams")}
               results={yearData.get("summer")}
             />
