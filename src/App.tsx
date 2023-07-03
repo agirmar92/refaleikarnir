@@ -1,12 +1,7 @@
 import React from "react";
-import classNames from "classnames";
 import Foxlympics from "./Components/Foxlympics";
 import { results } from "./Data/results";
-
-const beforeClassNames =
-  "before:content-['Vetur'] before:right-[calc(50%+60px)] before:bottom-4 before:absolute before:text-[22px] before:font-gantari";
-const afterClassNames =
-  "after:content-['Sumar'] after:left-[calc(50%+60px)] after:top-4 after:absolute after:text-[22px] after:font-gantari";
+import YearDivider from "./Components/YearDivider";
 
 const App = () => {
   return (
@@ -20,15 +15,7 @@ const App = () => {
               key={iYear}
               className="relative snap-start h-screen min-w-full flex flex-col items-center justify-center text-xl text-fox-white bg-winter"
             >
-              <div
-                className={classNames(
-                  "absolute w-screen text-[42px] leading-[42px] text-center z-10 text-white text-shadow font-tilliana",
-                  beforeClassNames,
-                  afterClassNames
-                )}
-              >
-                {yearData.year}
-              </div>
+              <YearDivider year={yearData.year} />
               <Foxlympics
                 season="winter"
                 teams={yearData.teams}
