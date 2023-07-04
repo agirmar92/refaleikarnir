@@ -1,26 +1,27 @@
-import { PLAYERS, TEAMS } from "../constants";
+import { players } from "../constants";
+import { Result } from "../types";
 
-export const results = [
+export const results: Result[] = [
   {
     year: "2014",
     teams: {
-      [TEAMS.WHITE]: [PLAYERS.DANNI, PLAYERS.MAGGI],
-      [TEAMS.BLACK]: [PLAYERS.GAUI, PLAYERS.VIKINGUR],
-      [TEAMS.RED]: [PLAYERS.AEGIR, PLAYERS.ARNAR],
+      WHITE: [players.DANNI, players.MAGGI],
+      BLACK: [players.GAUI, players.VIKINGUR],
+      RED: [players.AEGIR, players.ARNAR],
     },
     winter: {
       challenges: ["Borðtennis 🏓", "Keila 🎳", "FIFA ⚽"],
       teamPlacement: [
         {
-          team: TEAMS.WHITE,
+          team: "WHITE",
           place: 2,
         },
         {
-          team: TEAMS.BLACK,
+          team: "BLACK",
           place: 0,
         },
         {
-          team: TEAMS.RED,
+          team: "RED",
           place: 1,
         },
       ],
@@ -29,15 +30,15 @@ export const results = [
       challenges: ["Bogfimi 🏹", "Lazer tag 🟩", "Píla 🎯"],
       teamPlacement: [
         {
-          team: TEAMS.WHITE,
+          team: "WHITE",
           place: 0,
         },
         {
-          team: TEAMS.BLACK,
+          team: "BLACK",
           place: 2,
         },
         {
-          team: TEAMS.RED,
+          team: "RED",
           place: 1,
         },
       ],
@@ -46,23 +47,23 @@ export const results = [
   {
     year: "2015",
     teams: {
-      [TEAMS.WHITE]: [PLAYERS.DANNI, PLAYERS.MAGGI],
-      [TEAMS.BLACK]: [PLAYERS.VIKINGUR, PLAYERS.ARNAR],
-      [TEAMS.RED]: [PLAYERS.GAUI, PLAYERS.AEGIR],
+      WHITE: [players.DANNI, players.MAGGI],
+      BLACK: [players.VIKINGUR, players.ARNAR],
+      RED: [players.GAUI, players.AEGIR],
     },
     winter: {
       challenges: ["Badminton 🏸", "Pool 🎱", "FIFA ⚽"],
       teamPlacement: [
         {
-          team: TEAMS.WHITE,
+          team: "WHITE",
           place: 0,
         },
         {
-          team: TEAMS.BLACK,
+          team: "BLACK",
           place: 0,
         },
         {
-          team: TEAMS.RED,
+          team: "RED",
           place: 0,
         },
       ],
@@ -71,15 +72,15 @@ export const results = [
       challenges: ["Körfubolti 🏀", "Keila 🎳", "Minute to Win it ⏲️"],
       teamPlacement: [
         {
-          team: TEAMS.WHITE,
+          team: "WHITE",
           place: 2,
         },
         {
-          team: TEAMS.BLACK,
+          team: "BLACK",
           place: 1,
         },
         {
-          team: TEAMS.RED,
+          team: "RED",
           place: 0,
         },
       ],
@@ -88,23 +89,23 @@ export const results = [
   {
     year: "2016",
     teams: {
-      [TEAMS.WHITE]: [PLAYERS.DANNI, PLAYERS.GAUI],
-      [TEAMS.BLACK]: [PLAYERS.MAGGI, PLAYERS.AEGIR],
-      [TEAMS.RED]: [PLAYERS.VIKINGUR, PLAYERS.ARNAR],
+      WHITE: [players.DANNI, players.GAUI],
+      BLACK: [players.MAGGI, players.AEGIR],
+      RED: [players.VIKINGUR, players.ARNAR],
     },
     winter: {
       challenges: ["Skotfimi 🔫", "Borðtennis 🏓", "Black Ops 🎮"],
       teamPlacement: [
         {
-          team: TEAMS.WHITE,
+          team: "WHITE",
           place: 2,
         },
         {
-          team: TEAMS.BLACK,
+          team: "BLACK",
           place: 1,
         },
         {
-          team: TEAMS.RED,
+          team: "RED",
           place: 0,
         },
       ],
@@ -113,15 +114,15 @@ export const results = [
       challenges: ["Folf 🥏", "Kubbur 👑", "Capture the Flag 🏴"],
       teamPlacement: [
         {
-          team: TEAMS.WHITE,
+          team: "WHITE",
           place: 2,
         },
         {
-          team: TEAMS.BLACK,
+          team: "BLACK",
           place: 0,
         },
         {
-          team: TEAMS.RED,
+          team: "RED",
           place: 1,
         },
       ],
@@ -130,23 +131,23 @@ export const results = [
   {
     year: "2017",
     teams: {
-      [TEAMS.WHITE]: [PLAYERS.AEGIR, PLAYERS.ARNAR],
-      [TEAMS.BLACK]: [PLAYERS.VIKINGUR, PLAYERS.GAUI],
-      [TEAMS.RED]: [PLAYERS.DANNI, PLAYERS.MAGGI],
+      WHITE: [players.AEGIR, players.ARNAR],
+      BLACK: [players.VIKINGUR, players.GAUI],
+      RED: [players.DANNI, players.MAGGI],
     },
     winter: {
       challenges: ["Go Kart 🏁", "Píla 🎯", "Mario Kart 🍄"],
       teamPlacement: [
         {
-          team: TEAMS.WHITE,
+          team: "WHITE",
           place: 2,
         },
         {
-          team: TEAMS.BLACK,
+          team: "BLACK",
           place: 0,
         },
         {
-          team: TEAMS.RED,
+          team: "RED",
           place: 1,
         },
       ],
@@ -155,15 +156,15 @@ export const results = [
       challenges: ["Strandblak 🏐", "Pool 🎱", "Rocket League 🏎️"],
       teamPlacement: [
         {
-          team: TEAMS.WHITE,
+          team: "WHITE",
           place: 0,
         },
         {
-          team: TEAMS.BLACK,
+          team: "BLACK",
           place: 0,
         },
         {
-          team: TEAMS.RED,
+          team: "RED",
           place: 2,
         },
       ],
@@ -172,18 +173,18 @@ export const results = [
   {
     year: "2018",
     teams: {
-      [TEAMS.WHITE]: [PLAYERS.MAGGI, PLAYERS.GAUI, PLAYERS.DANNI],
-      [TEAMS.BLACK]: [PLAYERS.AEGIR, PLAYERS.ARNAR, PLAYERS.VIKINGUR],
+      WHITE: [players.MAGGI, players.GAUI, players.DANNI],
+      BLACK: [players.AEGIR, players.ARNAR, players.VIKINGUR],
     },
     winter: {
       challenges: ["Fótbolti ⚽", "Keila 🎳", "Black Ops 🎮"],
       teamPlacement: [
         {
-          team: TEAMS.WHITE,
+          team: "WHITE",
           place: 0,
         },
         {
-          team: TEAMS.BLACK,
+          team: "BLACK",
           place: 1,
         },
       ],
@@ -192,11 +193,11 @@ export const results = [
       challenges: ["Skotfimi 🔫", "Pútt ⛳", "Beer Pong 🍻"],
       teamPlacement: [
         {
-          team: TEAMS.WHITE,
+          team: "WHITE",
           place: 1,
         },
         {
-          team: TEAMS.BLACK,
+          team: "BLACK",
           place: 0,
         },
       ],
@@ -205,23 +206,23 @@ export const results = [
   {
     year: "2019",
     teams: {
-      [TEAMS.WHITE]: [PLAYERS.DANNI, PLAYERS.MAGGI],
-      [TEAMS.BLACK]: [PLAYERS.AEGIR, PLAYERS.GAUI],
-      [TEAMS.RED]: [PLAYERS.ARNAR, PLAYERS.VIKINGUR],
+      WHITE: [players.DANNI, players.MAGGI],
+      BLACK: [players.AEGIR, players.GAUI],
+      RED: [players.ARNAR, players.VIKINGUR],
     },
     winter: {
       challenges: ["Foosball ⚽", "Dota 2 🎮", "Overwatch 🔫"],
       teamPlacement: [
         {
-          team: TEAMS.WHITE,
+          team: "WHITE",
           place: 2,
         },
         {
-          team: TEAMS.BLACK,
+          team: "BLACK",
           place: 0,
         },
         {
-          team: TEAMS.RED,
+          team: "RED",
           place: 1,
         },
       ],
@@ -230,15 +231,15 @@ export const results = [
       challenges: ["Tennis 🎾", "Golfhermir 🏌️‍♂️", "Píla 🎯"],
       teamPlacement: [
         {
-          team: TEAMS.WHITE,
+          team: "WHITE",
           place: 0,
         },
         {
-          team: TEAMS.BLACK,
+          team: "BLACK",
           place: 2,
         },
         {
-          team: TEAMS.RED,
+          team: "RED",
           place: 0,
         },
       ],
@@ -247,23 +248,23 @@ export const results = [
   {
     year: "2020",
     teams: {
-      [TEAMS.WHITE]: [PLAYERS.DANNI, PLAYERS.AEGIR],
-      [TEAMS.BLACK]: [PLAYERS.GAUI, PLAYERS.MAGGI],
-      [TEAMS.RED]: [PLAYERS.ARNAR, PLAYERS.VIKINGUR],
+      WHITE: [players.DANNI, players.AEGIR],
+      BLACK: [players.GAUI, players.MAGGI],
+      RED: [players.ARNAR, players.VIKINGUR],
     },
     winter: {
       challenges: ["Keila 🎳", "Borðtennis 🏓", "Minute to Win it ⏲️"],
       teamPlacement: [
         {
-          team: TEAMS.WHITE,
+          team: "WHITE",
           place: 2,
         },
         {
-          team: TEAMS.BLACK,
+          team: "BLACK",
           place: 0,
         },
         {
-          team: TEAMS.RED,
+          team: "RED",
           place: 1,
         },
       ],
@@ -272,15 +273,15 @@ export const results = [
       challenges: ["Folf 🥏", "Körfubolti (trick shots) 🏀", "Kubbur 👑"],
       teamPlacement: [
         {
-          team: TEAMS.WHITE,
+          team: "WHITE",
           place: 1,
         },
         {
-          team: TEAMS.BLACK,
+          team: "BLACK",
           place: 0,
         },
         {
-          team: TEAMS.RED,
+          team: "RED",
           place: 2,
         },
       ],
@@ -289,10 +290,10 @@ export const results = [
   {
     year: "2022",
     teams: {
-      [TEAMS.WHITE]: [PLAYERS.DANNI, PLAYERS.VIKINGUR],
-      [TEAMS.BLACK]: [PLAYERS.AEGIR, PLAYERS.MAGGI],
-      [TEAMS.RED]: [PLAYERS.ARNAR, PLAYERS.GAUI],
-      [TEAMS.SILVER]: [PLAYERS.KRISSI, PLAYERS.JONNI],
+      WHITE: [players.DANNI, players.VIKINGUR],
+      BLACK: [players.AEGIR, players.MAGGI],
+      RED: [players.ARNAR, players.GAUI],
+      SILVER: [players.KRISSI, players.JONNI],
     },
     winter: {
       challenges: [],
@@ -302,19 +303,19 @@ export const results = [
       challenges: ["Padel 🎾", "Fall Guys 🎮", "Minute to Win it ⏲️"],
       teamPlacement: [
         {
-          team: TEAMS.WHITE,
+          team: "WHITE",
           place: 2,
         },
         {
-          team: TEAMS.BLACK,
+          team: "BLACK",
           place: 0,
         },
         {
-          team: TEAMS.RED,
+          team: "RED",
           place: 3,
         },
         {
-          team: TEAMS.SILVER,
+          team: "SILVER",
           place: 1,
         },
       ],
@@ -323,10 +324,10 @@ export const results = [
   {
     year: "2023",
     teams: {
-      [TEAMS.WHITE]: [PLAYERS.GAUI, PLAYERS.KRISSI],
-      [TEAMS.BLACK]: [PLAYERS.VIKINGUR, PLAYERS.ARNAR],
-      [TEAMS.RED]: [PLAYERS.DANNI, PLAYERS.MAGGI],
-      [TEAMS.SILVER]: [PLAYERS.AEGIR, PLAYERS.ATLI],
+      WHITE: [players.GAUI, players.KRISSI],
+      BLACK: [players.VIKINGUR, players.ARNAR],
+      RED: [players.DANNI, players.MAGGI],
+      SILVER: [players.AEGIR, players.ATLI],
     },
     winter: {
       challenges: [],
@@ -336,19 +337,19 @@ export const results = [
       challenges: ["GT 🏎️", "Black Ops 🎮", "Boccia/Boule 👴🏻"],
       teamPlacement: [
         {
-          team: TEAMS.WHITE,
+          team: "WHITE",
           place: 3,
         },
         {
-          team: TEAMS.BLACK,
+          team: "BLACK",
           place: 0,
         },
         {
-          team: TEAMS.RED,
+          team: "RED",
           place: 2,
         },
         {
-          team: TEAMS.SILVER,
+          team: "SILVER",
           place: 1,
         },
       ],

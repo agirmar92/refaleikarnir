@@ -1,9 +1,9 @@
 import React, { Fragment } from "react";
 import { Tooltip as ReactTooltip } from "react-tooltip";
 import classNames from "classnames";
-import { TEAMS } from "../../constants";
 import { results } from "../../data/results";
 import type { TeamColor } from "../../types";
+import { actualTeamNames } from "../../constants";
 
 type Results =
   | (typeof results)[number]["winter"]
@@ -17,12 +17,6 @@ const renderTeamTooltip = (
     slug: string;
   }[]
 ) => {
-  const actualTeamNames = {
-    [TEAMS.BLACK]: "Svartir refir",
-    [TEAMS.RED]: "Rauðir refir",
-    [TEAMS.WHITE]: "Hvítir refir",
-    [TEAMS.SILVER]: "Silfur refir",
-  } as const;
   const membersNames = members
     .map((member) => `<p class="text-base">${member.name}</p>`)
     .join("");
@@ -35,7 +29,9 @@ const renderTeamTooltip = (
 };
 
 const renderTeamPlacement = (results: Results, teams: Teams) => {
-  const placement = results.teamPlacement.sort((teamA, teamB) => teamA.place - teamB.place);
+  const placement = results.teamPlacement.sort(
+    (teamA, teamB) => teamA.place - teamB.place
+  );
   const text = ["Sigurvegarar", "Annað sæti", "Þriðja sæti", "Fjórða sæti"];
   const placementOrder =
     Object.keys(teams).length === 3 ? [1, 0, 2] : [0, 1, 2, 3];
@@ -56,10 +52,10 @@ const renderTeamPlacement = (results: Results, teams: Teams) => {
           <div className="m-2.5 flex flex-col justify-between" key={place}>
             <div
               className={classNames("flex rounded-[30%]", {
-                "bg-black": team.team === "black",
-                "bg-white": team.team === "white",
-                "bg-fox-red": team.team === "red",
-                "bg-fox-silver": team.team === "silver",
+                "bg-black": team.team === "BLACK",
+                "bg-white": team.team === "WHITE",
+                "bg-fox-red": team.team === "RED",
+                "bg-fox-silver": team.team === "SILVER",
                 "h-[100px] sm:h-[140px] w-[100px] sm:w-[140px] mt-0":
                   team.place === 0,
                 "h-[80px] sm:h-[100px] w-[80px] sm:w-[100px] mt-2.5 sm:mt-5":

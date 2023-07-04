@@ -1,11 +1,6 @@
-export const TEAMS = {
-  WHITE: "white",
-  BLACK: "black",
-  RED: "red",
-  SILVER: "silver",
-} as const;
+import { PlayerDetails, PlayerName, TeamColor } from "./types";
 
-export const PLAYERS = {
+export const players: Record<PlayerName, PlayerDetails> = {
   AEGIR: {
     name: "Ægir",
     slug: "aegir",
@@ -42,4 +37,11 @@ export const PLAYERS = {
     name: "Krissi",
     slug: "krissi",
   },
+};
+
+export const actualTeamNames: Record<TeamColor, string> = {
+  BLACK: "Svartir refir",
+  RED: "Rauðir refir",
+  WHITE: "Hvítir refir",
+  SILVER: "Silfur refir",
 };
