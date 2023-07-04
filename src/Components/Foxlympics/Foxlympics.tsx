@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { Tooltip as ReactTooltip } from "react-tooltip";
 import classNames from "classnames";
 import { TEAMS } from "../../constants";
-import { results } from "../../Data/results";
+import { results } from "../../data/results";
 import type { TeamColor } from "../../types";
 
 type Results =

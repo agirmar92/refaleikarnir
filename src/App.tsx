@@ -1,7 +1,7 @@
 import React from "react";
-import Foxlympics from "./Components/Foxlympics";
-import { results } from "./Data/results";
-import YearDivider from "./Components/YearDivider";
+import Foxlympics from "./components/Foxlympics";
+import YearDivider from "./components/YearDivider";
+import { results } from "./data/results";
 
 const App = () => {
   return (
