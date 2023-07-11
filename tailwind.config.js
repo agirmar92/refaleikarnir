@@ -2,19 +2,23 @@
 const plugin = require("tailwindcss/plugin");
 
 module.exports = {
-  content: ["./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    // Or if using `src` directory:
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   theme: {
     extend: {
       backgroundImage: {
-        aegir: "url('./images/aegir.jpg')",
-        arnar: "url('./images/arnar.jpg')",
-        atli: "url('./images/atli.jpg')",
-        danni: "url('./images/danni.jpg')",
-        gaui: "url('./images/gaui.jpg')",
-        jonni: "url('./images/jonni.jpg')",
-        krissi: "url('./images/krissi.jpg')",
-        maggi: "url('./images/maggi.jpg')",
-        vikingur: "url('./images/vikingur.jpg')",
+        aegir: "url('../src/images/aegir.jpg')",
+        arnar: "url('../src/images/arnar.jpg')",
+        atli: "url('../src/images/atli.jpg')",
+        danni: "url('../src/images/danni.jpg')",
+        gaui: "url('../src/images/gaui.jpg')",
+        jonni: "url('../src/images/jonni.jpg')",
+        krissi: "url('../src/images/krissi.jpg')",
+        maggi: "url('../src/images/maggi.jpg')",
+        vikingur: "url('../src/images/vikingur.jpg')",
       },
       colors: {
         winter: "#264653",

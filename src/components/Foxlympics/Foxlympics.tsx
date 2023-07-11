@@ -1,9 +1,11 @@
+'use client'
+
 import React, { Fragment } from "react";
 import { Tooltip as ReactTooltip } from "react-tooltip";
 import classNames from "classnames";
-import { results } from "../../data/results";
-import type { TeamColor } from "../../types";
-import { actualTeamNames } from "../../constants";
+import { results } from "@/data/results";
+import type { TeamColor } from "@/types";
+import { actualTeamNames } from "@/constants";
 
 type Results =
   | (typeof results)[number]["winter"]
