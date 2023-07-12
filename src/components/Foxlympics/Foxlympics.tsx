@@ -39,7 +39,7 @@ const renderTeamPlacement = (results: Results, teams: Teams) => {
     Object.keys(teams).length === 3 ? [1, 0, 2] : [0, 1, 2, 3];
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center flex-wrap">
       <ReactTooltip id="teamMembersTooltip" />
       {placementOrder.map((place) => {
         const team = placement[place];
@@ -51,7 +51,7 @@ const renderTeamPlacement = (results: Results, teams: Teams) => {
           return null;
         }
         return (
-          <div className="m-2.5 flex flex-col justify-between" key={place}>
+          <div className="mx-2.5 flex flex-col justify-between" key={place}>
             <div
               className={classNames("flex rounded-[30%]", {
                 "bg-black": team.team === "BLACK",
