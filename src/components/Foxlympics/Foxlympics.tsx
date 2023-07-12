@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React, { Fragment } from "react";
 import { Tooltip as ReactTooltip } from "react-tooltip";
