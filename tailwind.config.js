@@ -23,6 +23,7 @@ module.exports = {
       },
       colors: {
         winter: "#264653",
+        "winter-light": "#8798b5",
         summer: "#E76F51",
         "fox-silver": "#c0c0c0",
         "fox-red": "#d62828",
