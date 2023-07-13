@@ -1,6 +1,8 @@
 const ArrowIcon = ({ orientation }: { orientation: "left" | "right" }) => (
   <svg
-    transform={orientation === "right" ? "rotate(180)" : ""}
+    style={{
+      transform: orientation === "right" ? "rotate(180deg)" : "",
+    }}
     xmlns="http://www.w3.org/2000/svg"
     width={40}
     height={40}
