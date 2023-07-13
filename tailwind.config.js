@@ -19,7 +19,7 @@ module.exports = {
         krissi: "url('../src/images/krissi.jpg')",
         maggi: "url('../src/images/maggi.jpg')",
         vikingur: "url('../src/images/vikingur.jpg')",
-        cover: "url('https://picsum.photos/id/575/600')",
+        coverPhoto: "url('https://picsum.photos/id/575/600')",
       },
       colors: {
         winter: "#264653",
