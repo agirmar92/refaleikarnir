@@ -58,9 +58,13 @@ const Header = () => {
           { "z-[-999]": !isMenuOpen, "backdrop-blur-md": isMenuOpen }
         )}
       >
-        <span className="text-2xl">Menu item #1</span>
-        <span className="text-2xl">Menu item #2</span>
-        <span className="text-2xl">Menu item #3</span>
+        {isMenuOpen && (
+          <>
+            <span className="text-2xl">Menu item #1</span>
+            <span className="text-2xl">Menu item #2</span>
+            <span className="text-2xl">Menu item #3</span>
+          </>
+        )}
       </div>
     </>
   );
