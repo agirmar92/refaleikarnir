@@ -11,7 +11,7 @@ import useScrollY from "@/hooks/useScrollY";
 const Header = () => {
   const scrollY = useScrollY();
   const screenWidth = useScreenWidth();
-  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const handleMenuToggle = () => {
     if (!isMenuOpen) {
       // OPENING the menu overlay
