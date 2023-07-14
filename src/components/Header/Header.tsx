@@ -1,33 +1,15 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Link from "next/link";
+import classNames from "classnames";
 import FoxIcon from "@/icons/FoxIcon";
 import MenuIcon from "@/icons/MenuIcon";
-import classNames from "classnames";
+import useScreenWidth from "@/hooks/useScreenWidth";
+import useScrollY from "@/hooks/useScrollY";
 
 const Header = () => {
-  const [scrollY, setScrollY] = useState(0);
-  const [screenWidth, setScreenWidth] = useState<number | undefined>();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-    const handleResize = () => {
-      setScreenWidth(window.innerWidth);
-    };
-
-    handleScroll();
-    handleResize();
-
-    window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  const scrollY = useScrollY();
+  const screenWidth = useScreenWidth();
 
   return (
     <header

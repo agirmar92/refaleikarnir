@@ -1,30 +1,13 @@
 "use client";
 
+import { ReactNode } from "react";
 import classNames from "classnames";
-import { ReactNode, useEffect, useState } from "react";
+import useScreenWidth from "@/hooks/useScreenWidth";
+import useScrollY from "@/hooks/useScrollY";
 
 const CoverPhoto = ({ children }: { children: ReactNode }) => {
-  const [scrollY, setScrollY] = useState(0);
-  const [screenWidth, setScreenWidth] = useState<number | undefined>();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-    const handleResize = () => {
-      setScreenWidth(window.innerWidth);
-    };
-
-    handleScroll();
-    handleResize();
-
-    window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  const scrollY = useScrollY();
+  const screenWidth = useScreenWidth();
 
   return (
     <div className="w-[100vw] h-[100vw] relative">
