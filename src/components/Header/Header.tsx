@@ -88,9 +88,7 @@ const Header = () => {
             label="Niðurstöður"
             href="/"
             onClickHandler={() => {
-              if (isMenuOpen) {
-                handleMenuToggle();
-              }
+              handleMenuToggle();
             }}
           />
           <HeaderMenuLink label="Önnur tölfræði" />
