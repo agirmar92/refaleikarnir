@@ -5,8 +5,33 @@ import Link from "next/link";
 import classNames from "classnames";
 import FoxIcon from "@/icons/FoxIcon";
 import MenuIcon from "@/icons/MenuIcon";
+import CloseIcon from "@/icons/CloseIcon";
 import useScreenWidth from "@/hooks/useScreenWidth";
 import useScrollY from "@/hooks/useScrollY";
+
+const HeaderMenuLink = ({
+  label,
+  href,
+  onClickHandler,
+}: {
+  label: string;
+  href?: string;
+  onClickHandler?: () => void;
+}) => {
+  if (href) {
+    return (
+      <Link href={href} onClick={onClickHandler} className="text-2xl underline">
+        {label}
+      </Link>
+    );
+  } else {
+    return (
+      <span className="text-2xl underline text-stone-300 relative after:content-['Í_vinnslu'] after:absolute after:top-3 after:-right-1/4 after:-rotate-12 after:text-base after:bg-summer after:p-2 after:rounded-md after:text-white">
+        {label}
+      </span>
+    );
+  }
+};
 
 const Header = () => {
   const scrollY = useScrollY();
@@ -49,22 +74,27 @@ const Header = () => {
           <h1 className="small-caps text-xl font-medium">Refaleikarnir</h1>
         </Link>
         <button onClick={() => handleMenuToggle()}>
-          <MenuIcon />
+          {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
         </button>
       </header>
       <div
         className={classNames(
-          "fixed w-full h-full transition-[backdrop-filter] z-[998] flex flex-col p-3 justify-center space-y-4 text-center",
-          { "z-[-999]": !isMenuOpen, "backdrop-blur-md": isMenuOpen }
+          "fixed left-0 transition-[top] w-full h-full z-[998] bg-winter p-3 flex flex-col justify-center flex-wrap content-center",
+          isMenuOpen ? "top-0" : "-top-full"
         )}
       >
-        {isMenuOpen && (
-          <>
-            <span className="text-2xl">Menu item #1</span>
-            <span className="text-2xl">Menu item #2</span>
-            <span className="text-2xl">Menu item #3</span>
-          </>
-        )}
+        <div className="flex flex-col space-y-4 text-center w-fit">
+          <HeaderMenuLink
+            label="Niðurstöður"
+            href="/"
+            onClickHandler={() => {
+              if (isMenuOpen) {
+                handleMenuToggle();
+              }
+            }}
+          />
+          <HeaderMenuLink label="Önnur tölfræði" />
+        </div>
       </div>
     </>
   );
