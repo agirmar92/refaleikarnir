@@ -79,7 +79,7 @@ const Header = () => {
       </header>
       <div
         className={classNames(
-          "fixed left-0 transition-[top] w-full h-full z-[998] bg-winter p-3 flex flex-col justify-center flex-wrap content-center",
+          "fixed left-0 transition-[top] ease-in-out duration-300 w-full h-full z-[998] bg-winter p-3 flex flex-col justify-center flex-wrap content-center",
           isMenuOpen ? "top-0" : "-top-full"
         )}
       >
