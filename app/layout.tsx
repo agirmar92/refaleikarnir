@@ -1,5 +1,6 @@
-import Header from "@/components/Header";
 import "./global.css";
+import Header from "@/components/Header";
+import GithubIcon from "@/icons/GithubIcon";
 
 export const metadata = {
   title: "Refaleikarnir",
@@ -35,6 +36,19 @@ export default function RootLayout({
       <body className="bg-winter text-white">
         <Header />
         {children}
+        <footer>
+          <a
+            target="_blank"
+            href="https://github.com/agirmar92/refaleikarnir"
+            rel="noopener noreferrer"
+            className="flex justify-center py-3 text-stone-300"
+          >
+            agirmar92/refaleikarnir
+            <span className="ml-2">
+              <GithubIcon />
+            </span>
+          </a>
+        </footer>
       </body>
     </html>
   );

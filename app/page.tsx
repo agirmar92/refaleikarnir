@@ -1,9 +1,7 @@
-import Link from "next/link";
 import CoverPhoto from "@/components/CoverPhoto";
 import Tile from "@/components/Tile";
 import TileTitle from "@/components/TileTitle";
 import YearSelector from "@/components/YearSelector";
-import GithubIcon from "@/icons/GithubIcon";
 
 const RefaleikarnirFrontPage = () => (
   <>
@@ -28,19 +26,6 @@ const RefaleikarnirFrontPage = () => (
       <Tile>
         <p className="text-center">GT - Black Ops - Boule</p>
       </Tile>
-
-      {/* Footer */}
-      <a
-        target="_blank"
-        href="https://github.com/agirmar92/refaleikarnir"
-        rel="noopener noreferrer"
-        className="flex justify-center pt-3 text-stone-300"
-      >
-        agirmar92/refaleikarnir
-        <span className="ml-2">
-          <GithubIcon />
-        </span>
-      </a>
     </div>
   </>
 );
