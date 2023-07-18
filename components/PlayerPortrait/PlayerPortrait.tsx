@@ -1,26 +1,25 @@
-import { players } from "@/constants";
-import { PlayerName } from "@/types";
+import { PlayerDetails, PlayerSlug } from "@/types";
 
-const bgClassNameByPlayerName: Record<PlayerName, string> = {
-  AEGIR: "bg-aegir",
-  ARNAR: "bg-arnar",
-  GAUI: "bg-gaui",
-  DANNI: "bg-danni",
-  VIKINGUR: "bg-vikingur",
-  MAGGI: "bg-maggi",
-  KRISSI: "bg-krissi",
-  ATLI: "bg-atli",
-  JONNI: "bg-jonni",
+const bgClassNameByPlayerSlug: Record<PlayerSlug, string> = {
+  aegir: "bg-aegir",
+  arnar: "bg-arnar",
+  gaui: "bg-gaui",
+  danni: "bg-danni",
+  vikingur: "bg-vikingur",
+  maggi: "bg-maggi",
+  krissi: "bg-krissi",
+  atli: "bg-atli",
+  jonni: "bg-jonni",
 };
 
-const PlayerPortrait = ({ player }: { player: PlayerName }) => {
-  const playerDetails = players[player];
-
+const PlayerPortrait = ({ player }: { player: PlayerDetails }) => {
   return (
     <div className="flex justify-end items-center space-x-2">
-      <p>{playerDetails.name}</p>
+      <p>{player.name}</p>
       <div
-        className={`w-10 h-10 ${bgClassNameByPlayerName[player]} bg-no-repeat bg-black bg-contain bg-center rounded-full`}
+        className={`w-10 h-10 ${
+          bgClassNameByPlayerSlug[player.slug]
+        } bg-no-repeat bg-black bg-contain bg-center rounded-full`}
       />
     </div>
   );

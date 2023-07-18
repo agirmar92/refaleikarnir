@@ -1,21 +1,21 @@
 export type TeamColor = "BLACK" | "WHITE" | "RED" | "SILVER";
 
-export type PlayerName =
-  | "AEGIR"
-  | "ARNAR"
-  | "ATLI"
-  | "DANNI"
-  | "GAUI"
-  | "MAGGI"
-  | "VIKINGUR"
-  | "JONNI"
-  | "KRISSI";
+export type PlayerSlug =
+  | "aegir"
+  | "arnar"
+  | "atli"
+  | "danni"
+  | "gaui"
+  | "maggi"
+  | "vikingur"
+  | "jonni"
+  | "krissi";
 
-export type PlayerDetails = { name: string; slug: string };
+export type PlayerDetails = { name: string; slug: PlayerSlug };
 
 export type EventResults = {
   challenges: string[];
-  teamPlacement: { team: TeamColor; place: number }[];
+  teamPlacement: { team: TeamColor; place: 0 | 1 | 2 | 3 }[];
 };
 
 export type Result = {

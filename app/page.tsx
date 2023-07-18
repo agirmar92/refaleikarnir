@@ -1,6 +1,6 @@
 import ChallengesPlayed from "@/components/ChallengesPlayed";
 import CoverPhoto from "@/components/CoverPhoto";
-import TeamResult from "@/components/TeamResult";
+import Scoreboard from "@/components/Scoreboard";
 import Tile from "@/components/Tile";
 import TileTitle from "@/components/TileTitle";
 import YearSelector from "@/components/YearSelector";
@@ -16,18 +16,7 @@ const RefaleikarnirFrontPage = () => (
         <ChallengesPlayed />
       </Tile>
       <TileTitle>Niðurstöður</TileTitle>
-      <Tile>
-        <TeamResult team="BLACK" place={1} />
-      </Tile>
-      <Tile>
-        <TeamResult team="SILVER" place={2} />
-      </Tile>
-      <Tile>
-        <TeamResult team="RED" place={3} />
-      </Tile>
-      <Tile>
-        <TeamResult team="WHITE" place={4} />
-      </Tile>
+      <Scoreboard />
     </div>
   </>
 );

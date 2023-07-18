@@ -5,9 +5,9 @@ export const results: Result[] = [
   {
     year: 2014,
     teams: {
-      WHITE: [players.DANNI, players.MAGGI],
-      BLACK: [players.GAUI, players.VIKINGUR],
-      RED: [players.AEGIR, players.ARNAR],
+      WHITE: [players.danni, players.maggi],
+      BLACK: [players.gaui, players.vikingur],
+      RED: [players.aegir, players.arnar],
     },
     winter: {
       challenges: ["Borðtennis 🏓", "Keila 🎳", "FIFA ⚽"],
@@ -47,9 +47,9 @@ export const results: Result[] = [
   {
     year: 2015,
     teams: {
-      WHITE: [players.DANNI, players.MAGGI],
-      BLACK: [players.VIKINGUR, players.ARNAR],
-      RED: [players.GAUI, players.AEGIR],
+      WHITE: [players.danni, players.maggi],
+      BLACK: [players.vikingur, players.arnar],
+      RED: [players.gaui, players.aegir],
     },
     winter: {
       challenges: ["Badminton 🏸", "Pool 🎱", "FIFA ⚽"],
@@ -89,9 +89,9 @@ export const results: Result[] = [
   {
     year: 2016,
     teams: {
-      WHITE: [players.DANNI, players.GAUI],
-      BLACK: [players.MAGGI, players.AEGIR],
-      RED: [players.VIKINGUR, players.ARNAR],
+      WHITE: [players.danni, players.gaui],
+      BLACK: [players.maggi, players.aegir],
+      RED: [players.vikingur, players.arnar],
     },
     winter: {
       challenges: ["Skotfimi 🔫", "Borðtennis 🏓", "Black Ops 🎮"],
@@ -131,9 +131,9 @@ export const results: Result[] = [
   {
     year: 2017,
     teams: {
-      WHITE: [players.AEGIR, players.ARNAR],
-      BLACK: [players.VIKINGUR, players.GAUI],
-      RED: [players.DANNI, players.MAGGI],
+      WHITE: [players.aegir, players.arnar],
+      BLACK: [players.vikingur, players.gaui],
+      RED: [players.danni, players.maggi],
     },
     winter: {
       challenges: ["Go Kart 🏁", "Píla 🎯", "Mario Kart 🍄"],
@@ -173,8 +173,8 @@ export const results: Result[] = [
   {
     year: 2018,
     teams: {
-      WHITE: [players.MAGGI, players.GAUI, players.DANNI],
-      BLACK: [players.AEGIR, players.ARNAR, players.VIKINGUR],
+      WHITE: [players.maggi, players.gaui, players.danni],
+      BLACK: [players.aegir, players.arnar, players.vikingur],
     },
     winter: {
       challenges: ["Fótbolti ⚽", "Keila 🎳", "Black Ops 🎮"],
@@ -206,9 +206,9 @@ export const results: Result[] = [
   {
     year: 2019,
     teams: {
-      WHITE: [players.DANNI, players.MAGGI],
-      BLACK: [players.AEGIR, players.GAUI],
-      RED: [players.ARNAR, players.VIKINGUR],
+      WHITE: [players.danni, players.maggi],
+      BLACK: [players.aegir, players.gaui],
+      RED: [players.arnar, players.vikingur],
     },
     winter: {
       challenges: ["Foosball ⚽", "Dota 2 🎮", "Overwatch 🔫"],
@@ -248,9 +248,9 @@ export const results: Result[] = [
   {
     year: 2020,
     teams: {
-      WHITE: [players.DANNI, players.AEGIR],
-      BLACK: [players.GAUI, players.MAGGI],
-      RED: [players.ARNAR, players.VIKINGUR],
+      WHITE: [players.danni, players.aegir],
+      BLACK: [players.gaui, players.maggi],
+      RED: [players.arnar, players.vikingur],
     },
     winter: {
       challenges: ["Keila 🎳", "Borðtennis 🏓", "Minute to Win it ⏲️"],
@@ -290,10 +290,10 @@ export const results: Result[] = [
   {
     year: 2022,
     teams: {
-      WHITE: [players.DANNI, players.VIKINGUR],
-      BLACK: [players.AEGIR, players.MAGGI],
-      RED: [players.ARNAR, players.GAUI],
-      SILVER: [players.KRISSI, players.JONNI],
+      WHITE: [players.danni, players.vikingur],
+      BLACK: [players.aegir, players.maggi],
+      RED: [players.arnar, players.gaui],
+      SILVER: [players.krissi, players.jonni],
     },
     winter: {
       challenges: [],
@@ -324,10 +324,10 @@ export const results: Result[] = [
   {
     year: 2023,
     teams: {
-      WHITE: [players.GAUI, players.KRISSI],
-      BLACK: [players.VIKINGUR, players.ARNAR],
-      RED: [players.DANNI, players.MAGGI],
-      SILVER: [players.AEGIR, players.ATLI],
+      WHITE: [players.gaui, players.krissi],
+      BLACK: [players.vikingur, players.arnar],
+      RED: [players.danni, players.maggi],
+      SILVER: [players.aegir, players.atli],
     },
     winter: {
       challenges: [],

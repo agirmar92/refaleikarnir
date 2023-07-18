@@ -1,21 +1,16 @@
 import TeamEmblem from "@/components/TeamEmblem";
 import PlayerPortrait from "@/components/PlayerPortrait";
 import Placement from "@/components/Placement";
-import { PlayerName, TeamColor } from "@/types";
-
-const playersByTeam: Record<TeamColor, PlayerName[]> = {
-  BLACK: ["VIKINGUR", "ARNAR"],
-  SILVER: ["AEGIR", "ATLI"],
-  RED: ["MAGGI", "DANNI"],
-  WHITE: ["GAUI", "KRISSI"],
-};
+import { PlayerDetails, TeamColor } from "@/types";
 
 const TeamResult = ({
   team,
+  teamMembers,
   place,
 }: {
   team: TeamColor;
-  place: 1 | 2 | 3 | 4;
+  teamMembers: PlayerDetails[];
+  place: 0 | 1 | 2 | 3;
 }) => {
   return (
     <div className="flex h-full space-x-2">
@@ -26,8 +21,8 @@ const TeamResult = ({
         <Placement place={place} />
       </span>
       <span className="flex-1 self-center flex flex-col justify-center space-y-1">
-        {playersByTeam[team].map((player) => (
-          <PlayerPortrait player={player} />
+        {teamMembers.map((player) => (
+          <PlayerPortrait key={player.slug} player={player} />
         ))}
       </span>
     </div>

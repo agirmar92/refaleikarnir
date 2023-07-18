@@ -9,8 +9,13 @@ const ChallengesPlayed = () => {
 
   return (
     <>
-      {challengesPlayed.map((challenge) => (
-        <p className="text-center font-semibold">{challenge}</p>
+      {challengesPlayed.map((challenge, iChallenge) => (
+        <p
+          key={`challenge-${iChallenge}`}
+          className="text-center font-semibold"
+        >
+          {challenge}
+        </p>
       ))}
     </>
   );
