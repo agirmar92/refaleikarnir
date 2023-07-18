@@ -1,5 +1,5 @@
-import { players } from "../constants";
-import { Result } from "../types";
+import { players } from "@/constants";
+import { Result } from "@/types";
 
 export const results: Result[] = [
   {

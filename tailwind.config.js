@@ -3,23 +3,23 @@ const plugin = require("tailwindcss/plugin");
 
 module.exports = {
   content: [
-    // Or if using `src` directory:
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       backgroundImage: {
-        aegir: "url('../src/images/aegir.jpg')",
-        arnar: "url('../src/images/arnar.jpg')",
-        atli: "url('../src/images/atli.jpg')",
-        danni: "url('../src/images/danni.jpg')",
-        gaui: "url('../src/images/gaui.jpg')",
-        jonni: "url('../src/images/jonni.jpg')",
-        krissi: "url('../src/images/krissi.jpg')",
-        maggi: "url('../src/images/maggi.jpg')",
-        vikingur: "url('../src/images/vikingur.jpg')",
-        coverPhoto: "url('../src/images/refir.jpeg')",
+        aegir: "url('../images/aegir.jpg')",
+        arnar: "url('../images/arnar.jpg')",
+        atli: "url('../images/atli.jpg')",
+        danni: "url('../images/danni.jpg')",
+        gaui: "url('../images/gaui.jpg')",
+        jonni: "url('../images/jonni.jpg')",
+        krissi: "url('../images/krissi.jpg')",
+        maggi: "url('../images/maggi.jpg')",
+        vikingur: "url('../images/vikingur.jpg')",
+        coverPhoto: "url('../images/refir.jpeg')",
       },
       colors: {
         winter: "#264653",
@@ -29,7 +29,7 @@ module.exports = {
         "fox-red": "#d62828",
         "fox-white": "#efefef",
         "fox-black": "#1f1f1f",
-        "tile": "#a8b5ba",
+        tile: "#a8b5ba",
       },
       textShadow: {
         DEFAULT: "0px 3px black",
