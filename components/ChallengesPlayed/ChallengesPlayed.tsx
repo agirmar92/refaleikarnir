@@ -5,7 +5,7 @@ import { results } from "@/data/results";
 
 const ChallengesPlayed = () => {
   const { gamesIndex } = useYear();
-  const challengesPlayed = results[gamesIndex].summer.challenges;
+  const challengesPlayed = results[gamesIndex].challenges;
 
   return (
     <>

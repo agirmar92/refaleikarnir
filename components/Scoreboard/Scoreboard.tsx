@@ -7,24 +7,20 @@ import { results } from "@/data/results";
 
 const Scoreboard = () => {
   const { gamesIndex } = useYear();
-  const { teams } = results[gamesIndex];
-  const teamPlacement = results[gamesIndex].summer.teamPlacement.sort(
-    (teamA, teamB) => teamA.place - teamB.place
+  const teamPlacement = results[gamesIndex].teams.sort(
+    (teamA, teamB) => teamA.teamPlace - teamB.teamPlace
   );
   return (
     <>
       {teamPlacement.map((team) => {
-        const { team: teamColor, place } = team;
-        const teamMembers = teams[teamColor];
-        if (!teamMembers) {
-          return null;
-        }
+        const { teamColor, teamPlace, teamPlayers } = team;
+
         return (
           <Tile key={teamColor}>
             <TeamResult
               team={teamColor}
-              teamMembers={teamMembers}
-              place={place}
+              teamMembers={teamPlayers}
+              place={teamPlace}
             />
           </Tile>
         );

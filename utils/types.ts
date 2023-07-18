@@ -13,14 +13,13 @@ export type PlayerSlug =
 
 export type PlayerDetails = { name: string; slug: PlayerSlug };
 
-export type EventResults = {
-  challenges: string[];
-  teamPlacement: { team: TeamColor; place: 0 | 1 | 2 | 3 }[];
-};
-
 export type Result = {
   year: number;
-  teams: { [key in TeamColor]?: PlayerDetails[] };
-  winter: EventResults;
-  summer: EventResults;
+  teams: {
+    teamPlayers: PlayerDetails[];
+    teamPlace: 0 | 1 | 2 | 3;
+    teamColor: TeamColor;
+  }[];
+  challenges: string[];
+  season?: "summer" | "winter" | undefined;
 };

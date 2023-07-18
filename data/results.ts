@@ -4,355 +4,352 @@ import { Result } from "@/types";
 export const results: Result[] = [
   {
     year: 2014,
-    teams: {
-      WHITE: [players.danni, players.maggi],
-      BLACK: [players.gaui, players.vikingur],
-      RED: [players.aegir, players.arnar],
-    },
-    winter: {
-      challenges: ["Borðtennis 🏓", "Keila 🎳", "FIFA ⚽"],
-      teamPlacement: [
-        {
-          team: "WHITE",
-          place: 2,
-        },
-        {
-          team: "BLACK",
-          place: 0,
-        },
-        {
-          team: "RED",
-          place: 1,
-        },
-      ],
-    },
-    summer: {
-      challenges: ["Bogfimi 🏹", "Lazer tag 🟩", "Píla 🎯"],
-      teamPlacement: [
-        {
-          team: "WHITE",
-          place: 0,
-        },
-        {
-          team: "BLACK",
-          place: 2,
-        },
-        {
-          team: "RED",
-          place: 1,
-        },
-      ],
-    },
+    teams: [
+      {
+        teamColor: "WHITE",
+        teamPlace: 2,
+        teamPlayers: [players.danni, players.maggi],
+      },
+      {
+        teamColor: "BLACK",
+        teamPlace: 0,
+        teamPlayers: [players.gaui, players.vikingur],
+      },
+      {
+        teamColor: "RED",
+        teamPlace: 1,
+        teamPlayers: [players.aegir, players.arnar],
+      },
+    ],
+    season: "winter",
+    challenges: ["Borðtennis 🏓", "Keila 🎳", "FIFA ⚽"],
+  },
+  {
+    year: 2014,
+    teams: [
+      {
+        teamColor: "WHITE",
+        teamPlace: 0,
+        teamPlayers: [players.danni, players.maggi],
+      },
+      {
+        teamColor: "BLACK",
+        teamPlace: 2,
+        teamPlayers: [players.gaui, players.vikingur],
+      },
+      {
+        teamColor: "RED",
+        teamPlace: 1,
+        teamPlayers: [players.aegir, players.arnar],
+      },
+    ],
+    season: "summer",
+    challenges: ["Bogfimi 🏹", "Lazer tag 🟩", "Píla 🎯"],
   },
   {
     year: 2015,
-    teams: {
-      WHITE: [players.danni, players.maggi],
-      BLACK: [players.vikingur, players.arnar],
-      RED: [players.gaui, players.aegir],
-    },
-    winter: {
-      challenges: ["Badminton 🏸", "Pool 🎱", "FIFA ⚽"],
-      teamPlacement: [
-        {
-          team: "WHITE",
-          place: 0,
-        },
-        {
-          team: "BLACK",
-          place: 0,
-        },
-        {
-          team: "RED",
-          place: 0,
-        },
-      ],
-    },
-    summer: {
-      challenges: ["Körfubolti 🏀", "Keila 🎳", "Minute to Win it ⏲️"],
-      teamPlacement: [
-        {
-          team: "WHITE",
-          place: 2,
-        },
-        {
-          team: "BLACK",
-          place: 1,
-        },
-        {
-          team: "RED",
-          place: 0,
-        },
-      ],
-    },
+    teams: [
+      {
+        teamColor: "WHITE",
+        teamPlace: 0,
+        teamPlayers: [players.danni, players.maggi],
+      },
+      {
+        teamColor: "BLACK",
+        teamPlace: 0,
+        teamPlayers: [players.vikingur, players.arnar],
+      },
+      {
+        teamColor: "RED",
+        teamPlace: 0,
+        teamPlayers: [players.gaui, players.aegir],
+      },
+    ],
+    season: "winter",
+    challenges: ["Badminton 🏸", "Pool 🎱", "FIFA ⚽"],
+  },
+  {
+    year: 2015,
+    teams: [
+      {
+        teamColor: "WHITE",
+        teamPlace: 2,
+        teamPlayers: [players.danni, players.maggi],
+      },
+      {
+        teamColor: "BLACK",
+        teamPlace: 1,
+        teamPlayers: [players.vikingur, players.arnar],
+      },
+      {
+        teamColor: "RED",
+        teamPlace: 0,
+        teamPlayers: [players.gaui, players.aegir],
+      },
+    ],
+    season: "summer",
+    challenges: ["Körfubolti 🏀", "Keila 🎳", "Minute to Win it ⏲️"],
   },
   {
     year: 2016,
-    teams: {
-      WHITE: [players.danni, players.gaui],
-      BLACK: [players.maggi, players.aegir],
-      RED: [players.vikingur, players.arnar],
-    },
-    winter: {
-      challenges: ["Skotfimi 🔫", "Borðtennis 🏓", "Black Ops 🎮"],
-      teamPlacement: [
-        {
-          team: "WHITE",
-          place: 2,
-        },
-        {
-          team: "BLACK",
-          place: 1,
-        },
-        {
-          team: "RED",
-          place: 0,
-        },
-      ],
-    },
-    summer: {
-      challenges: ["Folf 🥏", "Kubbur 👑", "Capture the Flag 🏴"],
-      teamPlacement: [
-        {
-          team: "WHITE",
-          place: 2,
-        },
-        {
-          team: "BLACK",
-          place: 0,
-        },
-        {
-          team: "RED",
-          place: 1,
-        },
-      ],
-    },
+    teams: [
+      {
+        teamColor: "WHITE",
+        teamPlace: 2,
+        teamPlayers: [players.danni, players.gaui],
+      },
+      {
+        teamColor: "BLACK",
+        teamPlace: 1,
+        teamPlayers: [players.maggi, players.aegir],
+      },
+      {
+        teamColor: "RED",
+        teamPlace: 0,
+        teamPlayers: [players.vikingur, players.arnar],
+      },
+    ],
+    season: "winter",
+    challenges: ["Skotfimi 🔫", "Borðtennis 🏓", "Black Ops 🎮"],
+  },
+  {
+    year: 2016,
+    teams: [
+      {
+        teamColor: "WHITE",
+        teamPlace: 2,
+        teamPlayers: [players.danni, players.gaui],
+      },
+      {
+        teamColor: "BLACK",
+        teamPlace: 0,
+        teamPlayers: [players.maggi, players.aegir],
+      },
+      {
+        teamColor: "RED",
+        teamPlace: 1,
+        teamPlayers: [players.vikingur, players.arnar],
+      },
+    ],
+    season: "summer",
+    challenges: ["Folf 🥏", "Kubbur 👑", "Capture the Flag 🏴"],
   },
   {
     year: 2017,
-    teams: {
-      WHITE: [players.aegir, players.arnar],
-      BLACK: [players.vikingur, players.gaui],
-      RED: [players.danni, players.maggi],
-    },
-    winter: {
-      challenges: ["Go Kart 🏁", "Píla 🎯", "Mario Kart 🍄"],
-      teamPlacement: [
-        {
-          team: "WHITE",
-          place: 2,
-        },
-        {
-          team: "BLACK",
-          place: 0,
-        },
-        {
-          team: "RED",
-          place: 1,
-        },
-      ],
-    },
-    summer: {
-      challenges: ["Strandblak 🏐", "Pool 🎱", "Rocket League 🏎️"],
-      teamPlacement: [
-        {
-          team: "WHITE",
-          place: 0,
-        },
-        {
-          team: "BLACK",
-          place: 0,
-        },
-        {
-          team: "RED",
-          place: 2,
-        },
-      ],
-    },
+    teams: [
+      {
+        teamColor: "WHITE",
+        teamPlace: 2,
+        teamPlayers: [players.aegir, players.arnar],
+      },
+      {
+        teamColor: "BLACK",
+        teamPlace: 0,
+        teamPlayers: [players.vikingur, players.gaui],
+      },
+      {
+        teamColor: "RED",
+        teamPlace: 1,
+        teamPlayers: [players.danni, players.maggi],
+      },
+    ],
+    season: "winter",
+    challenges: ["Go Kart 🏁", "Píla 🎯", "Mario Kart 🍄"],
+  },
+  {
+    year: 2017,
+    teams: [
+      {
+        teamColor: "WHITE",
+        teamPlace: 0,
+        teamPlayers: [players.aegir, players.arnar],
+      },
+      {
+        teamColor: "BLACK",
+        teamPlace: 0,
+        teamPlayers: [players.vikingur, players.gaui],
+      },
+      {
+        teamColor: "RED",
+        teamPlace: 2,
+        teamPlayers: [players.danni, players.maggi],
+      },
+    ],
+    season: "summer",
+    challenges: ["Strandblak 🏐", "Pool 🎱", "Rocket League 🏎️"],
   },
   {
     year: 2018,
-    teams: {
-      WHITE: [players.maggi, players.gaui, players.danni],
-      BLACK: [players.aegir, players.arnar, players.vikingur],
-    },
-    winter: {
-      challenges: ["Fótbolti ⚽", "Keila 🎳", "Black Ops 🎮"],
-      teamPlacement: [
-        {
-          team: "WHITE",
-          place: 0,
-        },
-        {
-          team: "BLACK",
-          place: 1,
-        },
-      ],
-    },
-    summer: {
-      challenges: ["Skotfimi 🔫", "Pútt ⛳", "Beer Pong 🍻"],
-      teamPlacement: [
-        {
-          team: "WHITE",
-          place: 1,
-        },
-        {
-          team: "BLACK",
-          place: 0,
-        },
-      ],
-    },
+    teams: [
+      {
+        teamColor: "WHITE",
+        teamPlace: 0,
+        teamPlayers: [players.maggi, players.gaui, players.danni],
+      },
+      {
+        teamColor: "BLACK",
+        teamPlace: 1,
+        teamPlayers: [players.aegir, players.arnar, players.vikingur],
+      },
+    ],
+    season: "winter",
+    challenges: ["Fótbolti ⚽", "Keila 🎳", "Black Ops 🎮"],
+  },
+  {
+    year: 2018,
+    teams: [
+      {
+        teamColor: "WHITE",
+        teamPlace: 1,
+        teamPlayers: [players.maggi, players.gaui, players.danni],
+      },
+      {
+        teamColor: "BLACK",
+        teamPlace: 0,
+        teamPlayers: [players.aegir, players.arnar, players.vikingur],
+      },
+    ],
+    season: "summer",
+    challenges: ["Skotfimi 🔫", "Pútt ⛳", "Beer Pong 🍻"],
   },
   {
     year: 2019,
-    teams: {
-      WHITE: [players.danni, players.maggi],
-      BLACK: [players.aegir, players.gaui],
-      RED: [players.arnar, players.vikingur],
-    },
-    winter: {
-      challenges: ["Foosball ⚽", "Dota 2 🎮", "Overwatch 🔫"],
-      teamPlacement: [
-        {
-          team: "WHITE",
-          place: 2,
-        },
-        {
-          team: "BLACK",
-          place: 0,
-        },
-        {
-          team: "RED",
-          place: 1,
-        },
-      ],
-    },
-    summer: {
-      challenges: ["Tennis 🎾", "Golfhermir 🏌️‍♂️", "Píla 🎯"],
-      teamPlacement: [
-        {
-          team: "WHITE",
-          place: 0,
-        },
-        {
-          team: "BLACK",
-          place: 2,
-        },
-        {
-          team: "RED",
-          place: 0,
-        },
-      ],
-    },
+    teams: [
+      {
+        teamColor: "WHITE",
+        teamPlace: 2,
+        teamPlayers: [players.danni, players.maggi],
+      },
+      {
+        teamColor: "BLACK",
+        teamPlace: 0,
+        teamPlayers: [players.aegir, players.gaui],
+      },
+      {
+        teamColor: "RED",
+        teamPlace: 1,
+        teamPlayers: [players.arnar, players.vikingur],
+      },
+    ],
+    season: "winter",
+    challenges: ["Foosball ⚽", "Dota 2 🎮", "Overwatch 🔫"],
+  },
+  {
+    year: 2019,
+    teams: [
+      {
+        teamColor: "WHITE",
+        teamPlace: 0,
+        teamPlayers: [players.danni, players.maggi],
+      },
+      {
+        teamColor: "BLACK",
+        teamPlace: 2,
+        teamPlayers: [players.aegir, players.gaui],
+      },
+      {
+        teamColor: "RED",
+        teamPlace: 0,
+        teamPlayers: [players.arnar, players.vikingur],
+      },
+    ],
+    season: "summer",
+    challenges: ["Tennis 🎾", "Golfhermir 🏌️‍♂️", "Píla 🎯"],
   },
   {
     year: 2020,
-    teams: {
-      WHITE: [players.danni, players.aegir],
-      BLACK: [players.gaui, players.maggi],
-      RED: [players.arnar, players.vikingur],
-    },
-    winter: {
-      challenges: ["Keila 🎳", "Borðtennis 🏓", "Minute to Win it ⏲️"],
-      teamPlacement: [
-        {
-          team: "WHITE",
-          place: 2,
-        },
-        {
-          team: "BLACK",
-          place: 0,
-        },
-        {
-          team: "RED",
-          place: 1,
-        },
-      ],
-    },
-    summer: {
-      challenges: ["Folf 🥏", "Körfubolti (trick shots) 🏀", "Kubbur 👑"],
-      teamPlacement: [
-        {
-          team: "WHITE",
-          place: 1,
-        },
-        {
-          team: "BLACK",
-          place: 0,
-        },
-        {
-          team: "RED",
-          place: 2,
-        },
-      ],
-    },
+    teams: [
+      {
+        teamColor: "WHITE",
+        teamPlace: 2,
+        teamPlayers: [players.danni, players.aegir],
+      },
+      {
+        teamColor: "BLACK",
+        teamPlace: 0,
+        teamPlayers: [players.gaui, players.maggi],
+      },
+      {
+        teamColor: "RED",
+        teamPlace: 1,
+        teamPlayers: [players.arnar, players.vikingur],
+      },
+    ],
+    season: "winter",
+    challenges: ["Keila 🎳", "Borðtennis 🏓", "Minute to Win it ⏲️"],
+  },
+  {
+    year: 2020,
+    teams: [
+      {
+        teamColor: "WHITE",
+        teamPlace: 1,
+        teamPlayers: [players.danni, players.aegir],
+      },
+      {
+        teamColor: "BLACK",
+        teamPlace: 0,
+        teamPlayers: [players.gaui, players.maggi],
+      },
+      {
+        teamColor: "RED",
+        teamPlace: 2,
+        teamPlayers: [players.arnar, players.vikingur],
+      },
+    ],
+    season: "summer",
+    challenges: ["Folf 🥏", "Körfubolti (trick shots) 🏀", "Kubbur 👑"],
   },
   {
     year: 2022,
-    teams: {
-      WHITE: [players.danni, players.vikingur],
-      BLACK: [players.aegir, players.maggi],
-      RED: [players.arnar, players.gaui],
-      SILVER: [players.krissi, players.jonni],
-    },
-    winter: {
-      challenges: [],
-      teamPlacement: [],
-    },
-    summer: {
-      challenges: ["Padel 🎾", "Fall Guys 🎮", "Minute to Win it ⏲️"],
-      teamPlacement: [
-        {
-          team: "WHITE",
-          place: 2,
-        },
-        {
-          team: "BLACK",
-          place: 0,
-        },
-        {
-          team: "RED",
-          place: 3,
-        },
-        {
-          team: "SILVER",
-          place: 1,
-        },
-      ],
-    },
+    teams: [
+      {
+        teamColor: "WHITE",
+        teamPlace: 2,
+        teamPlayers: [players.danni, players.vikingur],
+      },
+      {
+        teamColor: "BLACK",
+        teamPlace: 0,
+        teamPlayers: [players.aegir, players.maggi],
+      },
+      {
+        teamColor: "RED",
+        teamPlace: 3,
+        teamPlayers: [players.arnar, players.gaui],
+      },
+      {
+        teamColor: "SILVER",
+        teamPlace: 1,
+        teamPlayers: [players.krissi, players.jonni],
+      },
+    ],
+    challenges: ["Padel 🎾", "Fall Guys 🎮", "Minute to Win it ⏲️"],
   },
   {
     year: 2023,
-    teams: {
-      WHITE: [players.gaui, players.krissi],
-      BLACK: [players.vikingur, players.arnar],
-      RED: [players.danni, players.maggi],
-      SILVER: [players.aegir, players.atli],
-    },
-    winter: {
-      challenges: [],
-      teamPlacement: [],
-    },
-    summer: {
-      challenges: ["GT 🏎️", "Black Ops 🎮", "Boccia/Boule 👴🏻"],
-      teamPlacement: [
-        {
-          team: "WHITE",
-          place: 3,
-        },
-        {
-          team: "BLACK",
-          place: 0,
-        },
-        {
-          team: "RED",
-          place: 2,
-        },
-        {
-          team: "SILVER",
-          place: 1,
-        },
-      ],
-    },
+    teams: [
+      {
+        teamColor: "WHITE",
+        teamPlace: 3,
+        teamPlayers: [players.gaui, players.krissi],
+      },
+      {
+        teamColor: "BLACK",
+        teamPlace: 0,
+        teamPlayers: [players.vikingur, players.arnar],
+      },
+      {
+        teamColor: "RED",
+        teamPlace: 2,
+        teamPlayers: [players.danni, players.maggi],
+      },
+      {
+        teamColor: "SILVER",
+        teamPlace: 1,
+        teamPlayers: [players.aegir, players.atli],
+      },
+    ],
+    challenges: ["GT 🏎️", "Black Ops 🎮", "Boccia/Boule 👴🏻"],
   },
 ];
