@@ -1,3 +1,4 @@
+import ChallengesPlayed from "@/components/ChallengesPlayed";
 import CoverPhoto from "@/components/CoverPhoto";
 import TeamResult from "@/components/TeamResult";
 import Tile from "@/components/Tile";
@@ -12,7 +13,7 @@ const RefaleikarnirFrontPage = () => (
     <div className="flex flex-col space-y-3 p-3 bg-winter relative z-10">
       <TileTitle>Þrautir</TileTitle>
       <Tile>
-        <p className="text-center">GT - Black Ops - Boule</p>
+        <ChallengesPlayed />
       </Tile>
       <TileTitle>Niðurstöður</TileTitle>
       <Tile>
