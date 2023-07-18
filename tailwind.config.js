@@ -29,6 +29,7 @@ module.exports = {
         "fox-red": "#d62828",
         "fox-white": "#efefef",
         "fox-black": "#1f1f1f",
+        "tile": "#a8b5ba",
       },
       textShadow: {
         DEFAULT: "0px 3px black",
