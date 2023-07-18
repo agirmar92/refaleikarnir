@@ -19,7 +19,7 @@ export type EventResults = {
 };
 
 export type Result = {
-  year: string;
+  year: number;
   teams: { [key in TeamColor]?: PlayerDetails[] };
   winter: EventResults;
   summer: EventResults;

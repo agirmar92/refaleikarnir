@@ -1,5 +1,6 @@
 import "./global.css";
 import Header from "@/components/Header";
+import Providers from "@/contexts/Providers";
 import GithubIcon from "@/icons/GithubIcon";
 
 export const metadata = {
@@ -35,7 +36,7 @@ export default function RootLayout({
       </head>
       <body className="bg-winter text-white">
         <Header />
-        {children}
+        <Providers>{children}</Providers>
         <footer className="relative z-10">
           <a
             target="_blank"

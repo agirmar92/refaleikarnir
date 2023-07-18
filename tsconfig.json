@@ -32,6 +32,7 @@
       "@/data/*": ["data/*"],
       "@/icons/*": ["icons/*"],
       "@/hooks/*": ["hooks/*"],
+      "@/contexts/*": ["contexts/*"],
       "@/types": ["utils/types"],
       "@/constants": ["utils/constants"]
     },

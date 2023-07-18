@@ -3,7 +3,7 @@ import { Result } from "@/types";
 
 export const results: Result[] = [
   {
-    year: "2014",
+    year: 2014,
     teams: {
       WHITE: [players.DANNI, players.MAGGI],
       BLACK: [players.GAUI, players.VIKINGUR],
@@ -45,7 +45,7 @@ export const results: Result[] = [
     },
   },
   {
-    year: "2015",
+    year: 2015,
     teams: {
       WHITE: [players.DANNI, players.MAGGI],
       BLACK: [players.VIKINGUR, players.ARNAR],
@@ -87,7 +87,7 @@ export const results: Result[] = [
     },
   },
   {
-    year: "2016",
+    year: 2016,
     teams: {
       WHITE: [players.DANNI, players.GAUI],
       BLACK: [players.MAGGI, players.AEGIR],
@@ -129,7 +129,7 @@ export const results: Result[] = [
     },
   },
   {
-    year: "2017",
+    year: 2017,
     teams: {
       WHITE: [players.AEGIR, players.ARNAR],
       BLACK: [players.VIKINGUR, players.GAUI],
@@ -171,7 +171,7 @@ export const results: Result[] = [
     },
   },
   {
-    year: "2018",
+    year: 2018,
     teams: {
       WHITE: [players.MAGGI, players.GAUI, players.DANNI],
       BLACK: [players.AEGIR, players.ARNAR, players.VIKINGUR],
@@ -204,7 +204,7 @@ export const results: Result[] = [
     },
   },
   {
-    year: "2019",
+    year: 2019,
     teams: {
       WHITE: [players.DANNI, players.MAGGI],
       BLACK: [players.AEGIR, players.GAUI],
@@ -246,7 +246,7 @@ export const results: Result[] = [
     },
   },
   {
-    year: "2020",
+    year: 2020,
     teams: {
       WHITE: [players.DANNI, players.AEGIR],
       BLACK: [players.GAUI, players.MAGGI],
@@ -288,7 +288,7 @@ export const results: Result[] = [
     },
   },
   {
-    year: "2022",
+    year: 2022,
     teams: {
       WHITE: [players.DANNI, players.VIKINGUR],
       BLACK: [players.AEGIR, players.MAGGI],
@@ -322,7 +322,7 @@ export const results: Result[] = [
     },
   },
   {
-    year: "2023",
+    year: 2023,
     teams: {
       WHITE: [players.GAUI, players.KRISSI],
       BLACK: [players.VIKINGUR, players.ARNAR],
