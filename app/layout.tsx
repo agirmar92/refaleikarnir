@@ -36,7 +36,7 @@ export default function RootLayout({
       <body className="bg-winter text-white">
         <Header />
         {children}
-        <footer>
+        <footer className="relative z-10">
           <a
             target="_blank"
             href="https://github.com/agirmar92/refaleikarnir"
