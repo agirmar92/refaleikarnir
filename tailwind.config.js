@@ -19,7 +19,10 @@ module.exports = {
         krissi: "url('../images/krissi.jpg')",
         maggi: "url('../images/maggi.jpg')",
         vikingur: "url('../images/vikingur.jpg')",
-        coverPhoto: "url('../images/refir.jpeg')",
+        coverPhoto: "url('../images/coverPhotos/refir.jpg')",
+        "coverPhoto-2023": "url('../images/coverPhotos/2023.jpg')",
+        "coverPhoto-2022": "url('../images/coverPhotos/2022.jpg')",
+        "coverPhoto-2015-winter": "url('../images/coverPhotos/2015.jpg')",
       },
       colors: {
         winter: "#264653",
