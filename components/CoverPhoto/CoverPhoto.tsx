@@ -18,6 +18,7 @@ const coverPhotosByYearAndSeason: { [key: string]: string } = {
   "2018-summer": "bg-coverPhoto-2018-summer",
   "2018-winter": "bg-coverPhoto-2018-winter",
   "2017-winter": "bg-coverPhoto-2017-winter",
+  "2016-summer": "bg-coverPhoto-2016-summer",
   "2016-winter": "bg-coverPhoto-2016-winter",
   "2015-summer": "bg-coverPhoto-2015-summer",
   "2015-winter": "bg-coverPhoto-2015-winter",
