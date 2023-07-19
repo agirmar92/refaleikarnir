@@ -11,6 +11,10 @@ const defaultCoverPhoto = "bg-coverPhoto";
 const coverPhotosByYearAndSeason: { [key: string]: string } = {
   "2023": "bg-coverPhoto-2023",
   "2022": "bg-coverPhoto-2022",
+  "2020-summer": "bg-coverPhoto-2020-summer",
+  "2020-winter": "bg-coverPhoto-2020-winter",
+  "2018-summer": "bg-coverPhoto-2018-summer",
+  "2017-winter": "bg-coverPhoto-2017-winter",
   "2015-winter": "bg-coverPhoto-2015-winter",
 };
 

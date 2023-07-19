@@ -22,7 +22,11 @@ module.exports = {
         coverPhoto: "url('../images/coverPhotos/refir.jpg')",
         "coverPhoto-2023": "url('../images/coverPhotos/2023.jpg')",
         "coverPhoto-2022": "url('../images/coverPhotos/2022.jpg')",
-        "coverPhoto-2015-winter": "url('../images/coverPhotos/2015.jpg')",
+        "coverPhoto-2020-summer": "url('../images/coverPhotos/2020-summer.jpg')",
+        "coverPhoto-2020-winter": "url('../images/coverPhotos/2020-winter.jpg')",
+        "coverPhoto-2018-summer": "url('../images/coverPhotos/2018-summer.jpg')",
+        "coverPhoto-2017-winter": "url('../images/coverPhotos/2017-winter.jpg')",
+        "coverPhoto-2015-winter": "url('../images/coverPhotos/2015-winter.jpg')",
       },
       colors: {
         winter: "#264653",
