@@ -34,6 +34,8 @@ module.exports = {
           "url('../images/coverPhotos/2018-summer.jpg')",
         "coverPhoto-2018-winter":
           "url('../images/coverPhotos/2018-winter.jpg')",
+        "coverPhoto-2017-summer":
+          "url('../images/coverPhotos/2017-summer.jpg')",
         "coverPhoto-2017-winter":
           "url('../images/coverPhotos/2017-winter.jpg')",
         "coverPhoto-2016-summer":
