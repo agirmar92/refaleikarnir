@@ -13,9 +13,16 @@ const coverPhotosByYearAndSeason: { [key: string]: string } = {
   "2022": "bg-coverPhoto-2022",
   "2020-summer": "bg-coverPhoto-2020-summer",
   "2020-winter": "bg-coverPhoto-2020-winter",
+  "2019-summer": "bg-coverPhoto-2019-summer",
+  "2019-winter": "bg-coverPhoto-2019-winter",
   "2018-summer": "bg-coverPhoto-2018-summer",
+  "2018-winter": "bg-coverPhoto-2018-winter",
   "2017-winter": "bg-coverPhoto-2017-winter",
+  "2016-winter": "bg-coverPhoto-2016-winter",
+  "2015-summer": "bg-coverPhoto-2015-summer",
   "2015-winter": "bg-coverPhoto-2015-winter",
+  "2014-summer": "bg-coverPhoto-2014-summer",
+  "2014-winter": "bg-coverPhoto-2014-winter",
 };
 
 const CoverPhoto = ({ children }: { children: ReactNode }) => {
