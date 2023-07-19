@@ -1,36 +1,24 @@
-import React from "react";
-import Foxlympics from "@/components/Foxlympics";
-import YearDivider from "@/components/YearDivider";
-import { results } from "@/data/results";
+import ChallengesPlayed from "@/components/ChallengesPlayed";
+import CoverPhoto from "@/components/CoverPhoto";
+import Scoreboard from "@/components/Scoreboard";
+import Tile from "@/components/Tile";
+import TileTitle from "@/components/TileTitle";
+import YearSelector from "@/components/YearSelector";
 
-const App = () => {
-  return (
-    <main className="h-full w-screen snap-x snap-mandatory flex flex-row font-bold overflow-y-hidden">
-      {results
-        .slice()
-        .reverse()
-        .map((yearData, iYear) => {
-          return (
-            <section
-              key={iYear}
-              className="relative snap-start h-screen min-w-full flex flex-col items-center justify-center text-xl text-fox-white bg-winter"
-            >
-              <YearDivider year={yearData.year} />
-              <Foxlympics
-                season="winter"
-                teams={yearData.teams}
-                results={yearData.winter}
-              />
-              <Foxlympics
-                season="summer"
-                teams={yearData.teams}
-                results={yearData.summer}
-              />
-            </section>
-          );
-        })}
-    </main>
-  );
-};
+const RefaleikarnirFrontPage = () => (
+  <>
+    <CoverPhoto>
+      <YearSelector />
+    </CoverPhoto>
+    <div className="flex flex-col space-y-3 p-3 bg-winter relative z-10">
+      <TileTitle>Þrautir</TileTitle>
+      <Tile>
+        <ChallengesPlayed />
+      </Tile>
+      <TileTitle>Niðurstöður</TileTitle>
+      <Scoreboard />
+    </div>
+  </>
+);
 
-export default App;
+export default RefaleikarnirFrontPage;

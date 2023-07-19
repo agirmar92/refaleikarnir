@@ -1,4 +1,7 @@
 import "./global.css";
+import Header from "@/components/Header";
+import Providers from "@/contexts/Providers";
+import GithubIcon from "@/icons/GithubIcon";
 
 export const metadata = {
   title: "Refaleikarnir",
@@ -19,6 +22,7 @@ export default function RootLayout({
           name="viewport"
           content="width=device-width, initial-scale=1, user-scalable=no"
         />
+        {/* Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -26,11 +30,27 @@ export default function RootLayout({
           crossOrigin=""
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Gantari:wght@200;400;500&family=Tillana:wght@700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;800&display=swap"
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body className="bg-winter text-white">
+        <Header />
+        <Providers>{children}</Providers>
+        <footer className="relative z-10">
+          <a
+            target="_blank"
+            href="https://github.com/agirmar92/refaleikarnir"
+            rel="noopener noreferrer"
+            className="flex justify-center py-3 text-stone-300"
+          >
+            agirmar92/refaleikarnir
+            <span className="ml-2">
+              <GithubIcon />
+            </span>
+          </a>
+        </footer>
+      </body>
     </html>
   );
 }

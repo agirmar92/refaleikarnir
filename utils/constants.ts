@@ -1,39 +1,39 @@
-import { PlayerDetails, PlayerName, TeamColor } from "./types";
+import { PlayerDetails, PlayerSlug, TeamColor } from "./types";
 
-export const players: Record<PlayerName, PlayerDetails> = {
-  AEGIR: {
+export const players: Record<PlayerSlug, PlayerDetails> = {
+  aegir: {
     name: "Ægir",
     slug: "aegir",
   },
-  ARNAR: {
+  arnar: {
     name: "Arnar",
     slug: "arnar",
   },
-  ATLI: {
+  atli: {
     name: "Atli",
     slug: "atli",
   },
-  DANNI: {
+  danni: {
     name: "Danni",
     slug: "danni",
   },
-  GAUI: {
+  gaui: {
     name: "Gaui",
     slug: "gaui",
   },
-  MAGGI: {
+  maggi: {
     name: "Maggi",
     slug: "maggi",
   },
-  VIKINGUR: {
+  vikingur: {
     name: "Víkingur",
     slug: "vikingur",
   },
-  JONNI: {
+  jonni: {
     name: "Jonni",
     slug: "jonni",
   },
-  KRISSI: {
+  krissi: {
     name: "Krissi",
     slug: "krissi",
   },
