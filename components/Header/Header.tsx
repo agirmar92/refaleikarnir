@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import classNames from "classnames";
 import FoxIcon from "@/icons/FoxIcon";
 import MenuIcon from "@/icons/MenuIcon";
@@ -37,6 +38,8 @@ const Header = () => {
   const scrollY = useScrollY();
   const screenWidth = useScreenWidth();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+
   const handleMenuToggle = () => {
     if (!isMenuOpen) {
       // OPENING the menu overlay
@@ -57,7 +60,9 @@ const Header = () => {
         className={classNames(
           "flex justify-between h-[64px] px-5 items-center z-[999] fixed top-0 left-0 w-full transition-[background]",
           {
-            "bg-winter": screenWidth && scrollY > screenWidth - 64 * 2,
+            "bg-winter":
+              pathname !== "/" ||
+              (screenWidth && scrollY > screenWidth - 64 * 2),
           }
         )}
       >
@@ -91,7 +96,13 @@ const Header = () => {
               handleMenuToggle();
             }}
           />
-          <HeaderMenuLink label="Önnur tölfræði" />
+          <HeaderMenuLink
+            label="Önnur tölfræði"
+            href="/stats"
+            onClickHandler={() => {
+              handleMenuToggle();
+            }}
+          />
         </div>
       </div>
     </>

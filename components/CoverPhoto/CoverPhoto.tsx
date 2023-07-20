@@ -34,7 +34,7 @@ const CoverPhoto = ({ children }: { children: ReactNode }) => {
   const season = results[gamesIndex].season;
 
   return (
-    <div className="w-[100vw] h-[100vw] relative">
+    <div className="w-[100vw] h-[100vw] relative -mt-16">
       <div
         className={classNames(
           "left-0 right-0 z-50 p-3 box-border transition-[background]",
