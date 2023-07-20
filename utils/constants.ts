@@ -40,8 +40,8 @@ export const players: Record<PlayerSlug, PlayerDetails> = {
 };
 
 export const actualTeamNames: Record<TeamColor, string> = {
-  BLACK: "Svartir refir",
-  RED: "Rauðir refir",
-  WHITE: "Hvítir refir",
-  SILVER: "Silfur refir",
+  BLACK: "Svartir Refir",
+  RED: "Rauðir Refir",
+  WHITE: "Hvítir Refir",
+  SILVER: "Silfur Refir",
 };

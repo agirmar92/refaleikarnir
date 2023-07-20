@@ -12,15 +12,28 @@ const bgClassNameByPlayerSlug: Record<PlayerSlug, string> = {
   jonni: "bg-jonni",
 };
 
-const PlayerPortrait = ({ player }: { player: PlayerDetails }) => {
+const PlayerPortrait = ({
+  player,
+  reverseContent = false,
+}: {
+  player: PlayerDetails;
+  reverseContent?: boolean;
+}) => {
+  let content = [
+    <p key={`playerName-${player.slug}`}>{player.name}</p>,
+    <div key={`playerPhoto-${player.slug}`}
+      className={`w-10 h-10 ${
+        bgClassNameByPlayerSlug[player.slug]
+      } bg-no-repeat bg-black bg-contain bg-center rounded-full`}
+    />,
+  ];
+  if (reverseContent) {
+    content = content.reverse();
+  }
+
   return (
-    <div className="flex justify-end items-center space-x-2">
-      <p>{player.name}</p>
-      <div
-        className={`w-10 h-10 ${
-          bgClassNameByPlayerSlug[player.slug]
-        } bg-no-repeat bg-black bg-contain bg-center rounded-full`}
-      />
+    <div className="flex items-center space-x-2">
+      {content.map((child) => child)}
     </div>
   );
 };

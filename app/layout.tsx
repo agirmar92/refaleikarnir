@@ -36,7 +36,9 @@ export default function RootLayout({
       </head>
       <body className="bg-winter text-white">
         <Header />
-        <Providers>{children}</Providers>
+        <Providers>
+          <div className="mt-16">{children}</div>
+        </Providers>
         <footer className="relative z-10">
           <a
             target="_blank"
