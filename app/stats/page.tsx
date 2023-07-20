@@ -88,7 +88,7 @@ const StatsPage = () => {
             <>
               <span
                 className={classNames("col-span-2", {
-                  "border-b pb-3":
+                  "border-b border-winter pb-3":
                     iPlayerData !== playersWithWinsAndApps.length - 1,
                   "pt-3": iPlayerData !== 0,
                 })}
@@ -100,7 +100,7 @@ const StatsPage = () => {
                 className={classNames(
                   "col-span-3 flex flex-col justify-center",
                   {
-                    "border-b pb-3":
+                    "border-b border-winter pb-3":
                       iPlayerData !== playersWithWinsAndApps.length - 1,
                     "pt-3": iPlayerData !== 0,
                   }
@@ -120,7 +120,7 @@ const StatsPage = () => {
             <>
               <span
                 className={classNames("col-span-2", {
-                  "border-b pb-3": iTeamData !== teamColorsWithWins.length - 1,
+                  "border-b border-winter pb-3": iTeamData !== teamColorsWithWins.length - 1,
                   "pt-3": iTeamData !== 0,
                 })}
               >
@@ -129,7 +129,7 @@ const StatsPage = () => {
               <span
                 key={`${teamData.color}-wins`}
                 className={classNames("flex flex-col justify-center", {
-                  "border-b pb-3": iTeamData !== teamColorsWithWins.length - 1,
+                  "border-b border-winter pb-3": iTeamData !== teamColorsWithWins.length - 1,
                   "pt-3": iTeamData !== 0,
                 })}
               >
