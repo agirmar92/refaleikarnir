@@ -33,6 +33,7 @@
       "@/icons/*": ["icons/*"],
       "@/hooks/*": ["hooks/*"],
       "@/contexts/*": ["contexts/*"],
+      "@/utils/*": ["utils/*"],
       "@/types": ["utils/types"],
       "@/constants": ["utils/constants"]
     },

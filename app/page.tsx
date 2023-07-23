@@ -10,7 +10,7 @@ const RefaleikarnirFrontPage = () => (
     <CoverPhoto>
       <YearSelector />
     </CoverPhoto>
-    <div className="flex flex-col space-y-3 p-3 bg-winter relative z-10">
+    <div className="space-y-3 p-3 bg-winter relative z-10">
       <TileTitle>Þrautir</TileTitle>
       <Tile>
         <ChallengesPlayed />
