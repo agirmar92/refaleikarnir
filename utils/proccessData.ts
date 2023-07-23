@@ -1,4 +1,4 @@
-import { PlayerDetails, TeamColor } from "@/types";
+import { PlayerDetails, PlayerSlug, TeamColor } from "@/types";
 import { players } from "@/constants";
 import { results } from "@/data/results";
 
@@ -68,4 +68,49 @@ export const getTeamColorsWithWins = () => {
   return Object.values(teamsWithWins).sort(
     (teamA, teamB) => teamB.wins - teamA.wins
   );
+};
+
+export const getTeamColorsWithPlayedCountByPlayer = (slug: PlayerSlug) => {
+  const teamColorsWithPlayedCount: Record<
+    TeamColor,
+    { color: TeamColor; count: number }
+  > = {
+    BLACK: { color: "BLACK", count: 0 },
+    WHITE: { color: "WHITE", count: 0 },
+    RED: { color: "RED", count: 0 },
+    SILVER: { color: "SILVER", count: 0 },
+  };
+  results.forEach((result) => {
+    const playerTeam = result.teams.find((team) =>
+      team.teamPlayers.some((player) => player.slug === slug)
+    );
+    if (!playerTeam) {
+      return;
+    }
+    teamColorsWithPlayedCount[playerTeam.teamColor].count =
+      teamColorsWithPlayedCount[playerTeam.teamColor].count + 1;
+  });
+  return Object.values(teamColorsWithPlayedCount).sort(
+    (teamA, teamB) => teamB.count - teamA.count
+  );
+};
+
+export const getOverallResultsStatsByPlayer = (slug: PlayerSlug) => {
+  const overallResultsStats = {
+    0: 0,
+    1: 0,
+    2: 0,
+    3: 0,
+  };
+  results.forEach((result) => {
+    const playerTeam = result.teams.find((team) =>
+      team.teamPlayers.some((player) => player.slug === slug)
+    );
+    if (!playerTeam) {
+      return;
+    }
+    overallResultsStats[playerTeam.teamPlace] =
+      overallResultsStats[playerTeam.teamPlace] + 1;
+  });
+  return overallResultsStats;
 };

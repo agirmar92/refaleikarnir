@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { PlayerDetails, PlayerSlug } from "@/types";
 
 const bgClassNameByPlayerSlug: Record<PlayerSlug, string> = {
@@ -21,7 +22,8 @@ const PlayerPortrait = ({
 }) => {
   let content = [
     <p key={`playerName-${player.slug}`}>{player.name}</p>,
-    <div key={`playerPhoto-${player.slug}`}
+    <div
+      key={`playerPhoto-${player.slug}`}
       className={`w-10 h-10 ${
         bgClassNameByPlayerSlug[player.slug]
       } bg-no-repeat bg-black bg-contain bg-center rounded-full`}
@@ -32,9 +34,12 @@ const PlayerPortrait = ({
   }
 
   return (
-    <div className="flex items-center space-x-2">
+    <Link
+      className="flex items-center space-x-2"
+      href={`/player/${player.slug}`}
+    >
       {content.map((child) => child)}
-    </div>
+    </Link>
   );
 };
 

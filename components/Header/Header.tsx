@@ -61,7 +61,7 @@ const Header = () => {
           "flex justify-between h-[64px] px-5 items-center z-[999] fixed top-0 left-0 w-full transition-[background]",
           {
             "bg-winter":
-              pathname !== "/" ||
+              (pathname !== "/" && !pathname.includes("/player/")) ||
               (screenWidth && scrollY > screenWidth - 64 * 2),
           }
         )}
