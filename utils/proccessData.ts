@@ -114,3 +114,36 @@ export const getOverallResultsStatsByPlayer = (slug: PlayerSlug) => {
   });
   return overallResultsStats;
 };
+
+export const getTeammateCountByPlayer = (slug: PlayerSlug) => {
+  const otherPlayersWithCount: { slug: PlayerSlug; count: number }[] =
+    Object.values(players)
+      .filter((player) => player.slug !== slug)
+      .map((player) => {
+        return { slug: player.slug, count: 0 };
+      });
+
+  results.forEach((result) => {
+    const playerTeam = result.teams.find((team) =>
+      team.teamPlayers.some((player) => player.slug === slug)
+    );
+    if (!playerTeam) {
+      return;
+    }
+    playerTeam.teamPlayers.forEach((player) => {
+      if (player.slug !== slug) {
+        const teammate = otherPlayersWithCount.find(
+          (playerWithCount) => playerWithCount.slug === player.slug
+        );
+        if (!teammate) {
+          return;
+        }
+        teammate.count = teammate.count + 1;
+      }
+    });
+  });
+
+  return otherPlayersWithCount.sort(
+    (playerA, playerB) => playerB.count - playerA.count
+  );
+};

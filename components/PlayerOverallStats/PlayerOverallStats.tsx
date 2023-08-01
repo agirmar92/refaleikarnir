@@ -12,7 +12,7 @@ const PlayerOverallStats = ({ slug }: { slug: PlayerSlug }) => {
 
   return (
     <div className="grid grid-cols-2">
-      <div className="flex flex-col items-center border-r">
+      <div className="flex flex-col items-center border-r border-winter">
         {Object.values(overallResultsStats).map((countInPlace, place) => {
           if (place < 0 || place > 3) return;
           return (

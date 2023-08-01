@@ -7,6 +7,8 @@ import Tile from "@/components/Tile";
 import TileTitle from "@/components/TileTitle";
 import PlayerCoverPhoto from "@/components/PlayerCoverPhoto";
 import PlayerOverallStats from "@/components/PlayerOverallStats";
+import { getTeammateCountByPlayer } from "@/utils/proccessData";
+import PlayerTeammatesList from "@/components/PlayerTeammatesList";
 
 const PlayerPage = ({ params }: { params: { slug: string } }) => {
   const router = useRouter();
@@ -15,6 +17,8 @@ const PlayerPage = ({ params }: { params: { slug: string } }) => {
     return router.push("/");
   }
   const { name, slug } = players[params.slug as PlayerSlug];
+
+  const bla = getTeammateCountByPlayer(slug);
 
   return (
     <>
@@ -27,6 +31,10 @@ const PlayerPage = ({ params }: { params: { slug: string } }) => {
         <TileTitle>Tölfræði</TileTitle>
         <Tile>
           <PlayerOverallStats slug={slug} />
+        </Tile>
+        <TileTitle>Liðsfélagar</TileTitle>
+        <Tile>
+          <PlayerTeammatesList slug={slug} />
         </Tile>
       </div>
     </>
