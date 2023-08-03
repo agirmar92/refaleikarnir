@@ -27,7 +27,13 @@ const coverPhotosByYearAndSeason: { [key: string]: string } = {
   "2014-winter": "bg-coverPhoto-2014-winter",
 };
 
-const CoverPhoto = ({ children }: { children: ReactNode }) => {
+const CoverPhoto = ({
+  children,
+  emblems,
+}: {
+  children: ReactNode;
+  emblems: ReactNode;
+}) => {
   const scrollY = useScrollY();
   const screenWidth = useScreenWidth();
   const { gamesIndex, currentYear } = useYear();
@@ -46,6 +52,17 @@ const CoverPhoto = ({ children }: { children: ReactNode }) => {
           }
         )}
       >
+        <div
+          className={classNames(
+            "absolute left-0 bottom-[54px] w-full opacity-0 transition-opacity",
+            {
+              "opacity-100":
+                screenWidth && scrollY < screenWidth - (64 * 2 + 26),
+            }
+          )}
+        >
+          {emblems}
+        </div>
         {children}
       </div>
       <div className="w-full h-[100vw] bg-winter opacity-50 fixed z-10" />

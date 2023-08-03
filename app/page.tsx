@@ -3,11 +3,12 @@ import CoverPhoto from "@/components/CoverPhoto";
 import Scoreboard from "@/components/Scoreboard";
 import Tile from "@/components/Tile";
 import TileTitle from "@/components/TileTitle";
+import WinningTeamsEmblems from "@/components/WinningTeamsEmblems";
 import YearSelector from "@/components/YearSelector";
 
 const RefaleikarnirFrontPage = () => (
   <>
-    <CoverPhoto>
+    <CoverPhoto emblems={<WinningTeamsEmblems />}>
       <YearSelector />
     </CoverPhoto>
     <div className="space-y-3 p-3 bg-winter relative z-10">
