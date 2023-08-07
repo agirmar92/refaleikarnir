@@ -6,6 +6,7 @@ import useScreenWidth from "@/hooks/useScreenWidth";
 import useScrollY from "@/hooks/useScrollY";
 import { useYear } from "@/contexts/YearContext";
 import { results } from "@/data/results";
+import WinningTeamsEmblems from "@/components/WinningTeamsEmblems";
 
 const defaultCoverPhoto = "bg-coverPhoto";
 const coverPhotosByYearAndSeason: { [key: string]: string } = {
@@ -27,7 +28,7 @@ const coverPhotosByYearAndSeason: { [key: string]: string } = {
   "2014-winter": "bg-coverPhoto-2014-winter",
 };
 
-const CoverPhoto = ({
+const DynamicallyPositionedContent = ({
   children,
   emblems,
 }: {
@@ -36,35 +37,43 @@ const CoverPhoto = ({
 }) => {
   const scrollY = useScrollY();
   const screenWidth = useScreenWidth();
+
+  return (
+    <div
+      className={classNames(
+        "left-0 right-0 z-50 p-3 box-border transition-[background]",
+        screenWidth && scrollY > screenWidth - 64 * 2
+          ? "fixed top-[64px]"
+          : "absolute bottom-0",
+        {
+          "bg-winter-light": screenWidth && scrollY > screenWidth - 64 * 2,
+        }
+      )}
+    >
+      <div
+        className={classNames(
+          "absolute left-0 bottom-[54px] w-full opacity-0 transition-opacity",
+          {
+            "opacity-100": screenWidth && scrollY < screenWidth - (64 * 2 + 26),
+          }
+        )}
+      >
+        {emblems}
+      </div>
+      {children}
+    </div>
+  );
+};
+
+const CoverPhoto = ({ children }: { children: ReactNode }) => {
   const { gamesIndex, currentYear } = useYear();
   const season = results[gamesIndex].season;
 
   return (
     <div className="w-[100vw] h-[100vw] relative -mt-16">
-      <div
-        className={classNames(
-          "left-0 right-0 z-50 p-3 box-border transition-[background]",
-          screenWidth && scrollY > screenWidth - 64 * 2
-            ? "fixed top-[64px]"
-            : "absolute bottom-0",
-          {
-            "bg-winter-light": screenWidth && scrollY > screenWidth - 64 * 2,
-          }
-        )}
-      >
-        <div
-          className={classNames(
-            "absolute left-0 bottom-[54px] w-full opacity-0 transition-opacity",
-            {
-              "opacity-100":
-                screenWidth && scrollY < screenWidth - (64 * 2 + 26),
-            }
-          )}
-        >
-          {emblems}
-        </div>
+      <DynamicallyPositionedContent emblems={<WinningTeamsEmblems />}>
         {children}
-      </div>
+      </DynamicallyPositionedContent>
       <div className="w-full h-[100vw] bg-winter opacity-50 fixed z-10" />
       <div
         className={classNames(
