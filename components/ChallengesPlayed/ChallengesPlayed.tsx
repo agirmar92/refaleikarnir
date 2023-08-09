@@ -64,7 +64,7 @@ const DetailedChallengesPlayed = ({
               key={`challenge-${iChallenge}-team-${team.color}-points`}
               className="contents text-center"
             >
-              <span className="flex items-center justify-center">
+              <span className="flex items-center justify-center border-r border-l">
                 {team.points}
               </span>
             </div>
