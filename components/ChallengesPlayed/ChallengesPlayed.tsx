@@ -1,23 +1,104 @@
 "use client";
 
+import classNames from "classnames";
 import { useYear } from "@/contexts/YearContext";
 import { results } from "@/data/results";
+import FoxIcon from "@/icons/FoxIcon";
+import { ChallengeAndResults } from "@/utils/types";
 
-const ChallengesPlayed = () => {
-  const { gamesIndex } = useYear();
-  const challengesPlayed = results[gamesIndex].challenges;
-
+const SimpleChallengesPlayed = ({
+  challengesPlayed,
+}: {
+  challengesPlayed: string[];
+}) => {
   return (
-    <>
+    <div className="space-y-2">
       {challengesPlayed.map((challenge, iChallenge) => (
         <p
-          key={`challenge-${iChallenge}`}
+          key={`simple-challenge-${iChallenge}`}
           className="text-center font-semibold"
         >
           {challenge}
         </p>
       ))}
-    </>
+    </div>
+  );
+};
+
+const ChallengesPlayed = () => {
+  const { gamesIndex } = useYear();
+
+  if (typeof results[gamesIndex].challenges[0] === "string") {
+    return (
+      <SimpleChallengesPlayed
+        challengesPlayed={results[gamesIndex].challenges as string[]}
+      />
+    );
+  }
+
+  const challengesPlayed = results[gamesIndex]
+    .challenges as ChallengeAndResults[];
+  const teamsThatPlayed = challengesPlayed[0].teamResults;
+
+  return (
+    <div
+      className={classNames("grid grid-flow-row-dense gap-y-2", {
+        "grid-cols-7": teamsThatPlayed.length === 2,
+        "grid-cols-8": teamsThatPlayed.length === 3,
+        "grid-cols-9": teamsThatPlayed.length === 4,
+      })}
+    >
+      <div className="contents text-center">
+        <span className="col-span-5" />
+        {teamsThatPlayed.map((team) => (
+          <span
+            key={`team-${team.color}-emblem`}
+            className="flex justify-center"
+          >
+            <FoxIcon color={team.color} />
+          </span>
+        ))}
+      </div>
+      {challengesPlayed.map((challenge, iChallenge) => (
+        <div key={`challenge-${iChallenge}`} className="contents">
+          <span className="text-center text-xl flex items-center justify-center">
+            {challenge.emoji}
+          </span>
+          <span className="col-span-4 flex items-center font-semibold">
+            {challenge.name}
+          </span>
+          {challenge.teamResults.map((team) => (
+            <div
+              key={`challenge-${iChallenge}-team-${team.color}-points`}
+              className="contents text-center"
+            >
+              <span className="flex items-center justify-center">
+                {team.points}
+              </span>
+            </div>
+          ))}
+        </div>
+      ))}
+      <div className="contents">
+        <span className="col-span-1" />
+        <span className="col-span-4">Lokastig</span>
+        {teamsThatPlayed.map((team, iTeam) => {
+          const teamTotalPoints = challengesPlayed.reduce(
+            (prev, currChallenge) =>
+              prev + (currChallenge.teamResults[iTeam].points || 0),
+            0
+          );
+          return (
+            <span
+              key={`challenge-totalPoints-${team.color}`}
+              className="text-center bg-white rounded-full"
+            >
+              {teamTotalPoints}
+            </span>
+          );
+        })}
+      </div>
+    </div>
   );
 };
 

@@ -232,7 +232,35 @@ export const results: Result[] = [
       },
     ],
     season: "winter",
-    challenges: ["Foosball ⚽", "Dota 2 🎮", "Overwatch 🔫"],
+    challenges: [
+      {
+        name: "Foosball",
+        emoji: "⚽",
+        teamResults: [
+          { color: "BLACK", points: 4 },
+          { color: "RED", points: 1 },
+          { color: "WHITE", points: 1 },
+        ],
+      },
+      {
+        name: "Dota 2",
+        emoji: "🎮",
+        teamResults: [
+          { color: "BLACK", points: 2 },
+          { color: "RED", points: 4 },
+          { color: "WHITE", points: 0 },
+        ],
+      },
+      {
+        name: "Overwatch",
+        emoji: "🔫",
+        teamResults: [
+          { color: "BLACK", points: 2 },
+          { color: "RED", points: 0 },
+          { color: "WHITE", points: 1 },
+        ],
+      },
+    ],
   },
   {
     year: 2019,
@@ -350,6 +378,37 @@ export const results: Result[] = [
         teamPlayers: [players.aegir, players.atli],
       },
     ],
-    challenges: ["GT 🏎️", "Black Ops 🎮", "Boccia/Boule 👴🏻"],
+    challenges: [
+      {
+        name: "GT Akademían",
+        emoji: "🏎️",
+        teamResults: [
+          { color: "BLACK", points: 6 },
+          { color: "SILVER", points: 7 },
+          { color: "RED", points: 5 },
+          { color: "WHITE", points: 1.5 },
+        ],
+      },
+      {
+        name: "Black Ops",
+        emoji: "🎮",
+        teamResults: [
+          { color: "BLACK", points: 15 },
+          { color: "SILVER", points: 0 },
+          { color: "RED", points: 10 },
+          { color: "WHITE", points: 5 },
+        ],
+      },
+      {
+        name: "Boccia/Boule",
+        emoji: "👴🏻",
+        teamResults: [
+          { color: "BLACK", points: 15 },
+          { color: "SILVER", points: 10 },
+          { color: "RED", points: 0 },
+          { color: "WHITE", points: 5 },
+        ],
+      },
+    ],
   },
 ];
