@@ -25,19 +25,11 @@ const SimpleChallengesPlayed = ({
   );
 };
 
-const ChallengesPlayed = () => {
-  const { gamesIndex } = useYear();
-
-  if (typeof results[gamesIndex].challenges[0] === "string") {
-    return (
-      <SimpleChallengesPlayed
-        challengesPlayed={results[gamesIndex].challenges as string[]}
-      />
-    );
-  }
-
-  const challengesPlayed = results[gamesIndex]
-    .challenges as ChallengeAndResults[];
+const DetailedChallengesPlayed = ({
+  challengesPlayed,
+}: {
+  challengesPlayed: ChallengeAndResults[];
+}) => {
   const teamsThatPlayed = challengesPlayed[0].teamResults;
 
   return (
@@ -103,6 +95,26 @@ const ChallengesPlayed = () => {
       </div>
     </div>
   );
+};
+
+const ChallengesPlayed = () => {
+  const { gamesIndex } = useYear();
+
+  if (typeof results[gamesIndex].challenges[0] === "string") {
+    return (
+      <SimpleChallengesPlayed
+        challengesPlayed={results[gamesIndex].challenges as string[]}
+      />
+    );
+  } else {
+    return (
+      <DetailedChallengesPlayed
+        challengesPlayed={
+          results[gamesIndex].challenges as ChallengeAndResults[]
+        }
+      />
+    );
+  }
 };
 
 export default ChallengesPlayed;
