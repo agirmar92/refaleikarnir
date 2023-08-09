@@ -91,7 +91,10 @@ const ChallengesPlayed = () => {
           return (
             <span
               key={`challenge-totalPoints-${team.color}`}
-              className="text-center bg-white rounded-full"
+              className={classNames("text-center bg-white", {
+                "rounded-s-md": iTeam === 0,
+                "rounded-e-md": iTeam === teamsThatPlayed.length - 1,
+              })}
             >
               {teamTotalPoints}
             </span>
