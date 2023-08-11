@@ -255,9 +255,9 @@ export const results: Result[] = [
         name: "Overwatch",
         emoji: "🔫",
         teamResults: [
-          { color: "BLACK", points: 2 },
+          { color: "BLACK", points: 4 },
           { color: "RED", points: 0 },
-          { color: "WHITE", points: 1 },
+          { color: "WHITE", points: 2 },
         ],
       },
     ],
