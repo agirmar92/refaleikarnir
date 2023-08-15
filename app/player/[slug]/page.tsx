@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { redirect } from "next/navigation";
 import { players } from "@/constants";
 import { PlayerSlug } from "@/types";
 import Tile from "@/components/Tile";
@@ -10,10 +10,9 @@ import PlayerOverallStats from "@/components/PlayerOverallStats";
 import PlayerTeammatesList from "@/components/PlayerTeammatesList";
 
 const PlayerPage = ({ params }: { params: { slug: string } }) => {
-  const router = useRouter();
   if (!players[params.slug as PlayerSlug]) {
     // No player found with that slug
-    return router.push("/");
+    redirect("/");
   }
   const { name, slug } = players[params.slug as PlayerSlug];
 
