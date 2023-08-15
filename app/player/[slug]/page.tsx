@@ -1,5 +1,3 @@
-"use client";
-
 import { redirect } from "next/navigation";
 import { players } from "@/constants";
 import { PlayerSlug } from "@/types";
