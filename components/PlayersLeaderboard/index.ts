@@ -1,3 +1,6 @@
-import PlayersLeaderboard from "./PlayersLeaderboard";
+import PlayersLeaderboard, {
+  PlayersLeaderboardSkeleton,
+} from "./PlayersLeaderboard";
 
+export { PlayersLeaderboardSkeleton };
 export default PlayersLeaderboard;

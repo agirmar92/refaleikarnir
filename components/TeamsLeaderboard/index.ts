@@ -1,3 +1,4 @@
-import TeamsLeaderboard from "./TeamsLeaderboard";
+import TeamsLeaderboard, { TeamsLeaderboardSkeleton } from "./TeamsLeaderboard";
 
+export { TeamsLeaderboardSkeleton };
 export default TeamsLeaderboard;
