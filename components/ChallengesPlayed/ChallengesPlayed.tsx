@@ -59,12 +59,19 @@ const DetailedChallengesPlayed = ({
           <span className="col-span-4 flex items-center font-semibold">
             {challenge.name}
           </span>
-          {challenge.teamResults.map((team) => (
+          {challenge.teamResults.map((team, iTeam) => (
             <div
               key={`challenge-${iChallenge}-team-${team.color}-points`}
               className="contents text-center"
             >
-              <span className="flex items-center justify-center border-r border-l">
+              <span
+                className={classNames(
+                  "flex items-center justify-center border-r",
+                  {
+                    "border-l": iTeam === 0,
+                  }
+                )}
+              >
                 {team.points}
               </span>
             </div>
