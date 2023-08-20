@@ -34,6 +34,7 @@
       "@/hooks/*": ["hooks/*"],
       "@/contexts/*": ["contexts/*"],
       "@/utils/*": ["utils/*"],
+      "@/public/*": ["public/*"],
       "@/types": ["utils/types"],
       "@/constants": ["utils/constants"]
     },
