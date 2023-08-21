@@ -59,6 +59,7 @@ const DynamicCoverPhoto = ({ photoSrc }: { photoSrc: string }) => {
         fill
         onLoadingComplete={onPhotoLoaded}
         onError={onError}
+        priority
       />
     </>
   );
