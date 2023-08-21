@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import classNames from "classnames";
-import defaultCoverPhoto from "@/public/coverPhotos/refir.jpg";
+import defaultCoverPhoto from "./refir.jpg";
 
 const DynamicCoverPhoto = ({ photoSrc }: { photoSrc: string }) => {
   const [isPhotoLoading, setIsPhotoLoading] = useState(true);
