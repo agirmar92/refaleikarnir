@@ -6,6 +6,5 @@ module.exports = {
         hostname: "drive.google.com",
       },
     ],
-    // domains: ["drive.google.com"],
   },
 };
