@@ -23,7 +23,7 @@ const TeamResult = ({
       <span className="flex-1 self-center flex flex-col justify-center space-y-1">
         {teamMembers.map((player) => (
           <span className="self-end" key={player.slug}>
-            <PlayerPortrait player={player} />
+            <PlayerPortrait player={player} color={team} />
           </span>
         ))}
       </span>

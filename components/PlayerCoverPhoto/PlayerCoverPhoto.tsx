@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 import classNames from "classnames";
 import useScreenWidth from "@/hooks/useScreenWidth";
 import useScrollY from "@/hooks/useScrollY";
-import { PlayerSlug } from "@/utils/types";
+import DynamicCoverPhoto from "../CoverPhoto/DynamicCoverPhoto";
 
 const DynamicallyPositionedContent = ({
   children,
@@ -33,20 +33,15 @@ const DynamicallyPositionedContent = ({
 
 const PlayerCoverPhoto = ({
   children,
-  backgroundClassName,
+  coverPhotoUrl,
 }: {
   children: ReactNode;
-  backgroundClassName: `bg-${PlayerSlug}`;
+  coverPhotoUrl: string;
 }) => (
   <div className="w-[100vw] h-[100vw] relative -mt-16">
     <DynamicallyPositionedContent>{children}</DynamicallyPositionedContent>
     <div className="w-full h-[100vw] bg-winter opacity-50 fixed z-10" />
-    <div
-      className={classNames(
-        "w-full h-[100vw] fixed bg-center bg-cover",
-        backgroundClassName
-      )}
-    />
+    <DynamicCoverPhoto photoSrc={coverPhotoUrl} />
   </div>
 );
 
