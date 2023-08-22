@@ -35,7 +35,7 @@ export const players: Record<PlayerSlug, PlayerDetails> = {
     name: "Jonni",
     slug: "jonni",
     coverPhotoUrl:
-      "https://drive.google.com/uc?id=1XIsNFkB_zvL8-3sXSixCTqiZEqPZ2M2k",
+      "https://drive.google.com/uc?id=1n9xfi1H9Ydd8z1r3sSv67-5T5ozGiek6",
   },
   krissi: {
     name: "Krissi",
