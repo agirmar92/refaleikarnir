@@ -11,7 +11,11 @@ export type PlayerSlug =
   | "jonni"
   | "krissi";
 
-export type PlayerDetails = { name: string; slug: PlayerSlug };
+export type PlayerDetails = {
+  name: string;
+  slug: PlayerSlug;
+  coverPhotoUrl: string;
+};
 
 export type ChallengeAndResults = {
   name: string;

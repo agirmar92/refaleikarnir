@@ -9,17 +9,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        aegir: "url('../images/aegir.jpg')",
-        arnar: "url('../images/arnar.jpg')",
-        atli: "url('../images/atli.jpg')",
-        danni: "url('../images/danni.jpg')",
-        gaui: "url('../images/gaui.jpg')",
-        jonni: "url('../images/jonni.jpg')",
-        krissi: "url('../images/krissi.jpg')",
-        maggi: "url('../images/maggi.jpg')",
-        vikingur: "url('../images/vikingur.jpg')",
-      },
       colors: {
         winter: "#264653",
         "winter-light": "#8798b5",

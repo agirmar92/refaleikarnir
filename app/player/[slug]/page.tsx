@@ -12,11 +12,11 @@ const PlayerPage = ({ params }: { params: { slug: string } }) => {
     // No player found with that slug
     redirect("/");
   }
-  const { name, slug } = players[params.slug as PlayerSlug];
+  const { name, slug, coverPhotoUrl } = players[params.slug as PlayerSlug];
 
   return (
     <>
-      <PlayerCoverPhoto backgroundClassName={`bg-${slug}`}>
+      <PlayerCoverPhoto coverPhotoUrl={coverPhotoUrl}>
         <h1 className="text-center text-4xl font-extrabold small-caps">
           {name}
         </h1>

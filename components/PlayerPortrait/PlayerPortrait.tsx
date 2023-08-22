@@ -1,17 +1,6 @@
 import Link from "next/link";
-import { PlayerDetails, PlayerSlug } from "@/types";
-
-const bgClassNameByPlayerSlug: Record<PlayerSlug, string> = {
-  aegir: "bg-aegir",
-  arnar: "bg-arnar",
-  gaui: "bg-gaui",
-  danni: "bg-danni",
-  vikingur: "bg-vikingur",
-  maggi: "bg-maggi",
-  krissi: "bg-krissi",
-  atli: "bg-atli",
-  jonni: "bg-jonni",
-};
+import { PlayerDetails } from "@/types";
+import DynamicPlayerPortrait from "./DynamicPlayerPortrait";
 
 const PlayerPortrait = ({
   player,
@@ -22,11 +11,9 @@ const PlayerPortrait = ({
 }) => {
   let content = [
     <p key={`playerName-${player.slug}`}>{player.name}</p>,
-    <div
+    <DynamicPlayerPortrait
       key={`playerPhoto-${player.slug}`}
-      className={`w-10 h-10 ${
-        bgClassNameByPlayerSlug[player.slug]
-      } bg-no-repeat bg-black bg-contain bg-center rounded-full`}
+      player={player}
     />,
   ];
   if (reverseContent) {
