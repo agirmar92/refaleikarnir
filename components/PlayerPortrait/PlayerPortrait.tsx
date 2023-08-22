@@ -1,19 +1,22 @@
 import Link from "next/link";
-import { PlayerDetails } from "@/types";
+import { PlayerDetails, TeamColor } from "@/types";
 import DynamicPlayerPortrait from "./DynamicPlayerPortrait";
 
 const PlayerPortrait = ({
   player,
   reverseContent = false,
+  color,
 }: {
   player: PlayerDetails;
   reverseContent?: boolean;
+  color?: TeamColor;
 }) => {
   let content = [
     <p key={`playerName-${player.slug}`}>{player.name}</p>,
     <DynamicPlayerPortrait
       key={`playerPhoto-${player.slug}`}
       player={player}
+      color={color}
     />,
   ];
   if (reverseContent) {
