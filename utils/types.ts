@@ -27,5 +27,6 @@ export type Result = {
     teamColor: TeamColor;
   }[];
   challenges: ChallengeAndResults[] | string[];
+  coverPhotoUrl: string;
   season?: "summer" | "winter" | undefined;
 };

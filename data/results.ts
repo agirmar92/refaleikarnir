@@ -23,6 +23,8 @@ export const results: Result[] = [
     ],
     season: "winter",
     challenges: ["Borðtennis 🏓", "Keila 🎳", "FIFA ⚽"],
+    coverPhotoUrl:
+      "https://drive.google.com/uc?id=1j_cWENZUerAnmLfZMv6gvLl8wXET5J5V",
   },
   {
     year: 2014,
@@ -45,6 +47,8 @@ export const results: Result[] = [
     ],
     season: "summer",
     challenges: ["Bogfimi 🏹", "Lazer tag 🟩", "Píla 🎯"],
+    coverPhotoUrl:
+      "https://drive.google.com/uc?id=1tg4cwHEAtYhLZavrt-z1IedIVcHGBWMD",
   },
   {
     year: 2015,
@@ -67,6 +71,8 @@ export const results: Result[] = [
     ],
     season: "winter",
     challenges: ["Badminton 🏸", "Pool 🎱", "FIFA ⚽"],
+    coverPhotoUrl:
+      "https://drive.google.com/uc?id=12CJDQsxAHlSG8wmFiUi51JWaavcNIbkl",
   },
   {
     year: 2015,
@@ -89,6 +95,8 @@ export const results: Result[] = [
     ],
     season: "summer",
     challenges: ["Körfubolti 🏀", "Keila 🎳", "Minute to Win it ⏲️"],
+    coverPhotoUrl:
+      "https://drive.google.com/uc?id=1N2fJhi3Ofh8Cu1NhSBaI9WMUrMy1bBku",
   },
   {
     year: 2016,
@@ -111,6 +119,8 @@ export const results: Result[] = [
     ],
     season: "winter",
     challenges: ["Skotfimi 🔫", "Borðtennis 🏓", "Black Ops 🎮"],
+    coverPhotoUrl:
+      "https://drive.google.com/uc?id=1OS6_1GWPp2P-EShBJ6ffKmbNWMw7NKm6",
   },
   {
     year: 2016,
@@ -133,6 +143,8 @@ export const results: Result[] = [
     ],
     season: "summer",
     challenges: ["Folf 🥏", "Kubbur 👑", "Capture the Flag 🏴"],
+    coverPhotoUrl:
+      "https://drive.google.com/uc?id=1WOkbsIrO2c0wSKHOKfNev5Fh-kYi08tx",
   },
   {
     year: 2017,
@@ -155,6 +167,8 @@ export const results: Result[] = [
     ],
     season: "winter",
     challenges: ["Go Kart 🏁", "Píla 🎯", "Mario Kart 🍄"],
+    coverPhotoUrl:
+      "https://drive.google.com/uc?id=1iZmAclRDQULib4a4yBE9TTu3UWaTRr8X",
   },
   {
     year: 2017,
@@ -177,6 +191,8 @@ export const results: Result[] = [
     ],
     season: "summer",
     challenges: ["Strandblak 🏐", "Pool 🎱", "Rocket League 🏎️"],
+    coverPhotoUrl:
+      "https://drive.google.com/uc?id=1B-FzCpjmmFLccFwt5kwVL1kYiYBTgCNN",
   },
   {
     year: 2018,
@@ -194,6 +210,8 @@ export const results: Result[] = [
     ],
     season: "winter",
     challenges: ["Fótbolti ⚽", "Keila 🎳", "Black Ops 🎮"],
+    coverPhotoUrl:
+      "https://drive.google.com/uc?id=1rT5-GZhsCqt2KzHs05ngePxU5sOyDo9F",
   },
   {
     year: 2018,
@@ -211,6 +229,8 @@ export const results: Result[] = [
     ],
     season: "summer",
     challenges: ["Skotfimi 🔫", "Pútt ⛳", "Beer Pong 🍻"],
+    coverPhotoUrl:
+      "https://drive.google.com/uc?id=1nNPIIrm9NfySL-H-e0BJA69HurOx-WyZ",
   },
   {
     year: 2019,
@@ -261,6 +281,8 @@ export const results: Result[] = [
         ],
       },
     ],
+    coverPhotoUrl:
+      "https://drive.google.com/uc?id=1UWJ9M3DXYKGZy4nSyclMtN7juYuwDOp5",
   },
   {
     year: 2019,
@@ -283,6 +305,8 @@ export const results: Result[] = [
     ],
     season: "summer",
     challenges: ["Tennis 🎾", "Golfhermir 🏌️‍♂️", "Píla 🎯"],
+    coverPhotoUrl:
+      "https://drive.google.com/uc?id=1rHHEtemspEsbiolsmqo9uh8NuoCtxzlB",
   },
   {
     year: 2020,
@@ -305,6 +329,8 @@ export const results: Result[] = [
     ],
     season: "winter",
     challenges: ["Keila 🎳", "Borðtennis 🏓", "Minute to Win it ⏲️"],
+    coverPhotoUrl:
+      "https://drive.google.com/uc?id=1bpjYF5fwSMh3BSSdczNZRa9dWUbq969a",
   },
   {
     year: 2020,
@@ -327,6 +353,8 @@ export const results: Result[] = [
     ],
     season: "summer",
     challenges: ["Folf 🥏", "Körfubolti (trick shots) 🏀", "Kubbur 👑"],
+    coverPhotoUrl:
+      "https://drive.google.com/uc?id=1k-NotuxaTpKV91FVsHHkevSOFpllfKZt",
   },
   {
     year: 2022,
@@ -353,6 +381,8 @@ export const results: Result[] = [
       },
     ],
     challenges: ["Padel 🎾", "Fall Guys 🎮", "Minute to Win it ⏲️"],
+    coverPhotoUrl:
+      "https://drive.google.com/uc?id=1MvGfWRcpaPaiDy7XDfvhD-L-7q0GnOP3",
   },
   {
     year: 2023,
@@ -410,5 +440,7 @@ export const results: Result[] = [
         ],
       },
     ],
+    coverPhotoUrl:
+      "https://drive.google.com/uc?id=18mhhfjLk94Yz0Qo9z1T80eWOK7pt7F13",
   },
 ];
