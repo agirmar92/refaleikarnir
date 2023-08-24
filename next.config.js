@@ -3,7 +3,7 @@ module.exports = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "drive.google.com",
+        hostname: "refaleikarnir.sirv.com",
       },
     ],
   },

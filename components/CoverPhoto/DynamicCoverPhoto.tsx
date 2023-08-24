@@ -60,7 +60,6 @@ const DynamicCoverPhoto = ({ photoSrc }: { photoSrc: string }) => {
         onLoadingComplete={onPhotoLoaded}
         onError={onError}
         priority
-        unoptimized
       />
     </>
   );
