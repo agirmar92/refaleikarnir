@@ -5,55 +5,55 @@ export const players: Record<PlayerSlug, PlayerDetails> = {
     name: "Ægir",
     slug: "aegir",
     coverPhotoUrl:
-      "https://drive.google.com/uc?id=1ebicq-cQL8DNptESeyShpAgK9tNYLe9q",
+      "https://refaleikarnir.sirv.com/playerPhotos/aegir.jpg",
   },
   arnar: {
     name: "Arnar",
     slug: "arnar",
     coverPhotoUrl:
-      "https://drive.google.com/uc?id=17d-mPSUhtwqXCRKoTvT5LnJR8AaEYbXf",
+      "https://refaleikarnir.sirv.com/playerPhotos/arnar.jpg",
   },
   atli: {
     name: "Atli",
     slug: "atli",
     coverPhotoUrl:
-      "https://drive.google.com/uc?id=19cOqcmx9xIK6CJPYGp6JmFrsEfeNcaQa",
+      "https://refaleikarnir.sirv.com/playerPhotos/atli.jpg",
   },
   danni: {
     name: "Danni",
     slug: "danni",
     coverPhotoUrl:
-      "https://drive.google.com/uc?id=16DklA-TBW3XcINXDkMlBOgZFzpQPK278",
+      "https://refaleikarnir.sirv.com/playerPhotos/danni.jpg",
   },
   gaui: {
     name: "Gaui",
     slug: "gaui",
     coverPhotoUrl:
-      "https://drive.google.com/uc?id=1I8IhLdh8C6BBx7nM2n4fYZCaP1hAbJOA",
+      "https://refaleikarnir.sirv.com/playerPhotos/gaui.jpg",
   },
   jonni: {
     name: "Jonni",
     slug: "jonni",
     coverPhotoUrl:
-      "https://drive.google.com/uc?id=1n9xfi1H9Ydd8z1r3sSv67-5T5ozGiek6",
+      "https://refaleikarnir.sirv.com/playerPhotos/jonni.jpg",
   },
   krissi: {
     name: "Krissi",
     slug: "krissi",
     coverPhotoUrl:
-      "https://drive.google.com/uc?id=1nf4KGckqyyfXPSeS7o_A4fJ_fz-9MbCg",
+      "https://refaleikarnir.sirv.com/playerPhotos/krissi.jpg",
   },
   maggi: {
     name: "Maggi",
     slug: "maggi",
     coverPhotoUrl:
-      "https://drive.google.com/uc?id=1u3L3qqoAQoyjT1MOUpcJHN9G0WdW_wNr",
+      "https://refaleikarnir.sirv.com/playerPhotos/maggi.jpg",
   },
   vikingur: {
     name: "Víkingur",
     slug: "vikingur",
     coverPhotoUrl:
-      "https://drive.google.com/uc?id=1fpJLwtmT3IuYvpDQMbSx5L-EBwT7LA7x",
+      "https://refaleikarnir.sirv.com/playerPhotos/vikingur.jpg",
   },
 };
 

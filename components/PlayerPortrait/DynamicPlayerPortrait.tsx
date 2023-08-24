@@ -43,10 +43,9 @@ const DynamicPlayerPortrait = ({
             color ? "w-9 h-9" : "w-10 h-10"
           )}
           alt={`${player.slug}-portrait`}
-          src={player.coverPhotoUrl}
+          src={`${player.coverPhotoUrl}?w=72&h=72`}
           width={40}
           height={40}
-          unoptimized
           style={{ visibility: "hidden" }}
           onLoadingComplete={(img) => {
             if (img.naturalWidth > 0) {

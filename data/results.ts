@@ -23,8 +23,7 @@ export const results: Result[] = [
     ],
     season: "winter",
     challenges: ["Borðtennis 🏓", "Keila 🎳", "FIFA ⚽"],
-    coverPhotoUrl:
-      "https://drive.google.com/uc?id=1j_cWENZUerAnmLfZMv6gvLl8wXET5J5V",
+    coverPhotoUrl: "https://refaleikarnir.sirv.com/coverPhotos/2014-winter.jpg",
   },
   {
     year: 2014,
@@ -47,8 +46,7 @@ export const results: Result[] = [
     ],
     season: "summer",
     challenges: ["Bogfimi 🏹", "Lazer tag 🟩", "Píla 🎯"],
-    coverPhotoUrl:
-      "https://drive.google.com/uc?id=1tg4cwHEAtYhLZavrt-z1IedIVcHGBWMD",
+    coverPhotoUrl: "https://refaleikarnir.sirv.com/coverPhotos/2014-summer.jpg",
   },
   {
     year: 2015,
@@ -71,8 +69,7 @@ export const results: Result[] = [
     ],
     season: "winter",
     challenges: ["Badminton 🏸", "Pool 🎱", "FIFA ⚽"],
-    coverPhotoUrl:
-      "https://drive.google.com/uc?id=12CJDQsxAHlSG8wmFiUi51JWaavcNIbkl",
+    coverPhotoUrl: "https://refaleikarnir.sirv.com/coverPhotos/2015-winter.jpg",
   },
   {
     year: 2015,
@@ -95,8 +92,7 @@ export const results: Result[] = [
     ],
     season: "summer",
     challenges: ["Körfubolti 🏀", "Keila 🎳", "Minute to Win it ⏲️"],
-    coverPhotoUrl:
-      "https://drive.google.com/uc?id=1N2fJhi3Ofh8Cu1NhSBaI9WMUrMy1bBku",
+    coverPhotoUrl: "https://refaleikarnir.sirv.com/coverPhotos/2015-summer.jpg",
   },
   {
     year: 2016,
@@ -119,8 +115,7 @@ export const results: Result[] = [
     ],
     season: "winter",
     challenges: ["Skotfimi 🔫", "Borðtennis 🏓", "Black Ops 🎮"],
-    coverPhotoUrl:
-      "https://drive.google.com/uc?id=1OS6_1GWPp2P-EShBJ6ffKmbNWMw7NKm6",
+    coverPhotoUrl: "https://refaleikarnir.sirv.com/coverPhotos/2016-winter.jpg",
   },
   {
     year: 2016,
@@ -143,8 +138,7 @@ export const results: Result[] = [
     ],
     season: "summer",
     challenges: ["Folf 🥏", "Kubbur 👑", "Capture the Flag 🏴"],
-    coverPhotoUrl:
-      "https://drive.google.com/uc?id=1WOkbsIrO2c0wSKHOKfNev5Fh-kYi08tx",
+    coverPhotoUrl: "https://refaleikarnir.sirv.com/coverPhotos/2016-summer.jpg",
   },
   {
     year: 2017,
@@ -167,8 +161,7 @@ export const results: Result[] = [
     ],
     season: "winter",
     challenges: ["Go Kart 🏁", "Píla 🎯", "Mario Kart 🍄"],
-    coverPhotoUrl:
-      "https://drive.google.com/uc?id=1iZmAclRDQULib4a4yBE9TTu3UWaTRr8X",
+    coverPhotoUrl: "https://refaleikarnir.sirv.com/coverPhotos/2017-winter.jpg",
   },
   {
     year: 2017,
@@ -191,8 +184,7 @@ export const results: Result[] = [
     ],
     season: "summer",
     challenges: ["Strandblak 🏐", "Pool 🎱", "Rocket League 🏎️"],
-    coverPhotoUrl:
-      "https://drive.google.com/uc?id=1B-FzCpjmmFLccFwt5kwVL1kYiYBTgCNN",
+    coverPhotoUrl: "https://refaleikarnir.sirv.com/coverPhotos/2017-summer.jpg",
   },
   {
     year: 2018,
@@ -210,8 +202,7 @@ export const results: Result[] = [
     ],
     season: "winter",
     challenges: ["Fótbolti ⚽", "Keila 🎳", "Black Ops 🎮"],
-    coverPhotoUrl:
-      "https://drive.google.com/uc?id=1rT5-GZhsCqt2KzHs05ngePxU5sOyDo9F",
+    coverPhotoUrl: "https://refaleikarnir.sirv.com/coverPhotos/2018-winter.jpg",
   },
   {
     year: 2018,
@@ -229,8 +220,7 @@ export const results: Result[] = [
     ],
     season: "summer",
     challenges: ["Skotfimi 🔫", "Pútt ⛳", "Beer Pong 🍻"],
-    coverPhotoUrl:
-      "https://drive.google.com/uc?id=1nNPIIrm9NfySL-H-e0BJA69HurOx-WyZ",
+    coverPhotoUrl: "https://refaleikarnir.sirv.com/coverPhotos/2018-summer.jpg",
   },
   {
     year: 2019,
@@ -281,8 +271,7 @@ export const results: Result[] = [
         ],
       },
     ],
-    coverPhotoUrl:
-      "https://drive.google.com/uc?id=1UWJ9M3DXYKGZy4nSyclMtN7juYuwDOp5",
+    coverPhotoUrl: "https://refaleikarnir.sirv.com/coverPhotos/2019-winter.jpg",
   },
   {
     year: 2019,
@@ -305,8 +294,7 @@ export const results: Result[] = [
     ],
     season: "summer",
     challenges: ["Tennis 🎾", "Golfhermir 🏌️‍♂️", "Píla 🎯"],
-    coverPhotoUrl:
-      "https://drive.google.com/uc?id=1rHHEtemspEsbiolsmqo9uh8NuoCtxzlB",
+    coverPhotoUrl: "https://refaleikarnir.sirv.com/coverPhotos/2019-summer.jpg",
   },
   {
     year: 2020,
@@ -329,8 +317,7 @@ export const results: Result[] = [
     ],
     season: "winter",
     challenges: ["Keila 🎳", "Borðtennis 🏓", "Minute to Win it ⏲️"],
-    coverPhotoUrl:
-      "https://drive.google.com/uc?id=1bpjYF5fwSMh3BSSdczNZRa9dWUbq969a",
+    coverPhotoUrl: "https://refaleikarnir.sirv.com/coverPhotos/2020-winter.jpg",
   },
   {
     year: 2020,
@@ -353,8 +340,7 @@ export const results: Result[] = [
     ],
     season: "summer",
     challenges: ["Folf 🥏", "Körfubolti (trick shots) 🏀", "Kubbur 👑"],
-    coverPhotoUrl:
-      "https://drive.google.com/uc?id=1k-NotuxaTpKV91FVsHHkevSOFpllfKZt",
+    coverPhotoUrl: "https://refaleikarnir.sirv.com/coverPhotos/2020-summer.jpg",
   },
   {
     year: 2022,
@@ -381,8 +367,7 @@ export const results: Result[] = [
       },
     ],
     challenges: ["Padel 🎾", "Fall Guys 🎮", "Minute to Win it ⏲️"],
-    coverPhotoUrl:
-      "https://drive.google.com/uc?id=1MvGfWRcpaPaiDy7XDfvhD-L-7q0GnOP3",
+    coverPhotoUrl: "https://refaleikarnir.sirv.com/coverPhotos/2022.jpg",
   },
   {
     year: 2023,
@@ -440,7 +425,6 @@ export const results: Result[] = [
         ],
       },
     ],
-    coverPhotoUrl:
-      "https://drive.google.com/uc?id=18mhhfjLk94Yz0Qo9z1T80eWOK7pt7F13",
+    coverPhotoUrl: "https://refaleikarnir.sirv.com/coverPhotos/2023.jpg",
   },
 ];
