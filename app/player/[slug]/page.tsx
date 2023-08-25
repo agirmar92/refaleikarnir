@@ -7,6 +7,15 @@ import PlayerCoverPhoto from "@/components/PlayerCoverPhoto";
 import PlayerOverallStats from "@/components/PlayerOverallStats";
 import PlayerTeammatesList from "@/components/PlayerTeammatesList";
 
+export const generateMetadata = ({ params }: { params: { slug: string } }) => {
+  if (players[params.slug as PlayerSlug]) {
+    const { name } = players[params.slug as PlayerSlug];
+    return { title: `${name} | Refaleikarnir` };
+  } else {
+    return { title: "Refaleikarnir" };
+  }
+};
+
 const PlayerPage = ({ params }: { params: { slug: string } }) => {
   if (!players[params.slug as PlayerSlug]) {
     // No player found with that slug

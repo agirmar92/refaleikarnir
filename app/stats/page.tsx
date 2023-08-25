@@ -8,6 +8,10 @@ import TeamsLeaderboard, {
 } from "@/components/TeamsLeaderboard";
 import { Suspense } from "react";
 
+export const metadata = {
+  title: "Tölfræði | Refaleikarnir",
+};
+
 const StatsPage = () => (
   <div className="p-3 space-y-3">
     <TileTitle>Flestir sigrar (leikmenn)</TileTitle>
