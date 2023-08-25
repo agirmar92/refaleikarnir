@@ -1,7 +1,7 @@
 "use state";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import classNames from "classnames";
 import defaultCoverPhoto from "./refir.jpg";
 
@@ -12,8 +12,9 @@ const DynamicCoverPhoto = ({
   photoSrc: string;
   isPriority?: boolean;
 }) => {
-  const [isPhotoLoading, setIsPhotoLoading] = useState(true);
+  const [isPhotoLoading, setIsPhotoLoading] = useState(false);
   const [useDefaultPhoto, setUseDefaultPhoto] = useState(false);
+  const imageRef = useRef<HTMLImageElement | null>(null);
 
   const onPhotoLoaded = () => {
     setIsPhotoLoading(false);
@@ -25,7 +26,9 @@ const DynamicCoverPhoto = ({
   };
 
   useEffect(() => {
-    setIsPhotoLoading(true);
+    if (imageRef.current?.naturalWidth === 0) {
+      setIsPhotoLoading(true);
+    }
     setUseDefaultPhoto(false);
   }, [photoSrc]);
 
@@ -66,6 +69,7 @@ const DynamicCoverPhoto = ({
         onLoadingComplete={onPhotoLoaded}
         onError={onError}
         priority={isPriority}
+        ref={imageRef}
       />
     </>
   );
