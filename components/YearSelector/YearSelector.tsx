@@ -17,6 +17,7 @@ const YearSelector = () => {
         })}
         disabled={gamesIndex === numOfGames - 1}
         onClick={() => stepForward()}
+        aria-label="Step to earlier year"
       >
         <ArrowIcon orientation="left" />
       </button>
@@ -32,6 +33,7 @@ const YearSelector = () => {
         })}
         disabled={gamesIndex === 0}
         onClick={() => stepBack()}
+        aria-label="Step to later year"
       >
         <ArrowIcon orientation="right" />
       </button>
