@@ -21,13 +21,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="is">
       <head>
         <meta charSet="utf-8" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1, user-scalable=no"
+          content="width=device-width, initial-scale=1, maximum-scale=2"
         />
       </head>
       <body className={`${montserrat.className} bg-winter text-white`}>

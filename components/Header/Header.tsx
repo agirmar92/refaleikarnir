@@ -78,7 +78,7 @@ const Header = () => {
           <FoxIcon />
           <h1 className="small-caps text-xl font-medium">Refaleikarnir</h1>
         </Link>
-        <button onClick={() => handleMenuToggle()}>
+        <button onClick={() => handleMenuToggle()} aria-label="Menu button">
           {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
         </button>
       </header>
