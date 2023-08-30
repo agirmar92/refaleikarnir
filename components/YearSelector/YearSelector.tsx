@@ -30,7 +30,8 @@ const YearSelector = () => {
           Select year/season
         </label>
         <select
-          name="year-selector"
+          id="year-selector"
+          name="Year/season selector"
           className="bg-transparent text-transparent appearance-none text-center absolute top-0 left-0 right-0 bottom-0"
           onChange={(e) => jumpToIndex(Number.parseInt(e.currentTarget.value))}
           value={gamesIndex}
