@@ -13,11 +13,11 @@ const YearSelector = () => {
     <div className="uppercase text-center text-4xl font-extrabold flex">
       <button
         className={classNames({
-          invisible: gamesIndex === numOfGames - 1,
+          invisible: gamesIndex === 0,
         })}
-        disabled={gamesIndex === numOfGames - 1}
-        onClick={() => stepForward()}
-        aria-label="Step to earlier year"
+        disabled={gamesIndex === 0}
+        onClick={() => stepBack()}
+        aria-label="Step to later year"
       >
         <ArrowIcon orientation="left" />
       </button>
@@ -49,11 +49,11 @@ const YearSelector = () => {
       )}
       <button
         className={classNames({
-          invisible: gamesIndex === 0,
+          invisible: gamesIndex === numOfGames - 1,
         })}
-        disabled={gamesIndex === 0}
-        onClick={() => stepBack()}
-        aria-label="Step to later year"
+        disabled={gamesIndex === numOfGames - 1}
+        onClick={() => stepForward()}
+        aria-label="Step to earlier year"
       >
         <ArrowIcon orientation="right" />
       </button>
