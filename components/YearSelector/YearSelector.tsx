@@ -26,8 +26,11 @@ const YearSelector = () => {
           {results[gamesIndex].year}
           <div className="absolute -right-4 h-0 w-0 border-x-[6px] border-x-transparent border-t-[8px] border-t-white"></div>
         </h2>
+        <label htmlFor="year-selector" className="sr-only">
+          Select year/season
+        </label>
         <select
-          name="pets"
+          name="year-selector"
           className="bg-transparent text-transparent appearance-none text-center absolute top-0 left-0 right-0 bottom-0"
           onChange={(e) => jumpToIndex(Number.parseInt(e.currentTarget.value))}
           value={gamesIndex}
