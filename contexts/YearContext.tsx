@@ -6,7 +6,7 @@ const numOfGames = results.length;
 const yearContextInitial = {
   stepForward: () => {},
   stepBack: () => {},
-  currentYear: results[numOfGames - 1].year,
+  jumpToIndex: (_: number) => {},
   gamesIndex: 0,
 };
 
@@ -14,21 +14,25 @@ const YearContext = createContext(yearContextInitial);
 
 const YearProvider = ({ children }: { children: ReactNode }) => {
   const [gamesIndex, setGamesIndex] = useState(numOfGames - 1);
-  const [currentYear, setCurrentYear] = useState(results[gamesIndex].year);
 
   const stepForward = () => {
     if (gamesIndex < numOfGames - 1) {
       const newIndex = gamesIndex + 1;
       setGamesIndex(newIndex);
-      setCurrentYear(results[newIndex].year);
     }
   };
   const stepBack = () => {
     if (gamesIndex > 0) {
       const newIndex = gamesIndex - 1;
       setGamesIndex(newIndex);
-      setCurrentYear(results[newIndex].year);
     }
+  };
+  const jumpToIndex = (index: number) => {
+    if (index >= results.length || index < 0) {
+      console.error(`Could not jump to games with index: ${index}`);
+      return;
+    }
+    setGamesIndex(index);
   };
 
   return (
@@ -36,7 +40,7 @@ const YearProvider = ({ children }: { children: ReactNode }) => {
       value={{
         stepForward,
         stepBack,
-        currentYear,
+        jumpToIndex,
         gamesIndex,
       }}
     >
