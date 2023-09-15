@@ -20,7 +20,7 @@ const useScrollY = () => {
     return () => {
       element.removeEventListener("scroll", handleScroll);
     };
-  }, [document]);
+  }, []);
 
   return scrollY;
 };
