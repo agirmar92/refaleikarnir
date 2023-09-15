@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 
 const useScrollY = () => {
   const [scrollY, setScrollY] = useState(0);
-  const element = document.querySelector("div#main-content");
 
   useEffect(() => {
+    const element = document.querySelector("div#main-content");
+
     if (element === null) {
       return;
     }
@@ -19,7 +20,7 @@ const useScrollY = () => {
     return () => {
       element.removeEventListener("scroll", handleScroll);
     };
-  }, [element]);
+  }, [document]);
 
   return scrollY;
 };
