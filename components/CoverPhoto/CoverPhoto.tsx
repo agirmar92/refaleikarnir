@@ -22,13 +22,10 @@ const DynamicallyPositionedContent = ({
   return (
     <div
       className={classNames(
-        "left-0 right-0 z-50 p-3 box-border transition-[background]",
+        "left-0 right-0 z-50 p-3 box-border transition-[background] sm:absolute sm:bg-transparent sm:bottom-0 sm:top-auto",
         screenWidth && scrollY > screenWidth - 64 * 2
-          ? "fixed top-[64px]"
-          : "absolute bottom-0",
-        {
-          "bg-winter-light": screenWidth && scrollY > screenWidth - 64 * 2,
-        }
+          ? "fixed top-[64px] bg-winter-light"
+          : "absolute bottom-0"
       )}
     >
       <div
@@ -51,11 +48,11 @@ const CoverPhoto = ({ children }: { children: ReactNode }) => {
   const coverPhotoUrl = results[gamesIndex].coverPhotoUrl;
 
   return (
-    <div className="w-[100vw] h-[100vw] relative -mt-16">
+    <div className="w-[100vw] h-[100vw] sm:w-full sm:h-[638px] relative -mt-16">
       <DynamicallyPositionedContent emblems={<WinningTeamsEmblems />}>
         {children}
       </DynamicallyPositionedContent>
-      <div className="w-full h-[100vw] bg-winter opacity-50 fixed z-10" />
+      <div className="w-full h-full bg-winter opacity-50 sticky z-10" />
       <DynamicCoverPhoto photoSrc={coverPhotoUrl} isPriority />
     </div>
   );

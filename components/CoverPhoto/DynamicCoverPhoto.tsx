@@ -37,7 +37,7 @@ const DynamicCoverPhoto = ({
       {isPhotoLoading && (
         <div
           role="status"
-          className="w-full h-[100vw] flex justify-center items-center fixed"
+          className="w-full h-full flex justify-center items-center absolute top-0 left-0 right-0 bottom-0"
         >
           <svg
             aria-hidden="true"
@@ -59,7 +59,7 @@ const DynamicCoverPhoto = ({
         </div>
       )}
       <Image
-        className={classNames("w-full h-[100vw] fixed", {
+        className={classNames("w-full h-full absolute", {
           invisible: isPhotoLoading,
           blur: useDefaultPhoto,
         })}

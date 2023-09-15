@@ -58,11 +58,12 @@ const Header = () => {
     <>
       <header
         className={classNames(
-          "flex justify-between h-[64px] px-5 items-center z-[999] fixed top-0 left-0 w-full transition-[background]",
+          "flex justify-between h-[64px] min-h-[64px] px-5 items-center z-[999] sticky top-0 w-full transition-[background]",
           {
             "bg-winter":
               (pathname !== "/" && !pathname.includes("/player/")) ||
               (screenWidth && scrollY > screenWidth - 64 * 2),
+            "sm:bg-winter": scrollY !== 0,
           }
         )}
       >
@@ -84,7 +85,7 @@ const Header = () => {
       </header>
       <div
         className={classNames(
-          "fixed left-0 transition-[top] ease-in-out duration-300 w-full h-full z-[998] bg-winter p-3 flex flex-col justify-center flex-wrap content-center",
+          "fixed left-1/2 -translate-x-1/2 transition-[top] ease-in-out duration-300 w-full h-full max-w-screen-sm sm:max-h-screen z-[998] bg-winter p-3 flex flex-col justify-center flex-wrap content-center",
           isMenuOpen ? "top-0" : "-top-full"
         )}
       >

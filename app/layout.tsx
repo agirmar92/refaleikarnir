@@ -30,24 +30,31 @@ export default function RootLayout({
           content="width=device-width, initial-scale=1, maximum-scale=2"
         />
       </head>
-      <body className={`${montserrat.className} bg-winter text-white`}>
-        <Header />
-        <Providers>
-          <div className="mt-16">{children}</div>
-        </Providers>
-        <footer className="relative z-10">
-          <a
-            target="_blank"
-            href="https://github.com/agirmar92/refaleikarnir"
-            rel="noopener noreferrer"
-            className="flex justify-center py-3 text-stone-300"
-          >
-            agirmar92/refaleikarnir
-            <span className="ml-2">
-              <GithubIcon />
-            </span>
-          </a>
-        </footer>
+      <body
+        className={`${montserrat.className} bg-black text-white flex justify-center items-center h-[100vh] w-[100vw]`}
+      >
+        <div
+          id="main-content"
+          className="w-full h-full max-w-screen-sm sm:max-h-screen overflow-y-scroll flex flex-col bg-winter"
+        >
+          <Header />
+          <Providers>
+            <main>{children}</main>
+          </Providers>
+          <footer className="relative z-10">
+            <a
+              target="_blank"
+              href="https://github.com/agirmar92/refaleikarnir"
+              rel="noopener noreferrer"
+              className="flex justify-center py-3 text-stone-300"
+            >
+              agirmar92/refaleikarnir
+              <span className="ml-2">
+                <GithubIcon />
+              </span>
+            </a>
+          </footer>
+        </div>
       </body>
     </html>
   );

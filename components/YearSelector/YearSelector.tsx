@@ -47,7 +47,7 @@ const YearSelector = () => {
         </select>
       </div>
       {season && (
-        <span className="absolute text-sm left-0 bottom-1 w-screen leading-3">
+        <span className="absolute text-sm left-0 bottom-1 right-0 leading-3">
           {season === "summer" ? "Sumar" : "Vetur"}
         </span>
       )}
