@@ -31,7 +31,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${montserrat.className} bg-black text-white flex justify-center items-center w-[100vw]`}
+        className={`${montserrat.className} bg-fox-bg bg-fixed bg-tile text-white flex justify-center items-center w-[100vw]`}
       >
         <div
           id="main-content"

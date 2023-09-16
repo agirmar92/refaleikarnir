@@ -22,6 +22,9 @@ module.exports = {
       textShadow: {
         DEFAULT: "0px 3px black",
       },
+      backgroundImage: {
+        "fox-bg": "url('/fox_bg.jpg')",
+      },
     },
     fontFamily: {
       tilliana: ["Tillana", "cursive"],
