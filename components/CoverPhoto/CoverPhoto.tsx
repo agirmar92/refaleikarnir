@@ -53,7 +53,7 @@ const CoverPhoto = ({ children }: { children: ReactNode }) => {
         {children}
       </DynamicallyPositionedContent>
       <div className="w-full h-full bg-winter opacity-50 sticky z-10" />
-      <DynamicCoverPhoto photoSrc={coverPhotoUrl} isPriority />
+      <DynamicCoverPhoto photoSrc={coverPhotoUrl} />
     </div>
   );
 };
