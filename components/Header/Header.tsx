@@ -58,7 +58,7 @@ const Header = () => {
     <>
       <header
         className={classNames(
-          "flex justify-between h-[64px] min-h-[64px] px-5 items-center z-[999] sticky top-0 w-full transition-[background]",
+          "flex justify-between h-[64px] min-h-[64px] px-5 items-center z-[999] fixed top-0 w-full transition-[background]",
           {
             "bg-winter":
               (pathname !== "/" && !pathname.includes("/player/")) ||
