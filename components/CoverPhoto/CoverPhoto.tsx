@@ -48,7 +48,7 @@ const CoverPhoto = ({ children }: { children: ReactNode }) => {
   const coverPhotoUrl = results[gamesIndex].coverPhotoUrl;
 
   return (
-    <div className="w-[100vw] h-[100vw] sm:w-full sm:h-[638px] relative -mt-16">
+    <div className="w-[100vw] h-[100vw] sm:w-full sm:h-[638px] relative">
       <DynamicallyPositionedContent emblems={<WinningTeamsEmblems />}>
         {children}
       </DynamicallyPositionedContent>

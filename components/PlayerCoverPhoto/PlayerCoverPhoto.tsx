@@ -35,7 +35,7 @@ const PlayerCoverPhoto = ({
   children: ReactNode;
   coverPhotoUrl: string;
 }) => (
-  <div className="w-[100vw] h-[100vw] sm:w-full sm:h-[638px] relative -mt-16">
+  <div className="w-[100vw] h-[100vw] sm:w-full sm:h-[638px] relative">
     <DynamicallyPositionedContent>{children}</DynamicallyPositionedContent>
     <div className="w-full h-full bg-winter opacity-50 sticky z-10" />
     <DynamicCoverPhoto photoSrc={coverPhotoUrl} />
