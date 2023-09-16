@@ -5,13 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import classNames from "classnames";
 import defaultCoverPhoto from "./refir.jpg";
 
-const DynamicCoverPhoto = ({
-  photoSrc,
-  isPriority = false,
-}: {
-  photoSrc: string;
-  isPriority?: boolean;
-}) => {
+const DynamicCoverPhoto = ({ photoSrc }: { photoSrc: string }) => {
   const [isPhotoLoading, setIsPhotoLoading] = useState(false);
   const [useDefaultPhoto, setUseDefaultPhoto] = useState(false);
   const imageRef = useRef<HTMLImageElement | null>(null);
@@ -68,7 +62,7 @@ const DynamicCoverPhoto = ({
         fill
         onLoadingComplete={onPhotoLoaded}
         onError={onError}
-        priority={isPriority}
+        priority
         ref={imageRef}
       />
     </>
