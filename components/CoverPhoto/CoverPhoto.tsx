@@ -2,7 +2,7 @@
 
 import { ReactNode } from "react";
 import classNames from "classnames";
-import useScreenWidth from "@/hooks/useScreenWidth";
+import useMainContentWidth from "@/hooks/useMainContentWidth";
 import useScrollY from "@/hooks/useScrollY";
 import { useYear } from "@/contexts/YearContext";
 import { results } from "@/data/results";
@@ -17,13 +17,13 @@ const DynamicallyPositionedContent = ({
   emblems: ReactNode;
 }) => {
   const scrollY = useScrollY();
-  const screenWidth = useScreenWidth();
+  const mainContentWidth = useMainContentWidth();
 
   return (
     <div
       className={classNames(
-        "left-0 right-0 z-50 p-3 box-border transition-[background] sm:absolute sm:bg-transparent sm:bottom-0 sm:top-auto",
-        screenWidth && scrollY > screenWidth - 64 * 2
+        "left-0 right-0 z-50 p-3 box-border transition-[background] w-full max-w-screen-sm sm:left-1/2 sm:-translate-x-1/2",
+        mainContentWidth && scrollY > mainContentWidth - 64 * 2
           ? "fixed top-[64px] bg-winter-light"
           : "absolute bottom-0"
       )}
@@ -32,7 +32,8 @@ const DynamicallyPositionedContent = ({
         className={classNames(
           "absolute left-0 bottom-[54px] w-full opacity-0 transition-opacity",
           {
-            "opacity-100": screenWidth && scrollY < screenWidth - (64 * 2 + 26),
+            "opacity-100":
+              mainContentWidth && scrollY < mainContentWidth - (64 * 2 + 26),
           }
         )}
       >

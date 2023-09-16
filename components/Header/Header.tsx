@@ -7,7 +7,7 @@ import classNames from "classnames";
 import FoxIcon from "@/icons/FoxIcon";
 import MenuIcon from "@/icons/MenuIcon";
 import CloseIcon from "@/icons/CloseIcon";
-import useScreenWidth from "@/hooks/useScreenWidth";
+import useMainContentWidth from "@/hooks/useMainContentWidth";
 import useScrollY from "@/hooks/useScrollY";
 
 const HeaderMenuLink = ({
@@ -28,7 +28,7 @@ const HeaderMenuLink = ({
 
 const Header = () => {
   const scrollY = useScrollY();
-  const screenWidth = useScreenWidth();
+  const mainContentWidth = useMainContentWidth();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
 
@@ -56,8 +56,7 @@ const Header = () => {
           {
             "bg-winter":
               pathname === "/stats" ||
-              (screenWidth && scrollY > screenWidth - 64 * 2),
-            "sm:bg-winter": scrollY !== 0,
+              (mainContentWidth && scrollY > mainContentWidth - 64 * 2),
           }
         )}
       >
