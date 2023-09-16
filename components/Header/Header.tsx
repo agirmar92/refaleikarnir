@@ -16,22 +16,14 @@ const HeaderMenuLink = ({
   onClickHandler,
 }: {
   label: string;
-  href?: string;
-  onClickHandler?: () => void;
+  href: string;
+  onClickHandler: () => void;
 }) => {
-  if (href) {
-    return (
-      <Link href={href} onClick={onClickHandler} className="text-2xl underline">
-        {label}
-      </Link>
-    );
-  } else {
-    return (
-      <span className="text-2xl underline text-stone-300 relative after:content-['Í_vinnslu'] after:absolute after:top-3 after:-right-1/4 after:-rotate-12 after:text-base after:bg-summer after:p-2 after:rounded-md after:text-white">
-        {label}
-      </span>
-    );
-  }
+  return (
+    <Link href={href} onClick={onClickHandler} className="text-2xl underline">
+      {label}
+    </Link>
+  );
 };
 
 const Header = () => {
@@ -50,7 +42,9 @@ const Header = () => {
     } else {
       // CLOSING the menu overlay
       setIsMenuOpen(false);
-      document.body.style.overflow = "unset";
+      if (typeof window != "undefined" && window.document) {
+        document.body.style.overflow = "unset";
+      }
     }
   };
 
@@ -61,7 +55,7 @@ const Header = () => {
           "flex justify-between h-[64px] min-h-[64px] px-5 items-center z-[999] fixed top-0 w-full transition-[background] max-w-screen-sm",
           {
             "bg-winter":
-              (pathname !== "/" && !pathname.includes("/player/")) ||
+              pathname === "/stats" ||
               (screenWidth && scrollY > screenWidth - 64 * 2),
             "sm:bg-winter": scrollY !== 0,
           }
