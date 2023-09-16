@@ -13,7 +13,7 @@ export const metadata = {
 };
 
 const StatsPage = () => (
-  <div className="p-3 space-y-3">
+  <div className="p-3 space-y-3 mt-16">
     <TileTitle>Flestir sigrar (leikmenn)</TileTitle>
     <Tile>
       <Suspense fallback={<PlayersLeaderboardSkeleton />}>

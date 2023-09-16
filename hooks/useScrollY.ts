@@ -4,21 +4,15 @@ const useScrollY = () => {
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
-    const element = document.querySelector("div#main-content");
-
-    if (element === null) {
-      return;
-    }
-
     const handleScroll = () => {
-      setScrollY(element.scrollTop);
+      setScrollY(window.scrollY);
     };
 
     handleScroll();
 
-    element.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      element.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
