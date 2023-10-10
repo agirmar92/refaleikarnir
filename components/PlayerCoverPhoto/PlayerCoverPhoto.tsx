@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import { ReactNode } from "react";
-import classNames from "classnames";
-import useMainContentWidth from "@/hooks/useMainContentWidth";
-import useScrollY from "@/hooks/useScrollY";
-import DynamicCoverPhoto from "../CoverPhoto/DynamicCoverPhoto";
+import { ReactNode } from 'react';
+import classNames from 'classnames';
+import useMainContentWidth from '@/hooks/useMainContentWidth';
+import useScrollY from '@/hooks/useScrollY';
+import DynamicCoverPhoto from '@/components/CoverPhoto/DynamicCoverPhoto';
 
 const DynamicallyPositionedContent = ({
   children,
@@ -17,10 +17,10 @@ const DynamicallyPositionedContent = ({
   return (
     <div
       className={classNames(
-        "left-0 right-0 z-50 p-3 box-border transition-[background] w-full max-w-screen-sm sm:left-1/2 sm:-translate-x-1/2",
+        'left-0 right-0 z-50 p-3 box-border transition-[background] w-full max-w-screen-sm sm:left-1/2 sm:-translate-x-1/2',
         mainContentWidth && scrollY > mainContentWidth - 64 * 2
-          ? "fixed top-[64px] bg-winter-light"
-          : "absolute bottom-0"
+          ? 'fixed top-[64px] bg-winter-light'
+          : 'absolute -top-16'
       )}
     >
       {children}
@@ -28,18 +28,12 @@ const DynamicallyPositionedContent = ({
   );
 };
 
-const PlayerCoverPhoto = ({
-  children,
-  coverPhotoUrl,
-}: {
-  children: ReactNode;
-  coverPhotoUrl: string;
-}) => (
-  <div className="w-[100vw] h-[100vw] sm:w-full sm:h-[638px] relative">
-    <DynamicallyPositionedContent>{children}</DynamicallyPositionedContent>
-    <div className="w-full h-full bg-winter opacity-50 sticky z-10" />
+const PlayerCoverPhoto = ({ coverPhotoUrl }: { coverPhotoUrl: string }) => (
+  <div className='w-[100vw] h-[100vw] sm:w-full sm:h-[638px] sticky top-0'>
+    <div className='w-full h-full bg-winter opacity-50 sticky z-10' />
     <DynamicCoverPhoto photoSrc={coverPhotoUrl} />
   </div>
 );
 
+export { DynamicallyPositionedContent };
 export default PlayerCoverPhoto;
