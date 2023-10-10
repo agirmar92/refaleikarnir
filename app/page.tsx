@@ -1,9 +1,13 @@
+import dynamic from 'next/dynamic';
 import ChallengesPlayed from '@/components/ChallengesPlayed';
 import CoverPhoto from '@/components/CoverPhoto';
 import Scoreboard from '@/components/Scoreboard';
 import Tile from '@/components/Tile';
 import TileTitle from '@/components/TileTitle';
-import YearSelector from '@/components/YearSelector';
+
+const YearSelector = dynamic(() => import('@/components/YearSelector'), {
+  ssr: false,
+});
 
 const RefaleikarnirFrontPage = () => (
   <>
