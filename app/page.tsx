@@ -8,7 +8,7 @@ import YearSelector from '@/components/YearSelector';
 const RefaleikarnirFrontPage = () => (
   <>
     <CoverPhoto />
-    <div className='space-y-3 p-3 bg-winter relative z-10'>
+    <div className='space-y-3 p-3 bg-winter relative z-10 mt-[100vw] sm:mt-[640px]'>
       <YearSelector />
       <TileTitle>Þrautir</TileTitle>
       <Tile>

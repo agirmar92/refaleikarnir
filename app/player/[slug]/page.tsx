@@ -27,7 +27,7 @@ const PlayerPage = ({ params }: { params: { slug: string } }) => {
   return (
     <>
       <PlayerCoverPhoto coverPhotoUrl={coverPhotoUrl} />
-      <div className='p-3 space-y-3 z-10 relative bg-winter'>
+      <div className='p-3 space-y-3 z-10 relative bg-winter mt-[100vw] sm:mt-[640px]'>
         <DynamicallyPositionedContent>
           <h1 className='text-center text-4xl font-extrabold small-caps'>
             {name}

@@ -29,8 +29,8 @@ const DynamicallyPositionedContent = ({
 };
 
 const PlayerCoverPhoto = ({ coverPhotoUrl }: { coverPhotoUrl: string }) => (
-  <div className='w-[100vw] h-[100vw] sm:w-full sm:h-[638px] sticky top-0'>
-    <div className='w-full h-full bg-winter opacity-50 sticky z-10' />
+  <div className='w-[100vw] h-[100vw] max-w-screen-sm max-h-[640px] fixed top-0'>
+    <div className='w-full h-full max-w-screen-sm max-h-[640px] bg-winter opacity-50 fixed z-10 top-0' />
     <DynamicCoverPhoto photoSrc={coverPhotoUrl} />
   </div>
 );
