@@ -69,7 +69,7 @@ const DetailedChallengesPlayed = ({
                   "flex items-center justify-center border-r",
                   {
                     "border-l": iTeam === 0,
-                  }
+                  },
                 )}
               >
                 {team.points}
@@ -85,7 +85,7 @@ const DetailedChallengesPlayed = ({
           const teamTotalPoints = challengesPlayed.reduce(
             (prev, currChallenge) =>
               prev + (currChallenge.teamResults[iTeam].points || 0),
-            0
+            0,
           );
           return (
             <span

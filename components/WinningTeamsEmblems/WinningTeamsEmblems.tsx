@@ -7,7 +7,7 @@ import FoxIcon from "@/icons/FoxIcon";
 const WinningTeamsEmblems = () => {
   const { gamesIndex } = useYear();
   const winningTeams = results[gamesIndex].teams.filter(
-    (team) => team.teamPlace === 0
+    (team) => team.teamPlace === 0,
   );
 
   return (

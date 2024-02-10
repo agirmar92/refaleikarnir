@@ -57,7 +57,7 @@ const Header = () => {
             "bg-winter":
               pathname === "/stats" ||
               (mainContentWidth && scrollY > mainContentWidth - 64 * 2),
-          }
+          },
         )}
       >
         <Link
@@ -79,7 +79,7 @@ const Header = () => {
       <div
         className={classNames(
           "fixed left-1/2 -translate-x-1/2 transition-[top] ease-in-out duration-300 w-full h-full max-w-screen-sm sm:max-h-screen z-[998] bg-winter p-3 flex flex-col justify-center flex-wrap content-center",
-          isMenuOpen ? "top-0" : "-top-full"
+          isMenuOpen ? "top-0" : "-top-full",
         )}
       >
         <div className="flex flex-col space-y-4 text-center w-fit">

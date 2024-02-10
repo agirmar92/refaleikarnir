@@ -15,22 +15,22 @@ export const getPlayersWithWinsAndApps = () => {
     gameResult.teams.forEach((team) =>
       team.teamPlayers.forEach((player) => {
         const playerToUpdate = playersWithData.find(
-          (playerWithWinData) => playerWithWinData.slug === player.slug
+          (playerWithWinData) => playerWithWinData.slug === player.slug,
         );
         if (playerToUpdate) {
           playerToUpdate.apps = playerToUpdate.apps + 1;
         }
-      })
+      }),
     );
 
     // Increase games won for players that won the current game
     const winningTeams = gameResult.teams.filter(
-      (team) => team.teamPlace === 0
+      (team) => team.teamPlace === 0,
     );
     winningTeams.forEach((team) => {
       team.teamPlayers.forEach((player) => {
         const playerToUpdate = playersWithData.find(
-          (playerWithWinData) => playerWithWinData.slug === player.slug
+          (playerWithWinData) => playerWithWinData.slug === player.slug,
         );
         if (playerToUpdate) {
           playerToUpdate.wins = playerToUpdate.wins + 1;
@@ -40,7 +40,7 @@ export const getPlayersWithWinsAndApps = () => {
   });
 
   return playersWithData.sort(
-    (playerA, playerB) => playerB.wins - playerA.wins
+    (playerA, playerB) => playerB.wins - playerA.wins,
   );
 };
 
@@ -57,7 +57,7 @@ export const getTeamColorsWithWins = () => {
   results.forEach((gameResult) => {
     // Increase games won for the team colors that won
     const winningTeams = gameResult.teams.filter(
-      (team) => team.teamPlace === 0
+      (team) => team.teamPlace === 0,
     );
     winningTeams.forEach((team) => {
       teamsWithWins[team.teamColor].wins =
@@ -66,7 +66,7 @@ export const getTeamColorsWithWins = () => {
   });
 
   return Object.values(teamsWithWins).sort(
-    (teamA, teamB) => teamB.wins - teamA.wins
+    (teamA, teamB) => teamB.wins - teamA.wins,
   );
 };
 
@@ -82,7 +82,7 @@ export const getTeamColorsWithPlayedCountByPlayer = (slug: PlayerSlug) => {
   };
   results.forEach((result) => {
     const playerTeam = result.teams.find((team) =>
-      team.teamPlayers.some((player) => player.slug === slug)
+      team.teamPlayers.some((player) => player.slug === slug),
     );
     if (!playerTeam) {
       return;
@@ -91,7 +91,7 @@ export const getTeamColorsWithPlayedCountByPlayer = (slug: PlayerSlug) => {
       teamColorsWithPlayedCount[playerTeam.teamColor].count + 1;
   });
   return Object.values(teamColorsWithPlayedCount).sort(
-    (teamA, teamB) => teamB.count - teamA.count
+    (teamA, teamB) => teamB.count - teamA.count,
   );
 };
 
@@ -104,7 +104,7 @@ export const getOverallResultsStatsByPlayer = (slug: PlayerSlug) => {
   };
   results.forEach((result) => {
     const playerTeam = result.teams.find((team) =>
-      team.teamPlayers.some((player) => player.slug === slug)
+      team.teamPlayers.some((player) => player.slug === slug),
     );
     if (!playerTeam) {
       return;
@@ -125,7 +125,7 @@ export const getTeammateCountByPlayer = (slug: PlayerSlug) => {
 
   results.forEach((result) => {
     const playerTeam = result.teams.find((team) =>
-      team.teamPlayers.some((player) => player.slug === slug)
+      team.teamPlayers.some((player) => player.slug === slug),
     );
     if (!playerTeam) {
       return;
@@ -133,7 +133,7 @@ export const getTeammateCountByPlayer = (slug: PlayerSlug) => {
     playerTeam.teamPlayers.forEach((player) => {
       if (player.slug !== slug) {
         const teammate = otherPlayersWithCount.find(
-          (playerWithCount) => playerWithCount.slug === player.slug
+          (playerWithCount) => playerWithCount.slug === player.slug,
         );
         if (!teammate) {
           return;
@@ -144,6 +144,6 @@ export const getTeammateCountByPlayer = (slug: PlayerSlug) => {
   });
 
   return otherPlayersWithCount.sort(
-    (playerA, playerB) => playerB.count - playerA.count
+    (playerA, playerB) => playerB.count - playerA.count,
   );
 };

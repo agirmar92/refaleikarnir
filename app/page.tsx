@@ -1,9 +1,9 @@
-import ChallengesPlayed from '@/components/ChallengesPlayed'
-import CoverPhoto from '@/components/CoverPhoto'
-import Scoreboard from '@/components/Scoreboard'
-import Tile from '@/components/Tile'
-import TileTitle from '@/components/TileTitle'
-import YearSelector from '@/components/YearSelector'
+import ChallengesPlayed from "@/components/ChallengesPlayed";
+import CoverPhoto from "@/components/CoverPhoto";
+import Scoreboard from "@/components/Scoreboard";
+import Tile from "@/components/Tile";
+import TileTitle from "@/components/TileTitle";
+import YearSelector from "@/components/YearSelector";
 
 const RefaleikarnirFrontPage = () => (
   <>
@@ -18,6 +18,6 @@ const RefaleikarnirFrontPage = () => (
       <Scoreboard />
     </div>
   </>
-)
+);
 
-export default RefaleikarnirFrontPage
+export default RefaleikarnirFrontPage;

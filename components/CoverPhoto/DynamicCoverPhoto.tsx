@@ -1,9 +1,9 @@
-'use state';
+"use state";
 
-import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
-import classNames from 'classnames';
-import defaultCoverPhoto from './refir.jpg';
+import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
+import classNames from "classnames";
+import defaultCoverPhoto from "./refir.jpg";
 
 const DynamicCoverPhoto = ({ photoSrc }: { photoSrc: string }) => {
   const [isPhotoLoading, setIsPhotoLoading] = useState(false);
@@ -53,7 +53,7 @@ const DynamicCoverPhoto = ({ photoSrc }: { photoSrc: string }) => {
         </div>
       )}
       <Image
-        className={classNames('w-full h-full absolute', {
+        className={classNames("w-full h-full absolute", {
           invisible: isPhotoLoading,
           blur: useDefaultPhoto,
         })}

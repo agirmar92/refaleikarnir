@@ -27,7 +27,7 @@ const PlayerTeammatesList = ({ slug }: { slug: PlayerSlug }) => {
                 "border-b border-winter pb-3":
                   iPlayer !== otherPlayersWithCount.length - 1,
                 "pt-3": iPlayer !== 0,
-              }
+              },
             )}
           >
             x {player.count}
