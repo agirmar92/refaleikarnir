@@ -1,24 +1,23 @@
-import "./global.css";
-import { Montserrat } from "next/font/google";
-import Header from "@/components/Header";
-import Providers from "@/contexts/Providers";
-import Footer from "@/components/Footer/Footer";
+import './global.css'
+import { Montserrat } from 'next/font/google'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer/Footer'
 
 export const metadata = {
-  title: "Refaleikarnir",
-  description: "Mest spennandi leikar allra tíma",
-};
+  title: 'Refaleikarnir',
+  description: 'Mest spennandi leikar allra tíma',
+}
 
 const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["300", "500", "600", "800"],
-  display: "block",
-});
+  subsets: ['latin'],
+  weight: ['300', '500', '600', '800'],
+  display: 'block',
+})
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html lang="is">
@@ -38,12 +37,10 @@ export default function RootLayout({
           className="w-full h-full max-w-screen-sm flex flex-col bg-winter"
         >
           <Header />
-          <Providers>
-            <main>{children}</main>
-          </Providers>
+          <main>{children}</main>
           <Footer />
         </div>
       </body>
     </html>
-  );
+  )
 }

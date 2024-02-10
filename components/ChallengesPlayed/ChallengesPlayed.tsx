@@ -1,15 +1,12 @@
-"use client";
-
-import classNames from "classnames";
-import { useYear } from "@/contexts/YearContext";
-import { results } from "@/data/results";
-import FoxIcon from "@/icons/FoxIcon";
-import { ChallengeAndResults } from "@/utils/types";
+import classNames from 'classnames'
+import { results } from '@/data/results'
+import FoxIcon from '@/icons/FoxIcon'
+import { ChallengeAndResults } from '@/utils/types'
 
 const SimpleChallengesPlayed = ({
   challengesPlayed,
 }: {
-  challengesPlayed: string[];
+  challengesPlayed: string[]
 }) => {
   return (
     <div className="space-y-2">
@@ -22,22 +19,22 @@ const SimpleChallengesPlayed = ({
         </p>
       ))}
     </div>
-  );
-};
+  )
+}
 
 const DetailedChallengesPlayed = ({
   challengesPlayed,
 }: {
-  challengesPlayed: ChallengeAndResults[];
+  challengesPlayed: ChallengeAndResults[]
 }) => {
-  const teamsThatPlayed = challengesPlayed[0].teamResults;
+  const teamsThatPlayed = challengesPlayed[0].teamResults
 
   return (
     <div
-      className={classNames("grid grid-flow-row-dense gap-y-2", {
-        "grid-cols-7": teamsThatPlayed.length === 2,
-        "grid-cols-8": teamsThatPlayed.length === 3,
-        "grid-cols-9": teamsThatPlayed.length === 4,
+      className={classNames('grid grid-flow-row-dense gap-y-2', {
+        'grid-cols-7': teamsThatPlayed.length === 2,
+        'grid-cols-8': teamsThatPlayed.length === 3,
+        'grid-cols-9': teamsThatPlayed.length === 4,
       })}
     >
       <div className="contents text-center">
@@ -66,10 +63,10 @@ const DetailedChallengesPlayed = ({
             >
               <span
                 className={classNames(
-                  "flex items-center justify-center border-r",
+                  'flex items-center justify-center border-r',
                   {
-                    "border-l": iTeam === 0,
-                  },
+                    'border-l': iTeam === 0,
+                  }
                 )}
               >
                 {team.points}
@@ -85,34 +82,32 @@ const DetailedChallengesPlayed = ({
           const teamTotalPoints = challengesPlayed.reduce(
             (prev, currChallenge) =>
               prev + (currChallenge.teamResults[iTeam].points || 0),
-            0,
-          );
+            0
+          )
           return (
             <span
               key={`challenge-totalPoints-${team.color}`}
-              className={classNames("text-center bg-white", {
-                "rounded-s-md": iTeam === 0,
-                "rounded-e-md": iTeam === teamsThatPlayed.length - 1,
+              className={classNames('text-center bg-white', {
+                'rounded-s-md': iTeam === 0,
+                'rounded-e-md': iTeam === teamsThatPlayed.length - 1,
               })}
             >
               {teamTotalPoints}
             </span>
-          );
+          )
         })}
       </div>
     </div>
-  );
-};
+  )
+}
 
-const ChallengesPlayed = () => {
-  const { gamesIndex } = useYear();
-
-  if (typeof results[gamesIndex].challenges[0] === "string") {
+const ChallengesPlayed = ({ gamesIndex }: { gamesIndex: number }) => {
+  if (typeof results[gamesIndex].challenges[0] === 'string') {
     return (
       <SimpleChallengesPlayed
         challengesPlayed={results[gamesIndex].challenges as string[]}
       />
-    );
+    )
   } else {
     return (
       <DetailedChallengesPlayed
@@ -120,8 +115,8 @@ const ChallengesPlayed = () => {
           results[gamesIndex].challenges as ChallengeAndResults[]
         }
       />
-    );
+    )
   }
-};
+}
 
-export default ChallengesPlayed;
+export default ChallengesPlayed
