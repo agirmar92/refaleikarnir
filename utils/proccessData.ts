@@ -141,3 +141,10 @@ export const getTeammateCountByPlayer = (slug: PlayerSlug) => {
     (playerA, playerB) => playerB.count - playerA.count
   )
 }
+
+export const getLatestYearSlug = () => {
+  const latesGames = results[results.length - 1]
+  return `${latesGames.year.toString()}${
+    latesGames.season ? `?season=${latesGames.season}` : ''
+  }`
+}

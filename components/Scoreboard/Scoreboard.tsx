@@ -1,19 +1,15 @@
-"use client";
+import TeamResult from '@/components/TeamResult'
+import Tile from '@/components/Tile'
+import { results } from '@/data/results'
 
-import TeamResult from "@/components/TeamResult";
-import Tile from "@/components/Tile";
-import { useYear } from "@/contexts/YearContext";
-import { results } from "@/data/results";
-
-const Scoreboard = () => {
-  const { gamesIndex } = useYear();
+const Scoreboard = ({ gamesIndex }: { gamesIndex: number }) => {
   const teamPlacement = results[gamesIndex].teams.sort(
-    (teamA, teamB) => teamA.teamPlace - teamB.teamPlace,
-  );
+    (teamA, teamB) => teamA.teamPlace - teamB.teamPlace
+  )
   return (
     <>
       {teamPlacement.map((team) => {
-        const { teamColor, teamPlace, teamPlayers } = team;
+        const { teamColor, teamPlace, teamPlayers } = team
 
         return (
           <Tile key={teamColor}>
@@ -23,10 +19,10 @@ const Scoreboard = () => {
               place={teamPlace}
             />
           </Tile>
-        );
+        )
       })}
     </>
-  );
-};
+  )
+}
 
-export default Scoreboard;
+export default Scoreboard

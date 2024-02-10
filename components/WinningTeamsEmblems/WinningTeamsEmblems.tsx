@@ -1,14 +1,10 @@
-"use client";
+import { results } from '@/data/results'
+import FoxIcon from '@/icons/FoxIcon'
 
-import { useYear } from "@/contexts/YearContext";
-import { results } from "@/data/results";
-import FoxIcon from "@/icons/FoxIcon";
-
-const WinningTeamsEmblems = () => {
-  const { gamesIndex } = useYear();
+const WinningTeamsEmblems = ({ gamesIndex }: { gamesIndex: number }) => {
   const winningTeams = results[gamesIndex].teams.filter(
-    (team) => team.teamPlace === 0,
-  );
+    (team) => team.teamPlace === 0
+  )
 
   return (
     <div className="flex justify-center">
@@ -18,7 +14,7 @@ const WinningTeamsEmblems = () => {
         ))}
       </span>
     </div>
-  );
-};
+  )
+}
 
-export default WinningTeamsEmblems;
+export default WinningTeamsEmblems
