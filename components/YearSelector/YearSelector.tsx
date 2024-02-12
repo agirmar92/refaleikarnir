@@ -30,11 +30,10 @@ const YearSelector = ({ gamesIndex }: { gamesIndex: number }) => {
     >
       <div
         className={classNames(
-          'absolute left-0 bottom-[54px] w-full opacity-0 transition-opacity',
-          {
-            'opacity-100':
-              mainContentWidth && scrollY < mainContentWidth - (64 * 2 + 26),
-          }
+          'absolute left-0 bottom-[54px] w-full transition-opacity',
+          mainContentWidth && scrollY > mainContentWidth - (64 * 2 + 26)
+            ? 'opacity-0'
+            : 'opacity-100'
         )}
       >
         <WinningTeamsEmblems gamesIndex={gamesIndex} />
