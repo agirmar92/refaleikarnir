@@ -26,7 +26,7 @@ export const generateMetadata = ({
     const { year, season } = results[gamesIndex]
     return {
       title: `${year}${
-        season ? ` (${season === 'summer' ? 'sumar' : 'vetur'})` : ''
+        season ? ` - ${season === 'summer' ? 'Sumar' : 'Vetur'}` : ''
       } | Refaleikarnir`,
     }
   } else {
