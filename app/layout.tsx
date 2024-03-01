@@ -1,7 +1,5 @@
 import './global.css'
 import { Montserrat } from 'next/font/google'
-import { SpeedInsights } from '@vercel/speed-insights/next'
-import { Analytics } from '@vercel/analytics/react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer/Footer'
 
@@ -42,8 +40,6 @@ export default function RootLayout({
           <main>{children}</main>
           <Footer />
         </div>
-        <SpeedInsights />
-        <Analytics />
       </body>
     </html>
   )

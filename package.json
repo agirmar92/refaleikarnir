@@ -7,8 +7,6 @@
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
     "@types/websocket": "^1.0.5",
-    "@vercel/analytics": "^1.2.2",
-    "@vercel/speed-insights": "^1.0.10",
     "autoprefixer": "^10.4.14",
     "classnames": "^2.2.6",
     "next": "^14.0.0",
