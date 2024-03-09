@@ -142,9 +142,4 @@ export const getTeammateCountByPlayer = (slug: PlayerSlug) => {
   )
 }
 
-export const getLatestYearSlug = () => {
-  const latesGames = results[results.length - 1]
-  return `${latesGames.year.toString()}${
-    latesGames.season ? `?season=${latesGames.season}` : ''
-  }`
-}
+export const getLatestGameResultsIndex = () => results.length - 1
