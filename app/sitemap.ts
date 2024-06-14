@@ -20,25 +20,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 1,
     },
-    ...resultSlugs.map((resultSlug) => ({
-      url: `${BASE_URL}/${resultSlug}`,
-      lastModified: new Date(),
-      changeFrequency:
-        'monthly' as MetadataRoute.Sitemap[number]['changeFrequency'],
-      priority: 0.9,
-    })),
+    ...resultSlugs.map(
+      (resultSlug) =>
+        ({
+          url: `${BASE_URL}/${resultSlug}`,
+          lastModified: new Date(),
+          changeFrequency: 'monthly',
+          priority: 0.9,
+        } satisfies MetadataRoute.Sitemap[number])
+    ),
     {
       url: `${BASE_URL}/stats`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
-    ...playerSlugs.map((playerSlug) => ({
-      url: `${BASE_URL}/player/${playerSlug}`,
-      lastModified: new Date(),
-      changeFrequency:
-        'monthly' as MetadataRoute.Sitemap[number]['changeFrequency'],
-      priority: 0.7,
-    })),
+    ...playerSlugs.map(
+      (playerSlug) =>
+        ({
+          url: `${BASE_URL}/player/${playerSlug}`,
+          lastModified: new Date(),
+          changeFrequency: 'monthly',
+          priority: 0.7,
+        } satisfies MetadataRoute.Sitemap[number])
+    ),
   ]
 }
