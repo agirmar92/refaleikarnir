@@ -427,4 +427,57 @@ export const results: Result[] = [
     ],
     coverPhotoUrl: 'https://refaleikarnir.sirv.com/coverPhotos/2023.jpg',
   },
+  {
+    year: 2024,
+    teams: [
+      {
+        teamColor: 'WHITE',
+        teamPlace: 0,
+        teamPlayers: [players.gaui, players.krissi, players.jonni],
+      },
+      {
+        teamColor: 'BLACK',
+        teamPlace: 0,
+        teamPlayers: [players.vikingur, players.arnar, players.atli],
+      },
+      {
+        teamColor: 'RED',
+        teamPlace: 0,
+        teamPlayers: [players.danni, players.maggi, players.aegir],
+      },
+    ],
+    challenges: [
+      {
+        name: 'TBD',
+        emoji: '🏎️',
+        teamResults: [
+          { color: 'BLACK', points: 0 },
+          { color: 'SILVER', points: 0 },
+          { color: 'RED', points: 0 },
+          { color: 'WHITE', points: 0 },
+        ],
+      },
+      {
+        name: 'TBD',
+        emoji: '🎮',
+        teamResults: [
+          { color: 'BLACK', points: 0 },
+          { color: 'SILVER', points: 0 },
+          { color: 'RED', points: 0 },
+          { color: 'WHITE', points: 0 },
+        ],
+      },
+      {
+        name: 'TBD',
+        emoji: '👴🏻',
+        teamResults: [
+          { color: 'BLACK', points: 0 },
+          { color: 'SILVER', points: 0 },
+          { color: 'RED', points: 0 },
+          { color: 'WHITE', points: 0 },
+        ],
+      },
+    ],
+    coverPhotoUrl: 'https://refaleikarnir.sirv.com/coverPhotos/2024.png',
+  },
 ]
