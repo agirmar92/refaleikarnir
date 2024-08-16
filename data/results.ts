@@ -448,8 +448,8 @@ export const results: Result[] = [
     ],
     challenges: [
       {
-        name: 'TBD',
-        emoji: '🏎️',
+        name: 'Strandblak',
+        emoji: '🏐',
         teamResults: [
           { color: 'BLACK', points: 0 },
           { color: 'SILVER', points: 0 },
@@ -458,8 +458,8 @@ export const results: Result[] = [
         ],
       },
       {
-        name: 'TBD',
-        emoji: '🎮',
+        name: 'Shuffleboard',
+        emoji: '🥌',
         teamResults: [
           { color: 'BLACK', points: 0 },
           { color: 'SILVER', points: 0 },
@@ -468,8 +468,18 @@ export const results: Result[] = [
         ],
       },
       {
-        name: 'TBD',
-        emoji: '👴🏻',
+        name: 'Gang Beasts',
+        emoji: '👹',
+        teamResults: [
+          { color: 'BLACK', points: 0 },
+          { color: 'SILVER', points: 0 },
+          { color: 'RED', points: 0 },
+          { color: 'WHITE', points: 0 },
+        ],
+      },
+      {
+        name: 'Beer Pong',
+        emoji: '🍻',
         teamResults: [
           { color: 'BLACK', points: 0 },
           { color: 'SILVER', points: 0 },
