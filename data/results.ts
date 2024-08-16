@@ -452,7 +452,6 @@ export const results: Result[] = [
         emoji: '🏐',
         teamResults: [
           { color: 'BLACK', points: 0 },
-          { color: 'SILVER', points: 0 },
           { color: 'RED', points: 0 },
           { color: 'WHITE', points: 0 },
         ],
@@ -462,7 +461,6 @@ export const results: Result[] = [
         emoji: '🥌',
         teamResults: [
           { color: 'BLACK', points: 0 },
-          { color: 'SILVER', points: 0 },
           { color: 'RED', points: 0 },
           { color: 'WHITE', points: 0 },
         ],
@@ -472,7 +470,6 @@ export const results: Result[] = [
         emoji: '👹',
         teamResults: [
           { color: 'BLACK', points: 0 },
-          { color: 'SILVER', points: 0 },
           { color: 'RED', points: 0 },
           { color: 'WHITE', points: 0 },
         ],
@@ -482,7 +479,6 @@ export const results: Result[] = [
         emoji: '🍻',
         teamResults: [
           { color: 'BLACK', points: 0 },
-          { color: 'SILVER', points: 0 },
           { color: 'RED', points: 0 },
           { color: 'WHITE', points: 0 },
         ],
