@@ -316,7 +316,35 @@ export const results: Result[] = [
       },
     ],
     season: 'winter',
-    challenges: ['Keila 🎳', 'Borðtennis 🏓', 'Minute to Win it ⏲️'],
+    challenges: [
+      {
+        name: 'Keila',
+        emoji: '🎳',
+        teamResults: [
+          { color: 'BLACK', points: 10 },
+          { color: 'RED', points: 7 },
+          { color: 'WHITE', points: 4 },
+        ],
+      },
+      {
+        name: 'Borðtennis',
+        emoji: '🏓',
+        teamResults: [
+          { color: 'BLACK', points: 7 },
+          { color: 'RED', points: 5 },
+          { color: 'WHITE', points: 6 },
+        ],
+      },
+      {
+        name: 'Minute to Win it',
+        emoji: '⏲️',
+        teamResults: [
+          { color: 'BLACK', points: 0 },
+          { color: 'RED', points: 2 },
+          { color: 'WHITE', points: 0 },
+        ],
+      },
+    ],
     coverPhotoUrl: 'https://refaleikarnir.sirv.com/coverPhotos/2020-winter.jpg',
   },
   {
