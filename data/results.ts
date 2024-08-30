@@ -461,17 +461,17 @@ export const results: Result[] = [
       {
         teamColor: 'WHITE',
         teamPlace: 0,
-        teamPlayers: [players.gaui, players.krissi, players.jonni],
+        teamPlayers: [players.atli, players.vikingur, players.maggi],
       },
       {
         teamColor: 'BLACK',
         teamPlace: 0,
-        teamPlayers: [players.vikingur, players.arnar, players.atli],
+        teamPlayers: [players.arnar, players.krissi, players.aegir],
       },
       {
         teamColor: 'RED',
         teamPlace: 0,
-        teamPlayers: [players.danni, players.maggi, players.aegir],
+        teamPlayers: [players.danni, players.jonni, players.gaui],
       },
     ],
     challenges: [
