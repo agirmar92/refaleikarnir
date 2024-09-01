@@ -460,12 +460,12 @@ export const results: Result[] = [
     teams: [
       {
         teamColor: 'WHITE',
-        teamPlace: 0,
+        teamPlace: 1,
         teamPlayers: [players.aegir, players.krissi, players.jonni],
       },
       {
         teamColor: 'BLACK',
-        teamPlace: 0,
+        teamPlace: 2,
         teamPlayers: [players.arnar, players.danni, players.atli],
       },
       {
@@ -480,38 +480,38 @@ export const results: Result[] = [
         emoji: '🏐',
         teamResults: [
           { color: 'BLACK', points: 0 },
-          { color: 'RED', points: 0 },
-          { color: 'WHITE', points: 0 },
+          { color: 'RED', points: 20 },
+          { color: 'WHITE', points: 10 },
         ],
       },
       {
         name: 'Shuffleboard',
         emoji: '🥌',
         teamResults: [
-          { color: 'BLACK', points: 0 },
-          { color: 'RED', points: 0 },
-          { color: 'WHITE', points: 0 },
+          { color: 'BLACK', points: 10 },
+          { color: 'RED', points: 10 },
+          { color: 'WHITE', points: 10 },
         ],
       },
       {
         name: 'Gang Beasts',
         emoji: '👹',
         teamResults: [
-          { color: 'BLACK', points: 0 },
-          { color: 'RED', points: 0 },
-          { color: 'WHITE', points: 0 },
+          { color: 'BLACK', points: 10 },
+          { color: 'RED', points: 10 },
+          { color: 'WHITE', points: 10 },
         ],
       },
       {
         name: 'Beer Pong',
         emoji: '🍻',
         teamResults: [
-          { color: 'BLACK', points: 0 },
-          { color: 'RED', points: 0 },
-          { color: 'WHITE', points: 0 },
+          { color: 'BLACK', points: 7.5 },
+          { color: 'RED', points: 10 },
+          { color: 'WHITE', points: 12.5 },
         ],
       },
     ],
-    coverPhotoUrl: 'https://refaleikarnir.sirv.com/coverPhotos/2024.png',
+    coverPhotoUrl: 'https://refaleikarnir.sirv.com/coverPhotos/2024.jpg',
   },
 ]
