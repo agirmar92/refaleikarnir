@@ -479,36 +479,36 @@ export const results: Result[] = [
         name: 'Strandblak',
         emoji: '🏐',
         teamResults: [
-          { color: 'BLACK', points: 0 },
           { color: 'RED', points: 20 },
           { color: 'WHITE', points: 10 },
+          { color: 'BLACK', points: 0 },
         ],
       },
       {
         name: 'Shuffleboard',
         emoji: '🥌',
         teamResults: [
-          { color: 'BLACK', points: 10 },
           { color: 'RED', points: 10 },
           { color: 'WHITE', points: 10 },
+          { color: 'BLACK', points: 10 },
         ],
       },
       {
         name: 'Gang Beasts',
         emoji: '👹',
         teamResults: [
-          { color: 'BLACK', points: 10 },
           { color: 'RED', points: 10 },
           { color: 'WHITE', points: 10 },
+          { color: 'BLACK', points: 10 },
         ],
       },
       {
         name: 'Beer Pong',
         emoji: '🍻',
         teamResults: [
-          { color: 'BLACK', points: 7.5 },
           { color: 'RED', points: 10 },
           { color: 'WHITE', points: 12.5 },
+          { color: 'BLACK', points: 7.5 },
         ],
       },
     ],
