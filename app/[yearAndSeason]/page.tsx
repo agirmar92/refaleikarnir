@@ -3,14 +3,11 @@ import { results } from '@/data/results'
 import { YearResults, getYearResultsMetadata } from './YearResults'
 
 type PageParams = {
-  params: { year: string }
-  searchParams: { season?: string }
+  params: { yearAndSeason: string }
 }
 
-export const generateMetadata = ({
-  params: { year },
-  searchParams: { season },
-}: PageParams) => {
+export const generateMetadata = ({ params: { yearAndSeason } }: PageParams) => {
+  const [year, season] = yearAndSeason.split('-')
   const gamesIndex = results.findIndex(
     (result) =>
       result.year === Number(year) &&
@@ -19,10 +16,18 @@ export const generateMetadata = ({
   return getYearResultsMetadata(gamesIndex)
 }
 
-const YearResultsPage = ({
-  params: { year },
-  searchParams: { season },
-}: PageParams) => {
+export const generateStaticParams = () => {
+  const yearAndSeasonSlugs = results.map((result) => ({
+    yearAndSeason: `${result.year}${result.season ? `-${result.season}` : ''}`,
+  }))
+
+  return yearAndSeasonSlugs
+}
+
+export const dynamicParams = false
+
+const YearResultsPage = ({ params: { yearAndSeason } }: PageParams) => {
+  const [year, season] = yearAndSeason.split('-')
   const gamesIndex = results.findIndex(
     (result) =>
       result.year === Number(year) &&

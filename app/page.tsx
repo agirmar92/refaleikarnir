@@ -1,5 +1,8 @@
-import { YearResults, getYearResultsMetadata } from './[year]/YearResults'
 import { getLatestGameResultsIndex } from '@/utils/proccessData'
+import {
+  getYearResultsMetadata,
+  YearResults,
+} from './[yearAndSeason]/YearResults'
 
 export const generateMetadata = () => {
   const latestGameResultsIndex = getLatestGameResultsIndex()

@@ -1,28 +1,35 @@
-import { redirect } from "next/navigation";
-import { players } from "@/constants";
-import { PlayerSlug } from "@/types";
-import Tile from "@/components/Tile";
-import TileTitle from "@/components/TileTitle";
-import PlayerCoverPhoto from "@/components/PlayerCoverPhoto";
-import PlayerOverallStats from "@/components/PlayerOverallStats";
-import PlayerTeammatesList from "@/components/PlayerTeammatesList";
-import { DynamicallyPositionedContent } from "@/components/PlayerCoverPhoto/PlayerCoverPhoto";
+import { redirect } from 'next/navigation'
+import { players } from '@/constants'
+import { PlayerSlug } from '@/types'
+import Tile from '@/components/Tile'
+import TileTitle from '@/components/TileTitle'
+import PlayerCoverPhoto from '@/components/PlayerCoverPhoto'
+import PlayerOverallStats from '@/components/PlayerOverallStats'
+import PlayerTeammatesList from '@/components/PlayerTeammatesList'
+import { DynamicallyPositionedContent } from '@/components/PlayerCoverPhoto/PlayerCoverPhoto'
 
 export const generateMetadata = ({ params }: { params: { slug: string } }) => {
   if (players[params.slug as PlayerSlug]) {
-    const { name } = players[params.slug as PlayerSlug];
-    return { title: `${name} | Refaleikarnir` };
+    const { name } = players[params.slug as PlayerSlug]
+    return { title: `${name} | Refaleikarnir` }
   } else {
-    return { title: "Refaleikarnir" };
+    return { title: 'Refaleikarnir' }
   }
-};
+}
+
+export const generateStaticParams = () => {
+  const playerArray = Object.values(players)
+  return playerArray.map((player) => ({ slug: player.slug }))
+}
+
+export const dynamicParams = false
 
 const PlayerPage = ({ params }: { params: { slug: string } }) => {
   if (!players[params.slug as PlayerSlug]) {
     // No player found with that slug
-    redirect("/");
+    redirect('/')
   }
-  const { name, slug, coverPhotoUrl } = players[params.slug as PlayerSlug];
+  const { name, slug, coverPhotoUrl } = players[params.slug as PlayerSlug]
 
   return (
     <>
@@ -43,7 +50,7 @@ const PlayerPage = ({ params }: { params: { slug: string } }) => {
         </Tile>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default PlayerPage;
+export default PlayerPage
