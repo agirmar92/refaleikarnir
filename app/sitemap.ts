@@ -8,8 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const playerSlugs = getPlayersWithWinsAndApps().map((player) => player.slug)
   const resultSlugs = results
     .map(
-      (result) =>
-        `${result.year}${result.season ? `?season=${result.season}` : ''}`
+      (result) => `${result.year}${result.season ? `-${result.season}` : ''}`
     )
     .reverse()
 

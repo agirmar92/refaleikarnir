@@ -64,7 +64,7 @@ const YearSelector = ({ gamesIndex }: { gamesIndex: number }) => {
               }
               router.push(
                 `/${selectedGames.year.toString()}${
-                  selectedGames.season ? `?season=${selectedGames.season}` : ''
+                  selectedGames.season ? `-${selectedGames.season}` : ''
                 }`
               )
             }}
@@ -117,7 +117,7 @@ const YearArrowNavigator = ({
         isDisabled
           ? '/'
           : `/${nextResults.year.toString()}${
-              nextResults.season ? `?season=${nextResults.season}` : ''
+              nextResults.season ? `-${nextResults.season}` : ''
             }`
       }
     >
