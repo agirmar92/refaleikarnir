@@ -1,4 +1,4 @@
-import { redirect } from 'next/navigation'
+import { notFound } from 'next/navigation'
 import { results } from '@/data/results'
 import { YearResults, getYearResultsMetadata } from './YearResults'
 
@@ -35,8 +35,8 @@ const YearResultsPage = ({ params: { yearAndSeason } }: PageParams) => {
   )
 
   if (gamesIndex === -1) {
-    // No games found for given params - redirecting to home page root
-    redirect('/')
+    // No games found for given params - shouldn't happen due to `dynamicParams = false`
+    notFound()
   }
 
   return <YearResults gamesIndex={gamesIndex} />

@@ -1,4 +1,4 @@
-import { redirect } from 'next/navigation'
+import { notFound } from 'next/navigation'
 import { players } from '@/constants'
 import { PlayerSlug } from '@/types'
 import Tile from '@/components/Tile'
@@ -26,8 +26,8 @@ export const dynamicParams = false
 
 const PlayerPage = ({ params }: { params: { slug: string } }) => {
   if (!players[params.slug as PlayerSlug]) {
-    // No player found with that slug
-    redirect('/')
+    // No player found with that slug - shouldn't happen due to `dynamicParams = false`
+    notFound()
   }
   const { name, slug, coverPhotoUrl } = players[params.slug as PlayerSlug]
 
