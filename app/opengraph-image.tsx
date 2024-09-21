@@ -1,5 +1,6 @@
 import { generateOpengraphImage } from '@/utils/generateOpengraphImage'
 import { results } from '@/data/results'
+import { getLatestGameResultsIndex } from '@/utils/proccessData'
 
 export const runtime = 'edge'
 
@@ -11,7 +12,7 @@ export const size = {
 export const contentType = 'image/png'
 
 export default async function Image() {
-  const { coverPhotoUrl } = results[results.length - 1]
+  const { coverPhotoUrl } = results[getLatestGameResultsIndex()]
 
   return generateOpengraphImage({ photoUrl: coverPhotoUrl, size })
 }
