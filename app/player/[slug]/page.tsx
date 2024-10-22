@@ -8,7 +8,8 @@ import PlayerOverallStats from '@/components/PlayerOverallStats'
 import PlayerTeammatesList from '@/components/PlayerTeammatesList'
 import { DynamicallyPositionedContent } from '@/components/PlayerCoverPhoto/PlayerCoverPhoto'
 
-export const generateMetadata = ({ params }: { params: { slug: string } }) => {
+export const generateMetadata = async (props: { params: Promise<{ slug: string }> }) => {
+  const params = await props.params;
   if (players[params.slug as PlayerSlug]) {
     const { name } = players[params.slug as PlayerSlug]
     return { title: `${name} | Refaleikarnir` }
@@ -24,7 +25,8 @@ export const generateStaticParams = () => {
 
 export const dynamicParams = false
 
-const PlayerPage = ({ params }: { params: { slug: string } }) => {
+const PlayerPage = async (props: { params: Promise<{ slug: string }> }) => {
+  const params = await props.params;
   if (!players[params.slug as PlayerSlug]) {
     // No player found with that slug - shouldn't happen due to `dynamicParams = false`
     notFound()
