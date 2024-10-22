@@ -3,10 +3,11 @@ import { results } from '@/data/results'
 import { YearResults, getYearResultsMetadata } from './YearResults'
 
 type PageParams = {
-  params: { yearAndSeason: string }
+  params: Promise<{ yearAndSeason: string }>
 }
 
-export const generateMetadata = ({ params: { yearAndSeason } }: PageParams) => {
+export const generateMetadata = async (props: PageParams) => {
+  const { yearAndSeason } = await props.params
   const [year, season] = yearAndSeason.split('-')
   const gamesIndex = results.findIndex(
     (result) =>
@@ -26,7 +27,11 @@ export const generateStaticParams = () => {
 
 export const dynamicParams = false
 
-const YearResultsPage = ({ params: { yearAndSeason } }: PageParams) => {
+const YearResultsPage = async (props: PageParams) => {
+  const params = await props.params
+
+  const { yearAndSeason } = params
+
   const [year, season] = yearAndSeason.split('-')
   const gamesIndex = results.findIndex(
     (result) =>
