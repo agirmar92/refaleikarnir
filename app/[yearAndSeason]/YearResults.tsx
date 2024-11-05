@@ -20,17 +20,21 @@ export const getYearResultsMetadata = (gamesIndex: number): Metadata => {
   return { title: 'Refaleikarnir' }
 }
 
-export const YearResults = ({ gamesIndex }: { gamesIndex: number }) => (
-  <>
-    <CoverPhoto gamesIndex={gamesIndex} />
-    <div className="space-y-3 p-3 bg-winter relative z-10 mt-[100vw] sm:mt-[640px]">
-      <YearSelector gamesIndex={gamesIndex} />
-      <TileTitle>Þrautir</TileTitle>
-      <Tile>
-        <ChallengesPlayed gamesIndex={gamesIndex} />
-      </Tile>
-      <TileTitle>Niðurstöður</TileTitle>
-      <Scoreboard gamesIndex={gamesIndex} />
-    </div>
-  </>
-)
+export const YearResults = ({ gamesIndex }: { gamesIndex: number }) => {
+  const { coverPhotoUrl } = results[gamesIndex]
+
+  return (
+    <>
+      <CoverPhoto coverPhotoUrl={coverPhotoUrl} />
+      <div className="space-y-3 p-3 bg-winter relative z-10 mt-[100vw] sm:mt-[640px]">
+        <YearSelector gamesIndex={gamesIndex} />
+        <TileTitle>Þrautir</TileTitle>
+        <Tile>
+          <ChallengesPlayed gamesIndex={gamesIndex} />
+        </Tile>
+        <TileTitle>Niðurstöður</TileTitle>
+        <Scoreboard gamesIndex={gamesIndex} />
+      </div>
+    </>
+  )
+}
