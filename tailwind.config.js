@@ -10,9 +10,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        winter: "#264653",
+        winter: "#2E3B4E",
         "winter-light": "#8798b5",
-        summer: "#E76F51",
         "fox-silver": "#c0c0c0",
         "fox-red": "#d62828",
         "fox-white": "#efefef",
