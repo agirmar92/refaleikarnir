@@ -37,7 +37,6 @@ const PlayerPage = async (props: { params: Promise<{ slug: string }> }) => {
 
   return (
     <>
-      {/* <PlayerCoverPhoto coverPhotoUrl={coverPhotoUrl} /> */}
       <CoverPhoto coverPhotoUrl={coverPhotoUrl} />
       <div className="p-3 space-y-3 z-10 relative bg-winter mt-[100vw] sm:mt-[640px]">
         <DynamicallyPositionedContent>
