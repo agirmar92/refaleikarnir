@@ -6,6 +6,7 @@ import Tile from '@/components/Tile'
 import TileTitle from '@/components/TileTitle'
 import YearSelector from '@/components/YearSelector'
 import { results } from '@/data/results'
+import Carousel from '@/components/Carousel'
 
 export const getYearResultsMetadata = (gamesIndex: number): Metadata => {
   if (gamesIndex !== -1) {
@@ -34,6 +35,13 @@ export const YearResults = ({ gamesIndex }: { gamesIndex: number }) => {
         </Tile>
         <TileTitle>Niðurstöður</TileTitle>
         <Scoreboard gamesIndex={gamesIndex} />
+        <TileTitle>Myndir</TileTitle>
+        <Tile>
+          <Carousel
+            slides={Array.from(Array(5).keys())}
+            options={{ align: 'start' }}
+          />
+        </Tile>
       </div>
     </>
   )
