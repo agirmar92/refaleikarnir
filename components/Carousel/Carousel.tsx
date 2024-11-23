@@ -29,7 +29,7 @@ export const Carousel = (props: PropType) => {
   } = usePrevNextButtons(emblaApi)
 
   return (
-    <section className="embla max-w-[48rem] m-auto">
+    <section className="max-w-[48rem] m-auto">
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex touch-pinch-zoom touch-pan-y -ml-[--slide-spacing]">
           {slides.map((index) => (
