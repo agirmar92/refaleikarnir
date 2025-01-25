@@ -31,7 +31,6 @@ module.exports = {
     },
   },
   plugins: [
-    // require('tailwindcss-opentype'),
     plugin(function ({ matchUtilities, theme }) {
       matchUtilities(
         {

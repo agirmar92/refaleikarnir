@@ -15,7 +15,6 @@
     "react-dom": "^19.0.0",
     "scroll-snap": "^4.0.0",
     "tailwindcss": "^4.0.0",
-    "tailwindcss-opentype": "^1.1.0",
     "typescript": "^5.1.6",
     "web-vitals": "^4.0.0"
   },

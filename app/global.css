@@ -18,6 +18,14 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
   }
+
+  /**
+    * This is to replace the usage of Tailwind plugin `tailwindcss-typography`
+    * which is not supported in Tailwind CSS v4.
+    */
+  .small-caps {
+    font-variant: small-caps;
+  }
 }
 
 body {
