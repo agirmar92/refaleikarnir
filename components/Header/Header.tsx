@@ -52,7 +52,7 @@ const Header = () => {
     <>
       <header
         className={classNames(
-          "flex justify-between h-[64px] min-h-[64px] px-5 items-center z-[999] fixed top-0 w-full transition-[background] max-w-screen-sm",
+          "flex justify-between h-[64px] min-h-[64px] px-5 items-center z-999 fixed top-0 w-full transition-[background] max-w-(--breakpoint-sm)",
           {
             "bg-winter":
               pathname === "/stats" ||
@@ -78,7 +78,7 @@ const Header = () => {
       </header>
       <div
         className={classNames(
-          "fixed left-1/2 -translate-x-1/2 transition-[top] ease-in-out duration-300 w-full h-full max-w-screen-sm sm:max-h-screen z-[998] bg-winter p-3 flex flex-col justify-center flex-wrap content-center",
+          "fixed left-1/2 -translate-x-1/2 transition-[top] ease-in-out duration-300 w-full h-full max-w-(--breakpoint-sm) sm:max-h-screen z-998 bg-winter p-3 flex flex-col justify-center flex-wrap content-center",
           isMenuOpen ? "top-0" : "-top-full",
         )}
       >

@@ -38,7 +38,7 @@ export default function RootLayout({
       >
         <div
           id="main-content"
-          className="w-full h-full max-w-screen-sm flex flex-col bg-winter"
+          className="w-full h-full max-w-(--breakpoint-sm) flex flex-col bg-winter"
         >
           <Header />
           <main>{children}</main>

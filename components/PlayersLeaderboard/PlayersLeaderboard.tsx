@@ -51,7 +51,7 @@ export const PlayersLeaderboardSkeleton = () => {
           >
             <div className="flex items-center space-x-2">
               <div className="w-10 h-10 bg-no-repeat bg-gray-400 animate-pulse rounded-full" />
-              <div className="bg-gray-400 animate-pulse rounded h-6 w-1/2" />
+              <div className="bg-gray-400 animate-pulse rounded-sm h-6 w-1/2" />
             </div>
           </span>
           <span
@@ -60,7 +60,7 @@ export const PlayersLeaderboardSkeleton = () => {
               'pt-3': iPlayer !== 0,
             })}
           >
-            <div className="bg-gray-400 animate-pulse rounded h-6 w-full" />
+            <div className="bg-gray-400 animate-pulse rounded-sm h-6 w-full" />
           </span>
         </Fragment>
       ))}

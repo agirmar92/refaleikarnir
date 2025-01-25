@@ -48,7 +48,7 @@ export const TeamsLeaderboardSkeleton = () => {
               'pt-3': iTeam !== 0,
             })}
           >
-            <div className="h-24 w-16 m-auto bg-gray-400 animate-pulse rounded" />
+            <div className="h-24 w-16 m-auto bg-gray-400 animate-pulse rounded-sm" />
           </span>
           <span
             className={classNames('flex flex-col justify-center', {
@@ -56,7 +56,7 @@ export const TeamsLeaderboardSkeleton = () => {
               'pt-3': iTeam !== 0,
             })}
           >
-            <div className="bg-gray-400 animate-pulse rounded h-6 w-2/3" />
+            <div className="bg-gray-400 animate-pulse rounded-sm h-6 w-2/3" />
           </span>
         </Fragment>
       ))}
