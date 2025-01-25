@@ -1,6 +1,40 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+@theme {
+  --color-winter: #2e3b4e;
+  --color-winter-light: #8798b5;
+  --color-fox-silver: #c0c0c0;
+  --color-fox-red: #d62828;
+  --color-fox-white: #efefef;
+  --color-fox-black: #1f1f1f;
+  --color-tile: #a8b5ba;
+}
+
+/**
+  * This is to replace the usage of Tailwind plugin `tailwindcss-typography`
+  * which is not supported in Tailwind CSS v4.
+*/
+@utility small-caps {
+  font-variant: small-caps;
+}
 
 body {
   margin: 0;

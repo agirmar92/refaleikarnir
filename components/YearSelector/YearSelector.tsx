@@ -22,7 +22,7 @@ const YearSelector = ({ gamesIndex }: { gamesIndex: number }) => {
   return (
     <div
       className={classNames(
-        'left-0 right-0 z-50 p-3 box-border transition-[background] w-full max-w-screen-sm sm:left-1/2 sm:-translate-x-1/2',
+        'left-0 right-0 z-50 p-3 box-border transition-[background] w-full max-w-(--breakpoint-sm) sm:left-1/2 sm:-translate-x-1/2',
         mainContentWidth && scrollY > mainContentWidth - 64 * 2
           ? 'fixed top-16 bg-winter-light'
           : 'absolute -top-16'
