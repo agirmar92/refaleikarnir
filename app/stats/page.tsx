@@ -1,5 +1,5 @@
 import { Suspense } from 'react'
-import { Metadata, ResolvedMetadata } from 'next'
+import { Metadata, ResolvingMetadata } from 'next'
 import Tile from '@/components/Tile'
 import TileTitle from '@/components/TileTitle'
 import PlayersLeaderboard, {
@@ -11,7 +11,7 @@ import TeamsLeaderboard, {
 
 export const generateMetadata = async (
   _: never,
-  parent: ResolvedMetadata
+  parent: ResolvingMetadata
 ): Promise<Metadata> => {
   const parentMetadata = await parent
 

@@ -1,4 +1,4 @@
-import { Metadata, ResolvedMetadata } from 'next'
+import { Metadata, ResolvingMetadata } from 'next'
 import { getLatestGameResultsIndex } from '@/utils/proccessData'
 import {
   getYearResultsMetadata,
@@ -7,7 +7,7 @@ import {
 
 export const generateMetadata = async (
   _: never,
-  parent: ResolvedMetadata
+  parent: ResolvingMetadata
 ): Promise<Metadata> => {
   const parentMetadata = await parent
   const latestGameResultsIndex = getLatestGameResultsIndex()

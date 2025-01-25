@@ -1,4 +1,4 @@
-import { Metadata, ResolvedMetadata } from 'next'
+import { Metadata, ResolvingMetadata } from 'next'
 import { notFound } from 'next/navigation'
 import { results } from '@/data/results'
 import { YearResults, getYearResultsMetadata } from './YearResults'
@@ -9,7 +9,7 @@ type PageProps = {
 
 export const generateMetadata = async (
   props: PageProps,
-  parent: ResolvedMetadata
+  parent: ResolvingMetadata
 ): Promise<Metadata> => {
   const [{ yearAndSeason }, parentMetadata] = await Promise.all([
     props.params,
