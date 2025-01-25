@@ -1,4 +1,4 @@
-import { Metadata } from 'next'
+import { Metadata, ResolvedMetadata } from 'next'
 import ChallengesPlayed from '@/components/ChallengesPlayed'
 import CoverPhoto from '@/components/CoverPhoto'
 import Scoreboard from '@/components/Scoreboard'
@@ -7,13 +7,28 @@ import TileTitle from '@/components/TileTitle'
 import YearSelector from '@/components/YearSelector'
 import { results } from '@/data/results'
 
-export const getYearResultsMetadata = (gamesIndex: number): Metadata => {
+export const getYearResultsMetadata = (
+  gamesIndex: number,
+  parentMetadata: ResolvedMetadata
+): Metadata => {
   if (gamesIndex !== -1) {
     const { year, season } = results[gamesIndex]
+    const isLatestGames = gamesIndex === results.length - 1
+    // Remove the images from the parent metadata
+    delete parentMetadata.openGraph?.images
+
     return {
       title: `${year}${
         season ? ` - ${season === 'summer' ? 'Sumar' : 'Vetur'}` : ''
       } | Refaleikarnir`,
+      openGraph: {
+        ...parentMetadata.openGraph,
+        url: isLatestGames
+          ? 'https://www.refaleikarnir.fun'
+          : `https://www.refaleikarnir.fun/${year}${
+              season ? `-${season}` : ''
+            }`,
+      },
     }
   }
 

@@ -1,11 +1,15 @@
 import './global.css'
+import { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer/Footer'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Refaleikarnir',
   description: 'Mest spennandi leikar allra tíma',
+  openGraph: {
+    siteName: 'Refaleikarnir',
+  },
 }
 
 const montserrat = Montserrat({
