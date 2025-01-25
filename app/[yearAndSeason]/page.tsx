@@ -1,20 +1,27 @@
+import { Metadata, ResolvedMetadata } from 'next'
 import { notFound } from 'next/navigation'
 import { results } from '@/data/results'
 import { YearResults, getYearResultsMetadata } from './YearResults'
 
-type PageParams = {
+type PageProps = {
   params: Promise<{ yearAndSeason: string }>
 }
 
-export const generateMetadata = async (props: PageParams) => {
-  const { yearAndSeason } = await props.params
+export const generateMetadata = async (
+  props: PageProps,
+  parent: ResolvedMetadata
+): Promise<Metadata> => {
+  const [{ yearAndSeason }, parentMetadata] = await Promise.all([
+    props.params,
+    parent,
+  ])
   const [year, season] = yearAndSeason.split('-')
   const gamesIndex = results.findIndex(
     (result) =>
       result.year === Number(year) &&
       (season === undefined || season === result.season)
   )
-  return getYearResultsMetadata(gamesIndex)
+  return getYearResultsMetadata(gamesIndex, parentMetadata)
 }
 
 export const generateStaticParams = () => {
@@ -27,7 +34,7 @@ export const generateStaticParams = () => {
 
 export const dynamicParams = false
 
-const YearResultsPage = async (props: PageParams) => {
+const YearResultsPage = async (props: PageProps) => {
   const params = await props.params
 
   const { yearAndSeason } = params

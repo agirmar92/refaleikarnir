@@ -1,12 +1,18 @@
+import { Metadata, ResolvedMetadata } from 'next'
 import { getLatestGameResultsIndex } from '@/utils/proccessData'
 import {
   getYearResultsMetadata,
   YearResults,
 } from './[yearAndSeason]/YearResults'
 
-export const generateMetadata = () => {
+export const generateMetadata = async (
+  _: never,
+  parent: ResolvedMetadata
+): Promise<Metadata> => {
+  const parentMetadata = await parent
   const latestGameResultsIndex = getLatestGameResultsIndex()
-  return getYearResultsMetadata(latestGameResultsIndex)
+
+  return getYearResultsMetadata(latestGameResultsIndex, parentMetadata)
 }
 
 const RefaleikarnirFrontPage = () => {

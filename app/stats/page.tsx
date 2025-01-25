@@ -1,5 +1,5 @@
 import { Suspense } from 'react'
-import { Metadata } from 'next'
+import { Metadata, ResolvedMetadata } from 'next'
 import Tile from '@/components/Tile'
 import TileTitle from '@/components/TileTitle'
 import PlayersLeaderboard, {
@@ -9,11 +9,20 @@ import TeamsLeaderboard, {
   TeamsLeaderboardSkeleton,
 } from '@/components/TeamsLeaderboard'
 
-export const metadata: Metadata = {
-  title: 'Tölfræði | Refaleikarnir',
-  openGraph: {
-    url: 'https://www.refaleikarnir.fun/stats',
-  },
+export const generateMetadata = async (
+  _: never,
+  parent: ResolvedMetadata
+): Promise<Metadata> => {
+  const parentMetadata = await parent
+
+  return {
+    title: 'Tölfræði | Refaleikarnir',
+    // No need to remove the images from the parent metadata for this route
+    openGraph: {
+      ...parentMetadata.openGraph,
+      url: 'https://www.refaleikarnir.fun/stats',
+    },
+  }
 }
 
 const StatsPage = () => (
