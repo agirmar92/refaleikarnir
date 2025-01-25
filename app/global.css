@@ -1,7 +1,5 @@
 @import 'tailwindcss';
 
-@config '../tailwind.config.js';
-
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still
@@ -18,14 +16,24 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
   }
+}
 
-  /**
-    * This is to replace the usage of Tailwind plugin `tailwindcss-typography`
-    * which is not supported in Tailwind CSS v4.
-    */
-  .small-caps {
-    font-variant: small-caps;
-  }
+@theme {
+  --color-winter: #2e3b4e;
+  --color-winter-light: #8798b5;
+  --color-fox-silver: #c0c0c0;
+  --color-fox-red: #d62828;
+  --color-fox-white: #efefef;
+  --color-fox-black: #1f1f1f;
+  --color-tile: #a8b5ba;
+}
+
+/**
+  * This is to replace the usage of Tailwind plugin `tailwindcss-typography`
+  * which is not supported in Tailwind CSS v4.
+*/
+@utility small-caps {
+  font-variant: small-caps;
 }
 
 body {
