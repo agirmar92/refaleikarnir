@@ -1,6 +1,7 @@
+import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { players } from '@/constants'
-import { PlayerSlug } from '@/types'
+import { isPlayerSlug, PlayerSlug } from '@/types'
 import Tile from '@/components/Tile'
 import TileTitle from '@/components/TileTitle'
 import PlayerOverallStats from '@/components/PlayerOverallStats'
@@ -10,13 +11,17 @@ import { DynamicallyPositionedContent } from './DynamicallyPositionedContent'
 
 export const generateMetadata = async (props: {
   params: Promise<{ slug: string }>
-}) => {
+}): Promise<Metadata> => {
   const params = await props.params
-  if (players[params.slug as PlayerSlug]) {
-    const { name } = players[params.slug as PlayerSlug]
-    return { title: `${name} | Refaleikarnir` }
-  } else {
+
+  if (!isPlayerSlug(params.slug)) {
     return { title: 'Refaleikarnir' }
+  }
+
+  const { name, slug } = players[params.slug]
+  return {
+    title: `${name} | Refaleikarnir`,
+    openGraph: { url: `https://www.refaleikarnir.fun/player/${slug}` },
   }
 }
 
@@ -29,11 +34,11 @@ export const dynamicParams = false
 
 const PlayerPage = async (props: { params: Promise<{ slug: string }> }) => {
   const params = await props.params
-  if (!players[params.slug as PlayerSlug]) {
+  if (!isPlayerSlug(params.slug)) {
     // No player found with that slug - shouldn't happen due to `dynamicParams = false`
     notFound()
   }
-  const { name, slug, coverPhotoUrl } = players[params.slug as PlayerSlug]
+  const { name, slug, coverPhotoUrl } = players[params.slug]
 
   return (
     <>

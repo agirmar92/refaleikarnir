@@ -10,10 +10,19 @@ import { results } from '@/data/results'
 export const getYearResultsMetadata = (gamesIndex: number): Metadata => {
   if (gamesIndex !== -1) {
     const { year, season } = results[gamesIndex]
+    const isLatestGames = gamesIndex === results.length - 1
+
     return {
       title: `${year}${
         season ? ` - ${season === 'summer' ? 'Sumar' : 'Vetur'}` : ''
       } | Refaleikarnir`,
+      openGraph: {
+        url: isLatestGames
+          ? 'https://www.refaleikarnir.fun'
+          : `https://www.refaleikarnir.fun/${year}${
+              season ? `-${season}` : ''
+            }`,
+      },
     }
   }
 

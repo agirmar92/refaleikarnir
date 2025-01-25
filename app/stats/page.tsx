@@ -1,16 +1,20 @@
-import Tile from "@/components/Tile";
-import TileTitle from "@/components/TileTitle";
+import { Suspense } from 'react'
+import { Metadata } from 'next'
+import Tile from '@/components/Tile'
+import TileTitle from '@/components/TileTitle'
 import PlayersLeaderboard, {
   PlayersLeaderboardSkeleton,
-} from "@/components/PlayersLeaderboard";
+} from '@/components/PlayersLeaderboard'
 import TeamsLeaderboard, {
   TeamsLeaderboardSkeleton,
-} from "@/components/TeamsLeaderboard";
-import { Suspense } from "react";
+} from '@/components/TeamsLeaderboard'
 
-export const metadata = {
-  title: "Tölfræði | Refaleikarnir",
-};
+export const metadata: Metadata = {
+  title: 'Tölfræði | Refaleikarnir',
+  openGraph: {
+    url: 'https://www.refaleikarnir.fun/stats',
+  },
+}
 
 const StatsPage = () => (
   <div className="p-3 space-y-3 mt-16">
@@ -27,6 +31,6 @@ const StatsPage = () => (
       </Suspense>
     </Tile>
   </div>
-);
+)
 
-export default StatsPage;
+export default StatsPage
