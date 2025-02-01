@@ -1032,10 +1032,10 @@ scheduler@^0.25.0:
   resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.25.0.tgz#336cd9768e8cceebf52d3c80e3dcf5de23e7e015"
   integrity sha512-xFVuu11jh+xcO7JOAGJNOXld8/TcEHK/4CituBUeUb5hqxJLj9YuemAEuvm9gQ/+pgXYfbQuqAkiYu+u7YEsNA==
 
-scroll-snap@^4.0.0:
-  version "4.0.5"
-  resolved "https://registry.yarnpkg.com/scroll-snap/-/scroll-snap-4.0.5.tgz#ae1019d1f007995c423368dacc34cb812e0dfbf2"
-  integrity sha512-S1xBSNMcwp9Mt0SMmm0vuUDmvJe3FCv3udwXwC5QN0Lb/+3T81AR4hDARML3oK+GmYg57K/nZezRSNG3UzjRUA==
+scroll-snap@^5.0.0:
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/scroll-snap/-/scroll-snap-5.0.2.tgz#10f0b36a08108c82e2bf6ed6cc99abdba423f1e5"
+  integrity sha512-Uwd3gYQwryAnmhS5F4CdzI4jrdicXlKiSKywFTIOyrbGkECFec/w1O3BNspEXTcpQnGwZmJyDeBA4sQFmSBttw==
 
 semver@^7.6.3:
   version "7.6.3"
