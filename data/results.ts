@@ -514,4 +514,56 @@ export const results: Result[] = [
     ],
     coverPhotoUrl: 'https://refaleikarnir.sirv.com/coverPhotos/2024.jpg',
   },
+  {
+    year: 2025,
+    teams: [
+      {
+        teamColor: 'WHITE',
+        teamPlace: 0,
+        teamPlayers: [
+          players.aegir,
+          players.krissi,
+          players.jonni,
+          players.maggi,
+        ],
+      },
+      {
+        teamColor: 'BLACK',
+        teamPlace: 0,
+        teamPlayers: [
+          players.arnar,
+          players.danni,
+          players.vikingur,
+          players.gaui,
+        ],
+      },
+    ],
+    challenges: [
+      {
+        name: 'Archery Tag',
+        emoji: '🏹',
+        teamResults: [
+          { color: 'WHITE', points: 0 },
+          { color: 'BLACK', points: 0 },
+        ],
+      },
+      {
+        name: 'Fótbolti',
+        emoji: '⚽',
+        teamResults: [
+          { color: 'WHITE', points: 0 },
+          { color: 'BLACK', points: 0 },
+        ],
+      },
+      {
+        name: 'Kubbur',
+        emoji: '👑',
+        teamResults: [
+          { color: 'WHITE', points: 0 },
+          { color: 'BLACK', points: 0 },
+        ],
+      },
+    ],
+    coverPhotoUrl: 'https://refaleikarnir.sirv.com/coverPhotos/2025.jpg',
+  },
 ]
