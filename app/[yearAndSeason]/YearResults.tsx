@@ -15,14 +15,14 @@ export const getYearResultsMetadata = (
     const { year, season } = results[gamesIndex]
     const isLatestGames = gamesIndex === results.length - 1
     // Remove the images from the parent metadata
-    delete parentMetadata.openGraph?.images
+    const { images, ...restOfParentMetadataOG } = parentMetadata.openGraph ?? {}
 
     return {
       title: `${year}${
         season ? ` - ${season === 'summer' ? 'Sumar' : 'Vetur'}` : ''
       } | Refaleikarnir`,
       openGraph: {
-        ...parentMetadata.openGraph,
+        ...restOfParentMetadataOG,
         url: isLatestGames
           ? 'https://www.refaleikarnir.fun'
           : `https://www.refaleikarnir.fun/${year}${

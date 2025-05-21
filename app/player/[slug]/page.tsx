@@ -25,12 +25,12 @@ export const generateMetadata = async (
 
   const { name, slug } = players[params.slug]
   // Remove the images from the parent metadata
-  delete parentMetadata.openGraph?.images
+  const { images, ...restOfParentMetadataOG } = parentMetadata.openGraph ?? {}
 
   return {
     title: `${name} | Refaleikarnir`,
     openGraph: {
-      ...parentMetadata.openGraph,
+      ...restOfParentMetadataOG,
       url: `https://www.refaleikarnir.fun/player/${slug}`,
     },
   }
