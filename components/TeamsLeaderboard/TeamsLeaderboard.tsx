@@ -1,11 +1,11 @@
 import { Fragment } from 'react'
-import { getTeamColorsWithWins } from '@/utils/proccessData'
+import { getTeamColorsWithWinsAndParticipation } from '@/utils/proccessData'
 import classNames from 'classnames'
 import TeamEmblem from '@/components/TeamEmblem'
 import { actualTeamNames } from '@/utils/constants'
 
 const TeamsLeaderboard = () => {
-  const teamColorsWithWins = getTeamColorsWithWins()
+  const teamColorsWithWins = getTeamColorsWithWinsAndParticipation()
 
   return (
     <div className="grid grid-cols-3">
@@ -27,7 +27,10 @@ const TeamsLeaderboard = () => {
               'pt-3': iTeamData !== 0,
             })}
           >
-            {teamData.wins} sigrar
+            <span>
+              {teamData.wins} {teamData.wins === 1 ? 'sigur' : 'sigrar'}
+            </span>
+            <span>({teamData.appearances} leikar)</span>
           </span>
         </Fragment>
       ))}

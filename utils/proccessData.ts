@@ -40,13 +40,16 @@ export const getPlayersWithWinsAndApps = () => {
   return playersWithData.sort((playerA, playerB) => playerB.wins - playerA.wins)
 }
 
-export const getTeamColorsWithWins = () => {
+export const getTeamColorsWithWinsAndParticipation = () => {
   // Initialize teams data with wins
-  const teamsWithWins: Record<TeamColor, { color: TeamColor; wins: number }> = {
-    BLACK: { color: 'BLACK', wins: 0 },
-    WHITE: { color: 'WHITE', wins: 0 },
-    RED: { color: 'RED', wins: 0 },
-    SILVER: { color: 'SILVER', wins: 0 },
+  let teams: Record<
+    TeamColor,
+    { color: TeamColor; wins: number; appearances: number }
+  > = {
+    BLACK: { color: 'BLACK', wins: 0, appearances: 0 },
+    WHITE: { color: 'WHITE', wins: 0, appearances: 0 },
+    RED: { color: 'RED', wins: 0, appearances: 0 },
+    SILVER: { color: 'SILVER', wins: 0, appearances: 0 },
   }
 
   // Loop through all games and add results needed
@@ -54,14 +57,15 @@ export const getTeamColorsWithWins = () => {
     // Increase games won for the team colors that won
     const winningTeams = gameResult.teams.filter((team) => team.teamPlace === 0)
     winningTeams.forEach((team) => {
-      teamsWithWins[team.teamColor].wins =
-        teamsWithWins[team.teamColor].wins + 1
+      teams[team.teamColor].wins = teams[team.teamColor].wins + 1
+    })
+    const participatingTeams = gameResult.teams
+    participatingTeams.forEach((team) => {
+      teams[team.teamColor].appearances = teams[team.teamColor].appearances + 1
     })
   })
 
-  return Object.values(teamsWithWins).sort(
-    (teamA, teamB) => teamB.wins - teamA.wins
-  )
+  return Object.values(teams).sort((teamA, teamB) => teamB.wins - teamA.wins)
 }
 
 export const getTeamColorsWithPlayedCountByPlayer = (slug: PlayerSlug) => {
