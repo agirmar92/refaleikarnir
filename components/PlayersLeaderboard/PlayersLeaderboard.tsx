@@ -12,7 +12,7 @@ const PlayersLeaderboard = () => {
       {playersWithWinsAndApps.map((playerData, iPlayerData) => (
         <Fragment key={`${playerData.slug}-wins-and-apps`}>
           <span
-            className={classNames('col-span-2', {
+            className={classNames('col-span-2 pr-4', {
               'border-b border-winter pb-3':
                 iPlayerData !== playersWithWinsAndApps.length - 1,
               'pt-3': iPlayerData !== 0,
