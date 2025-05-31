@@ -519,10 +519,10 @@ export const results: Result[] = [
     teams: [
       {
         teamColor: 'WHITE',
-        teamPlace: 0,
+        teamPlace: 1,
         teamPlayers: [
-          players.aegir,
-          players.krissi,
+          players.arnar,
+          players.danni,
           players.jonni,
           players.maggi,
         ],
@@ -531,8 +531,8 @@ export const results: Result[] = [
         teamColor: 'BLACK',
         teamPlace: 0,
         teamPlayers: [
-          players.arnar,
-          players.danni,
+          players.aegir,
+          players.krissi,
           players.vikingur,
           players.gaui,
         ],
@@ -543,24 +543,32 @@ export const results: Result[] = [
         name: 'Archery Tag',
         emoji: '🏹',
         teamResults: [
-          { color: 'WHITE', points: 0 },
-          { color: 'BLACK', points: 0 },
+          { color: 'BLACK', points: 2 },
+          { color: 'WHITE', points: 1 },
         ],
       },
       {
         name: 'Fótbolti',
         emoji: '⚽',
         teamResults: [
-          { color: 'WHITE', points: 0 },
           { color: 'BLACK', points: 0 },
+          { color: 'WHITE', points: 1 },
+        ],
+      },
+      {
+        name: 'Körfubolta þrautir',
+        emoji: '🏀',
+        teamResults: [
+          { color: 'BLACK', points: 2 },
+          { color: 'WHITE', points: 0 },
         ],
       },
       {
         name: 'Kubbur',
         emoji: '👑',
         teamResults: [
+          { color: 'BLACK', points: 1 },
           { color: 'WHITE', points: 0 },
-          { color: 'BLACK', points: 0 },
         ],
       },
     ],
