@@ -572,6 +572,6 @@ export const results: Result[] = [
         ],
       },
     ],
-    coverPhotoUrl: 'https://refaleikarnir.sirv.com/coverPhotos/2025_tmp.jpg',
+    coverPhotoUrl: 'https://refaleikarnir.sirv.com/coverPhotos/2025.jpg',
   },
 ]
