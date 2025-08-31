@@ -6,7 +6,7 @@ import {
 } from './[yearAndSeason]/YearResults'
 
 export const generateMetadata = async (
-  _: never,
+  _: unknown,
   parent: ResolvingMetadata
 ): Promise<Metadata> => {
   const parentMetadata = await parent
