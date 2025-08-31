@@ -10,7 +10,7 @@ import TeamsLeaderboard, {
 } from '@/components/TeamsLeaderboard'
 
 export const generateMetadata = async (
-  _: never,
+  _: unknown,
   parent: ResolvingMetadata
 ): Promise<Metadata> => {
   const parentMetadata = await parent
