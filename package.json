@@ -4,21 +4,17 @@
   "private": true,
   "dependencies": {
     "@tailwindcss/postcss": "^4.0.0",
-    "@types/node": "^22.0.0",
-    "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0",
-    "@types/websocket": "^1.0.5",
     "classnames": "^2.2.6",
-    "next": "^15.0.0",
+    "next": "16.0.0",
     "postcss": "^8.4.25",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
     "tailwindcss": "^4.0.0",
     "typescript": "^5.1.6",
     "web-vitals": "^5.0.0"
   },
   "scripts": {
-    "dev": "next dev -p 3001 --turbopack",
+    "dev": "next dev -p 3001",
     "build": "next build",
     "start": "next start -p 3001"
   },
@@ -30,6 +26,10 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "@types/node": "^24.9.1",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@types/websocket": "^1.0.10",
     "eslint": "^9.0.0"
   },
   "packageManager": "yarn@1.22.22"
