@@ -538,6 +538,7 @@ export const results: Result[] = [
         ],
       },
     ],
+    season: 'summer',
     challenges: [
       {
         name: 'Archery Tag',
@@ -572,6 +573,66 @@ export const results: Result[] = [
         ],
       },
     ],
-    coverPhotoUrl: 'https://refaleikarnir.sirv.com/coverPhotos/2025.jpg',
+    coverPhotoUrl: 'https://refaleikarnir.sirv.com/coverPhotos/2025-summer.jpg',
+  },
+  {
+    year: 2025,
+    teams: [
+      {
+        teamColor: 'WHITE',
+        teamPlace: 0,
+        teamPlayers: [players.aegir, players.krissi],
+      },
+      {
+        teamColor: 'BLACK',
+        teamPlace: 3,
+        teamPlayers: [players.arnar, players.maggi],
+      },
+      {
+        teamColor: 'RED',
+        teamPlace: 2,
+        teamPlayers: [players.vikingur, players.danni],
+      },
+      {
+        teamColor: 'SILVER',
+        teamPlace: 1,
+        teamPlayers: [players.gaui, players.jonni],
+      },
+    ],
+    season: 'winter',
+    challenges: [
+      {
+        name: 'Ping Pong',
+        emoji: '🏓',
+        teamResults: [
+          { color: 'WHITE', points: 8 },
+          { color: 'SILVER', points: 5 },
+          { color: 'RED', points: 5 },
+          { color: 'BLACK', points: 6 },
+        ],
+      },
+      {
+        name: 'Pool',
+        emoji: '🎱',
+        teamResults: [
+          { color: 'WHITE', points: 6 },
+          { color: 'SILVER', points: 6 },
+          { color: 'RED', points: 6 },
+          { color: 'BLACK', points: 6 },
+        ],
+      },
+      {
+        name: 'PUBG',
+        emoji: '🎮',
+        teamResults: [
+          { color: 'WHITE', points: 8 },
+          { color: 'SILVER', points: 8 },
+          { color: 'RED', points: 2 },
+          { color: 'BLACK', points: 0 },
+        ],
+      },
+    ],
+    coverPhotoUrl:
+      'https://refaleikarnir.sirv.com/coverPhotos/2025-winter.jpeg',
   },
 ]

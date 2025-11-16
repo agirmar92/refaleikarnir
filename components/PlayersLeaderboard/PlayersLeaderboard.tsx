@@ -28,7 +28,7 @@ const PlayersLeaderboard = () => {
             })}
           >
             {playerData.wins} {playerData.wins === 1 ? 'sigur' : 'sigrar'} í{' '}
-            {playerData.apps} {playerData.apps > 1 ? 'leikjum' : 'leik'}
+            {playerData.apps} leikum
           </span>
         </Fragment>
       ))}
