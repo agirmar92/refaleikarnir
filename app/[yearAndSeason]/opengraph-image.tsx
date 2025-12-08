@@ -11,10 +11,12 @@ export const size = {
 export const contentType = 'image/png'
 
 export default async function Image({
-  params: { yearAndSeason },
+  params,
 }: {
-  params: { yearAndSeason: string }
+  params: Promise<{ yearAndSeason: string }>
 }) {
+  const { yearAndSeason } = await params
+
   const [year, season] = yearAndSeason.split('-')
   const gamesIndex = results.findIndex(
     (result) =>

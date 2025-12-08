@@ -11,12 +11,18 @@ export const size = {
 }
 export const contentType = 'image/png'
 
-export default async function Image({ params }: { params: { slug: string } }) {
-  if (!players[params.slug as PlayerSlug]) {
+export default async function Image({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}) {
+  const { slug } = await params
+
+  if (!players[slug as PlayerSlug]) {
     // No player found with that slug
     return null
   }
-  const { coverPhotoUrl } = players[params.slug as PlayerSlug]
+  const { coverPhotoUrl } = players[slug as PlayerSlug]
 
   return generateOpengraphImage({ photoUrl: coverPhotoUrl, size })
 }
