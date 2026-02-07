@@ -30,7 +30,7 @@
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
     "@types/websocket": "^1.0.10",
-    "eslint": "^9.0.0"
+    "eslint": "^10.0.0"
   },
   "packageManager": "yarn@1.22.22"
 }
