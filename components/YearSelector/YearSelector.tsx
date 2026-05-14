@@ -67,7 +67,7 @@ const YearSelector = ({ gamesIndex }: { gamesIndex: number }) => {
             <div className="absolute -right-4 h-0 w-0 border-x-[6px] border-x-transparent border-t-[8px] border-t-white"></div>
           </h2>
           <Select value={String(gamesIndex)} onValueChange={handleYearChange}>
-            <SelectTrigger className="absolute top-0 left-0 right-0 bottom-0 bg-transparent border-0 shadow-none focus-visible:ring-0 cursor-pointer [&>svg]:hidden text-transparent">
+            <SelectTrigger className="absolute top-0 left-0 right-0 bottom-0 w-full h-full bg-transparent border-0 shadow-none focus-visible:ring-0 cursor-pointer [&>svg]:hidden text-transparent">
               <SelectValue />
             </SelectTrigger>
             <SelectContent className="bg-winter border-winter-light text-white max-h-72">
