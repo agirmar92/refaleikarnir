@@ -66,7 +66,7 @@ const YearSelector = ({ gamesIndex }: { gamesIndex: number }) => {
             <SelectTrigger
               className="w-full border-0 bg-transparent shadow-none focus-visible:ring-0 focus-visible:ring-offset-0 text-white text-4xl font-extrabold uppercase justify-center gap-1.5 px-0 h-auto py-0 cursor-pointer hover:opacity-80 transition-opacity [&>svg]:size-5 [&>svg]:opacity-80"
             >
-              <SelectValue />
+              <SelectValue>{results[gamesIndex].year}</SelectValue>
             </SelectTrigger>
             <SelectContent className="bg-winter border-winter-light text-white max-h-72 overflow-y-auto">
               {results.map((result, iResult) => (
