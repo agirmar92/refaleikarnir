@@ -9,6 +9,13 @@ import useScrollY from '@/hooks/useScrollY'
 import useMainContentWidth from '@/hooks/useMainContentWidth'
 import { Result } from '@/utils/types'
 import { useRouter } from 'next/navigation'
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
 
 const YearSelector = ({ gamesIndex }: { gamesIndex: number }) => {
   const { season } = results[gamesIndex]
@@ -18,6 +25,16 @@ const YearSelector = ({ gamesIndex }: { gamesIndex: number }) => {
 
   const gamesBefore = results[gamesIndex - 1]
   const gamesAfter = results[gamesIndex + 1]
+
+  const handleYearChange = (value: string) => {
+    const selectedGames = results[Number.parseInt(value)]
+    if (!selectedGames) return
+    router.push(
+      `/${selectedGames.year.toString()}${
+        selectedGames.season ? `-${selectedGames.season}` : ''
+      }`
+    )
+  }
 
   return (
     <div
@@ -38,53 +55,40 @@ const YearSelector = ({ gamesIndex }: { gamesIndex: number }) => {
       >
         <WinningTeamsEmblems gamesIndex={gamesIndex} />
       </div>
-      <div className="uppercase text-center text-4xl font-extrabold flex">
+      <div className="uppercase text-center text-4xl font-extrabold flex items-center">
         <YearArrowNavigator
           isDisabled={gamesIndex === 0}
           orientation="left"
           nextResults={gamesBefore}
         />
         <div className="flex-1 relative">
-          <h2 className="inline-flex items-center relative">
-            {results[gamesIndex].year}
-            <div className="absolute -right-4 h-0 w-0 border-x-[6px] border-x-transparent border-t-[8px] border-t-white"></div>
-          </h2>
-          <label htmlFor="year-selector" className="sr-only">
-            Select year/season
-          </label>
-          <select
-            id="year-selector"
-            name="Year/season selector"
-            className="bg-transparent text-transparent appearance-none text-center absolute top-0 left-0 right-0 bottom-0 cursor-pointer"
-            onChange={(e) => {
-              const selectedGames =
-                results[Number.parseInt(e.currentTarget.value)]
-              if (!selectedGames) {
-                return
-              }
-              router.push(
-                `/${selectedGames.year.toString()}${
-                  selectedGames.season ? `-${selectedGames.season}` : ''
-                }`
-              )
-            }}
-            value={gamesIndex}
-          >
-            {results.map((result, iResult) => (
-              <option key={iResult} value={iResult}>
-                {result.year}
-                {result.season
-                  ? ` (${result.season === 'summer' ? 'sumar' : 'vetur'})`
-                  : ''}
-              </option>
-            ))}
-          </select>
+          <Select value={String(gamesIndex)} onValueChange={handleYearChange}>
+            <SelectTrigger
+              className="w-full border-0 bg-transparent shadow-none focus-visible:ring-0 focus-visible:ring-offset-0 text-white text-4xl font-extrabold uppercase justify-center gap-1.5 px-0 h-auto py-0 cursor-pointer hover:opacity-80 transition-opacity [&>svg]:size-5 [&>svg]:opacity-80"
+            >
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent className="bg-winter border-winter-light text-white max-h-72 overflow-y-auto">
+              {results.map((result, iResult) => (
+                <SelectItem
+                  key={iResult}
+                  value={String(iResult)}
+                  className="text-white text-base font-bold uppercase focus:bg-winter-light focus:text-white cursor-pointer"
+                >
+                  {result.year}
+                  {result.season
+                    ? ` (${result.season === 'summer' ? 'Sumar' : 'Vetur'})`
+                    : ''}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+          {season && (
+            <span className="absolute text-sm left-0 bottom-[-20px] right-0 leading-3">
+              {season === 'summer' ? 'Sumar' : 'Vetur'}
+            </span>
+          )}
         </div>
-        {season && (
-          <span className="absolute text-sm left-0 bottom-1 right-0 leading-3">
-            {season === 'summer' ? 'Sumar' : 'Vetur'}
-          </span>
-        )}
         <YearArrowNavigator
           isDisabled={gamesIndex === results.length - 1}
           orientation="right"

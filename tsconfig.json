@@ -33,6 +33,7 @@
       "@/contexts/*": ["./contexts/*"],
       "@/utils/*": ["./utils/*"],
       "@/public/*": ["./public/*"],
+      "@/lib/*": ["./lib/*"],
       "@/types": ["./utils/types"],
       "@/constants": ["./utils/constants"]
     },
