@@ -635,4 +635,32 @@ export const results: Result[] = [
     coverPhotoUrl:
       'https://refaleikarnir.sirv.com/coverPhotos/2025-winter.jpeg',
   },
+  {
+    year: 2026,
+    teams: [
+      {
+        teamColor: 'BLACK',
+        teamPlace: 0,
+        teamPlayers: [players.jonni, players.atli, players.maggi],
+      },
+      {
+        teamColor: 'WHITE',
+        teamPlace: 1,
+        teamPlayers: [players.aegir, players.danni],
+      },
+      {
+        teamColor: 'RED',
+        teamPlace: 2,
+        teamPlayers: [players.arnar, players.vikingur],
+      },
+      {
+        teamColor: 'SILVER',
+        teamPlace: 3,
+        teamPlayers: [players.gaui, players.krissi],
+      },
+    ],
+    season: 'summer',
+    challenges: ['Keila 🎳', 'Fótboltagolf ⛳', 'Dodgeball 🏐'],
+    coverPhotoUrl: 'https://refaleikarnir.sirv.com/coverPhotos/2026-summer.png',
+  },
 ]
