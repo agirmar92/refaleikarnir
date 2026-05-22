@@ -645,12 +645,12 @@ export const results: Result[] = [
       },
       {
         teamColor: 'WHITE',
-        teamPlace: 1,
+        teamPlace: 0,
         teamPlayers: [players.aegir, players.danni, players.gaui],
       },
       {
         teamColor: 'RED',
-        teamPlace: 2,
+        teamPlace: 0,
         teamPlayers: [players.arnar, players.vikingur, players.krissi],
       },
     ],
