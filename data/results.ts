@@ -646,17 +646,12 @@ export const results: Result[] = [
       {
         teamColor: 'WHITE',
         teamPlace: 1,
-        teamPlayers: [players.aegir, players.danni],
+        teamPlayers: [players.aegir, players.danni, players.gaui],
       },
       {
         teamColor: 'RED',
         teamPlace: 2,
-        teamPlayers: [players.arnar, players.vikingur],
-      },
-      {
-        teamColor: 'SILVER',
-        teamPlace: 3,
-        teamPlayers: [players.gaui, players.krissi],
+        teamPlayers: [players.arnar, players.vikingur, players.krissi],
       },
     ],
     season: 'summer',
