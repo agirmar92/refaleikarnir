@@ -640,17 +640,17 @@ export const results: Result[] = [
     teams: [
       {
         teamColor: 'BLACK',
-        teamPlace: 2,
+        teamPlace: 1,
         teamPlayers: [players.gaui, players.jonni, players.atli],
       },
       {
         teamColor: 'WHITE',
-        teamPlace: 3,
+        teamPlace: 2,
         teamPlayers: [players.danni, players.maggi, players.arnar],
       },
       {
         teamColor: 'RED',
-        teamPlace: 1,
+        teamPlace: 0,
         teamPlayers: [players.aegir, players.krissi, players.vikingur],
       },
     ],
