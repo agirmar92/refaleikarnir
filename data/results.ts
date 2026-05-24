@@ -640,22 +640,50 @@ export const results: Result[] = [
     teams: [
       {
         teamColor: 'BLACK',
-        teamPlace: 0,
+        teamPlace: 2,
         teamPlayers: [players.gaui, players.jonni, players.atli],
       },
       {
         teamColor: 'WHITE',
-        teamPlace: 0,
+        teamPlace: 3,
         teamPlayers: [players.danni, players.maggi, players.arnar],
       },
       {
         teamColor: 'RED',
-        teamPlace: 0,
+        teamPlace: 1,
         teamPlayers: [players.aegir, players.krissi, players.vikingur],
       },
     ],
     season: 'summer',
-    challenges: ['Keila 🎳', 'Fótboltagolf ⛳', 'Dodgeball 🏐'],
+    challenges: [
+      {
+        name: 'Keila',
+        emoji: '🎳',
+        teamResults: [
+          { color: 'WHITE', points: 10 },
+          { color: 'RED', points: 17 },
+          { color: 'BLACK', points: 18 },
+        ],
+      },
+      {
+        name: 'Fótboltagolf',
+        emoji: '⛳',
+        teamResults: [
+          { color: 'WHITE', points: 14.5 },
+          { color: 'RED', points: 17.5 },
+          { color: 'BLACK', points: 13 },
+        ],
+      },
+      {
+        name: 'Dodgeball',
+        emoji: '🏐',
+        teamResults: [
+          { color: 'WHITE', points: 12 },
+          { color: 'RED', points: 24 },
+          { color: 'BLACK', points: 9 },
+        ],
+      },
+    ],
     coverPhotoUrl: 'https://refaleikarnir.sirv.com/coverPhotos/2026-summer.png',
   },
 ]
