@@ -684,6 +684,6 @@ export const results: Result[] = [
         ],
       },
     ],
-    coverPhotoUrl: 'https://refaleikarnir.sirv.com/coverPhotos/2026-summer.png',
+    coverPhotoUrl: 'https://refaleikarnir.sirv.com/coverPhotos/2026-summer.jpg',
   },
 ]
