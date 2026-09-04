@@ -806,9 +806,9 @@ lightningcss@1.32.0:
     lightningcss-win32-x64-msvc "1.32.0"
 
 lucide-react@^1.16.0:
-  version "1.17.0"
-  resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-1.17.0.tgz#5b8ddd7d6975e3e45dc9d03025afc7674d78f8a8"
-  integrity sha512-9FA9evdox/JQL5PT57fdA1x/yg8T7knJ98+zjTL3UfKza6pflQUUh3XtaQIHKvnsJw1lmsEyHVlt5jchYxOQ5w==
+  version "1.41.0"
+  resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-1.41.0.tgz#6cabc941a55413a9a9363665c95508a7b48311ef"
+  integrity sha512-6lksP35l6KszDKUeRTi4LV7i6DEe0Yzl2ALJm9j4c5xEYN91GdW1xGsawGMOg2mgjF5GHBVX8pKX9kP+cWsP3Q==
 
 magic-string@^0.30.21:
   version "0.30.21"
