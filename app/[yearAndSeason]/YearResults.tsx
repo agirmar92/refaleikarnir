@@ -6,7 +6,6 @@ import Tile from '@/components/Tile'
 import TileTitle from '@/components/TileTitle'
 import YearSelector from '@/components/YearSelector'
 import { results } from '@/data/results'
-import { seasonNames } from '@/constants'
 
 export const getYearResultsMetadata = (
   gamesIndex: number,
@@ -20,7 +19,7 @@ export const getYearResultsMetadata = (
 
     return {
       title: `${year}${
-        season ? ` - ${seasonNames[season]}` : ''
+        season ? ` - ${season === 'summer' ? 'Sumar' : 'Vetur'}` : ''
       } | Refaleikarnir`,
       openGraph: {
         ...restOfParentMetadataOG,

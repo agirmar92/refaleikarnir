@@ -1,7 +1,5 @@
 export type TeamColor = 'BLACK' | 'WHITE' | 'RED' | 'SILVER'
 
-export type Season = 'summer' | 'autumn' | 'winter'
-
 const playerSlugs = [
   'aegir',
   'arnar',
@@ -39,5 +37,5 @@ export type Result = {
   }[]
   challenges: ChallengeAndResults[] | string[]
   coverPhotoUrl: string
-  season?: Season | undefined
+  season?: 'summer' | 'winter' | undefined
 }

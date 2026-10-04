@@ -8,7 +8,6 @@ import ArrowIcon from '@/icons/ArrowIcon'
 import useScrollY from '@/hooks/useScrollY'
 import useMainContentWidth from '@/hooks/useMainContentWidth'
 import { Result } from '@/utils/types'
-import { seasonNames } from '@/constants'
 import { useRouter } from 'next/navigation'
 import {
   Select,
@@ -80,7 +79,7 @@ const YearSelector = ({ gamesIndex }: { gamesIndex: number }) => {
                 >
                   {result.year}
                   {result.season
-                    ? ` (${seasonNames[result.season]})`
+                    ? ` (${result.season === 'summer' ? 'Sumar' : 'Vetur'})`
                     : ''}
                 </SelectItem>
               ))}
@@ -89,7 +88,7 @@ const YearSelector = ({ gamesIndex }: { gamesIndex: number }) => {
         </div>
         {season && (
           <span className="absolute text-sm left-0 bottom-1 right-0 leading-3">
-            {seasonNames[season]}
+            {season === 'summer' ? 'Sumar' : 'Vetur'}
           </span>
         )}
         <YearArrowNavigator

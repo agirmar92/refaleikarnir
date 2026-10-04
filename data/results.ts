@@ -710,7 +710,7 @@ export const results: Result[] = [
         ],
       },
     ],
-    season: 'autumn',
+    season: 'winter',
     challenges: [
       {
         name: 'GT Akademían',
@@ -737,6 +737,6 @@ export const results: Result[] = [
         ],
       },
     ],
-    coverPhotoUrl: 'https://refaleikarnir.sirv.com/coverPhotos/2026-autumn.jpg',
+    coverPhotoUrl: 'https://refaleikarnir.sirv.com/coverPhotos/2026-winter.jpg',
   },
 ]
