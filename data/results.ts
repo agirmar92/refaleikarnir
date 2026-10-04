@@ -686,4 +686,57 @@ export const results: Result[] = [
     ],
     coverPhotoUrl: 'https://refaleikarnir.sirv.com/coverPhotos/2026-summer.jpg',
   },
+  {
+    year: 2026,
+    teams: [
+      {
+        teamColor: 'WHITE',
+        teamPlace: 0,
+        teamPlayers: [
+          players.vikingur,
+          players.aegir,
+          players.gaui,
+          players.danni,
+        ],
+      },
+      {
+        teamColor: 'BLACK',
+        teamPlace: 1,
+        teamPlayers: [
+          players.jonni,
+          players.maggi,
+          players.arnar,
+          players.krissi,
+        ],
+      },
+    ],
+    season: 'autumn',
+    challenges: [
+      {
+        name: 'GT Akademían',
+        emoji: '🏎️',
+        teamResults: [
+          { color: 'WHITE', points: 46 },
+          { color: 'BLACK', points: 25 },
+        ],
+      },
+      {
+        name: 'Golfhermir',
+        emoji: '🏌️',
+        teamResults: [
+          { color: 'WHITE', points: 22 },
+          { color: 'BLACK', points: 22 },
+        ],
+      },
+      {
+        name: 'Chivalry 2',
+        emoji: '⚔️',
+        teamResults: [
+          { color: 'WHITE', points: 37 },
+          { color: 'BLACK', points: 7 },
+        ],
+      },
+    ],
+    coverPhotoUrl: 'https://refaleikarnir.sirv.com/coverPhotos/2026-autumn.jpg',
+  },
 ]

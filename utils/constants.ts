@@ -1,4 +1,4 @@
-import { PlayerDetails, PlayerSlug, TeamColor } from "./types";
+import { PlayerDetails, PlayerSlug, Season, TeamColor } from "./types";
 
 export const players: Record<PlayerSlug, PlayerDetails> = {
   aegir: {
@@ -53,4 +53,10 @@ export const actualTeamNames: Record<TeamColor, string> = {
   RED: "Rauðir Refir",
   WHITE: "Hvítir Refir",
   SILVER: "Silfur Refir",
+};
+
+export const seasonNames: Record<Season, string> = {
+  summer: "Sumar",
+  autumn: "Haust",
+  winter: "Vetur",
 };
